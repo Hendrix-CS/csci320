@@ -72,12 +72,12 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>4/9</td><td>Fri</td><td>Processor Scheduling</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">CPU Scheduling</a></td><td>Scheduling</td><td>Heap</td></tr>
 <tr><td>4/12</td><td>Mon</td><td>Scheduling with Priorities</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Multi-Level Feedback</a></td><td>None</td><td>None</td></tr>
 <tr><td>4/14</td><td>Wed</td><td>Randomized Scheduling</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf">Lottery Scheduling</a></td><td>None</td><td>None</td></tr>
-<tr><td>4/16</td><td>Fri</td><td>I/O Devices<br>Hard Disk Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a></td><td>None</td><td>None</td></tr>
-<tr><td>4/19</td><td>Mon</td><td>File System</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">File System Implementation</a></td><td>File System</td><td>Scheduling</td></tr>
-<tr><td>4/21</td><td>Wed</td><td>Solid-State Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/16</td><td>Fri</td><td>Final projects</td><td>None</td><td>Project proposal</td><td>Scheduling</td></tr>
+<tr><td>4/19</td><td>Mon</td><td>I/O Devices<br>Hard Disk Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/21</td><td>Wed</td><td>File System</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">File System Implementation</a></td><td>File System</td><td>Project Proposal</td></tr>
 <tr><td>4/23</td><td>Fri</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
-<tr><td>4/26</td><td>Mon</td><td>Final projects</td><td>None</td><td>Project proposal</td><td>File System</td></tr>
-<tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td>None</td><td>None</td><td>Project proposal</td></tr>
+<tr><td>4/26</td><td>Mon</td><td>Solid-State Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>4/30</td><td>Fri</td><td>Wrap-up</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>5/10</td><td>Mon</td><td>Final Project Presentations</td><td>None</td><td>None</td><td>Final Project</td></tr>
 </tbody>
