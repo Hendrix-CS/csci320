@@ -22,6 +22,7 @@ Upon completing this course, our goal is for you to be able to:
   * Interact directly with the CPU, keyboard, monitor, and RAM.
   * Operate concurrently without errors.
 * Empirically analyze the performance of operating system components.
+* Address cybersecurity issues that arise in these contexts.
 
 ## <a name="resources">Resources</a>
 
@@ -33,10 +34,9 @@ Upon completing this course, our goal is for you to be able to:
 
 <table cellspacing="2" cellpadding="3">
 <tbody>
-<tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
-<tr><td>1/20</td><td>Wed</td><td>Three Easy Pieces<br>Command Line<br>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a></td><td>Shell Commands 1</td><td>None</td></tr>
-<tr><td>1/22</td><td>Fri</td><td>Processes<br>Pipes<br>I/O Redirection</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a></td><td>Shell Commands 2</td><td>Shell Commands 1</td></tr>
-<tr><td>1/25</td><td>Mon</td><td>Rust<br>File I/O</td><td><a href="https://doc.rust-lang.org/book/ch01-00-getting-started.html">Getting Started</a><br><a href="https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html">Programming a Guessing Game</a><br><a href="https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html">Common Programming Concepts</a><br><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a> module</td><td>Rust Programming 1</td><td>Shell Commands 2</td></tr>
+<tr><td>1/20</td><td>Wed</td><td>Three Easy Pieces<br>Command Line<br>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a></td><td>Shell Commands, introduction</td><td>None</td></tr>
+<tr><td>1/22</td><td>Fri</td><td>Processes<br>Pipes<br>I/O Redirection</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a></td><td>Shell Commands, complete</td><td>Shell Commands, introduction</td></tr>
+<tr><td>1/25</td><td>Mon</td><td>Rust<br>File I/O</td><td><a href="https://doc.rust-lang.org/book/ch01-00-getting-started.html">Getting Started</a><br><a href="https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html">Programming a Guessing Game</a><br><a href="https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html">Common Programming Concepts</a><br><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a></td><td>Rust Programming 1</td><td>Shell Commands, complete</td></tr>
 <tr><td>1/27</td><td>Wed</td><td>Ownership and Borrowing<br>Strings<br>Buffers</td><td><a href="https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html">Understanding Ownership</a><br><a href="https://doc.rust-lang.org/std/io/trait.Read.html">Read trait</a><br><a href="https://gjf2a.blogspot.com/2017/02/strings-in-rust.html">String in Rust</a><br><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">BufReader</a><br><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html">BufRead trait</a></td><td>None</td><td>None</td></tr>
 <tr><td>1/29</td><td>Fri</td><td>Rust Collection Types</td><td><a href="https://doc.rust-lang.org/book/ch08-00-common-collections.html">Common Collections</a></td><td>None</td><td>None</td></tr>
 <tr><td>2/1</td><td>Mon</td><td>Unix Process API</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf">5: Process API</a><br><a href="https://docs.rs/nix/0.19.1/nix/">nix crate</a><br><a href="https://doc.rust-lang.org/std/ffi/struct.CString.html">C strings</a></td><td>Rust Programming 2</td><td>Rust Programming 1</td></tr>
@@ -62,7 +62,7 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>3/19</td><td>Fri</td><td>Interrupts</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>3/22</td><td>Mon</td><td>Final Game Demos</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>3/24</td><td>Wed</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
-<tr><td>3/26</td><td>Fri</td><td>Interrupt-based multitasking</td><td>None</td><td>Game Kernel</td><td>None</td></tr>
+<tr><td>3/26</td><td>Fri</td><td>Interrupt-based multitasking</td><td>None</td><td>Game Kernel</td><td>Bare metal game</td></tr>
 <tr><td>3/29</td><td>Mon</td><td>Paging</td><td><a href="https://os.phil-opp.com/paging-introduction/">Introduction to Paging</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">18: Introduction to Paging</a></td><td>None</td><td>None</td></tr>
 <tr><td>3/31</td><td>Wed</td><td>Implementation of Paging</td><td><a href="https://os.phil-opp.com/paging-implementation/">Paging Implementation</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf">Translation Lookaside Buffers</a></td><td>None</td><td>None</td></tr>
 <tr><td>4/2</td><td>Fri</td><td>Memory Management: Heap</td><td><a href="https://os.phil-opp.com/heap-allocation/">Heap Allocation</a></td><td>Heap</td><td>Game Kernel</td></tr>
@@ -71,12 +71,12 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>4/9</td><td>Fri</td><td>Garbage Collection<br>Mark-Sweep Collection</td><td>None</td><td>Garbage Collector</td><td>Heap</td></tr>
 <tr><td>4/12</td><td>Mon</td><td>Copy Collection</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>4/14</td><td>Wed</td><td>Generational Collection</td><td>None</td><td>None</td><td>None</td></tr>
-<tr><td>4/16</td><td>Fri</td><td>I/O Devices<br>Hard Disk Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a></td><td>File System</td><td>Garbage Collector</td></tr>
+<tr><td>4/16</td><td>Fri</td><td>I/O Devices<br>Hard Disk Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a></td><td>None</td><td>None</td></tr>
 <tr><td>4/19</td><td>Mon</td><td>File System</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">File System Implementation</a></td><td>File System</td><td>Garbage Collector</td></tr>
 <tr><td>4/21</td><td>Wed</td><td>Solid-State Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a></td><td>None</td><td>None</td></tr>
 <tr><td>4/23</td><td>Fri</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>4/26</td><td>Mon</td><td>Final projects</td><td>None</td><td>Project proposal</td><td>File System</td></tr>
-<tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td>None</td><td>None</td><td>Project proposal</td></tr>
 <tr><td>4/30</td><td>Fri</td><td>Wrap-up</td><td>None</td><td>None</td><td>None</td></tr>
 <tr><td>5/10</td><td>Mon</td><td>Final Project Presentations</td><td>None</td><td>None</td><td>Final Project</td></tr>
 </tbody>
@@ -86,6 +86,8 @@ Upon completing this course, our goal is for you to be able to:
 # <a name="assessment">Assessment</a>
 
 ## <a name="projects">Projects</a>
+
+Approximately one project will be assigned per week. 
 
 Every Tuesday, a project will be assigned. Students may complete projects individually or 
 in teams of two. In most projects, students will program their robots to perform a task using

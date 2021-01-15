@@ -14,10 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 description: >- # this means to ignore newlines until "baseurl:"
-  A study of the application of artificial intelligence to solving problems in robotics. 
-  Topics include subsumption, planning, machine learning, vision, neural networks, 
-  localization, and mapping. Students configure provided implementations of algorithms 
-  to control physical robots.
+  A study of the three major concepts of a modern operating systems: virtualization, 
+  concurrency and persistence. Topics include the memory hierarchy (including caching and 
+  virtual memory), memory managment, processes, processor scheduling, address spaces, 
+  threads, the critical section problem, locks, sockets, file systems, and system performance 
+  analysis.
 baseurl: "/csci320" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -61,8 +62,8 @@ instructors:
 
 offerings:
   - name: LECTURE 01
-    loc: MCREY 115
-    time: TR 8:15am - 9:30am
+    loc: MCREY 315
+    time: MWF 8:10am - 9:00am
     instructor: ferrer
 
 resources:
@@ -76,6 +77,7 @@ resources:
     image: assets/images/Rust2018_front.webp
     url: https://doc.rust-lang.org/book/
   - name: Writing an OS in Rust
+    image: assets/images/241211.png
     url: https://os.phil-opp.com/
 
 extra-resources:
