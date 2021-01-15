@@ -77,7 +77,7 @@ resources:
     image: assets/images/Rust2018_front.webp
     url: https://doc.rust-lang.org/book/
   - name: Writing an OS in Rust
-    image: assets/images/241211.png
+    image: assets/images/img_241211.png
     url: https://os.phil-opp.com/
 
 extra-resources:
