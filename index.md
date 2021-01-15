@@ -13,111 +13,177 @@ layout: course-multi
 
 Upon completing this course, our goal is for you to be able to:
 
-* Build computer programs to:
-  * Effectively solve realistic problems.
-  * Organize, analyze, and summarize realistic data sets.
-* Read, understand, and explain a computer program.
-* Understand and explain computation through:
-  * Thinking logically and precisely.
-  * Making and testing hypotheses.
-* Use modular components to decompose problems and assemble solutions.
-* Create abstract, generalized models from specific, complex examples.
+* Describe how an operating system mediates interaction with:
+  * CPU and RAM through the **process** abstraction
+  * Hard disk and Flash memory through the **file system** abstraction.
+  * The Internet through the **TCP socket** abstraction.
+* Write useful programs that:
+  * Deliver operating system services to a user.
+  * Interact directly with the CPU, keyboard, monitor, and RAM.
+  * Operate concurrently without errors.
+* Empirically analyze the performance of operating system components.
 
 ## <a name="resources">Resources</a>
 
 {% include resources.html content=site.resources %}
 
-## <a name="additional-resources">Optional Resources</a>
-
-{% include resources.html content=site.extra-resources %}
-
-## Laptop Policy
-
-Please **do not bring laptops to lecture**. This may seem strange in a computer science class. But lab is the place where you will get plenty of experience working on the computer; lecture is a time for thinking and learning without the distraction of a computer.
-
-Exceptions may be made on a case-by-case basis if you can prove to me that you really do benefit from using your laptop to take notes.
-
 <hr>
 
-# <a name="inclasscode">In-Class Code</a>
+# <a name="calendar">Calendar</a>
 
-When we write code together in class, it will be posted here!
-
-| Date | Topic | Code |
-|:----:|------||-----||
-| F 30 Aug | Intro to Python | [Intro Notebook](https://pythonintro-yorgey.notebooks.azure.com/j/notebooks/PythonIntro.ipynb) |
-| W 4 Sep | More Math and Functions | [Box Math](https://boxmath-yorgey.notebooks.azure.com/j/notebooks/BoxMath.ipynb) |
-| F 6 Sep | Strings and Booleans | [Booleans](https://booleans-yorgey.notebooks.azure.com/j/notebooks/Strings%20and%20Booleans.ipynb)
+<table cellspacing="2" cellpadding="3">
+<tbody>
+<tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
+<tr><td>1/20</td><td>Wed</td><td>Three Easy Pieces<br>Command Line<br>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a></td><td>Shell Commands 1</td><td>None</td></tr>
+<tr><td>1/22</td><td>Fri</td><td>Processes<br>Pipes<br>I/O Redirection</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a></td><td>Shell Commands 2</td><td>Shell Commands 1</td></tr>
+<tr><td>1/25</td><td>Mon</td><td>Rust<br>File I/O</td><td><a href="https://doc.rust-lang.org/book/ch01-00-getting-started.html">Getting Started</a><br><a href="https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html">Programming a Guessing Game</a><br><a href="https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html">Common Programming Concepts</a><br><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a> module</td><td>Rust Programming 1</td><td>Shell Commands 2</td></tr>
+<tr><td>1/27</td><td>Wed</td><td>Ownership and Borrowing<br>Strings<br>Buffers</td><td><a href="https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html">Understanding Ownership</a><br><a href="https://doc.rust-lang.org/std/io/trait.Read.html">Read trait</a><br><a href="https://gjf2a.blogspot.com/2017/02/strings-in-rust.html">String in Rust</a><br><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">BufReader</a><br><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html">BufRead trait</a></td><td>None</td><td>None</td></tr>
+<tr><td>1/29</td><td>Fri</td><td>Rust Collection Types</td><td><a href="https://doc.rust-lang.org/book/ch08-00-common-collections.html">Common Collections</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/1</td><td>Mon</td><td>Unix Process API</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf">5: Process API</a><br><a href="https://docs.rs/nix/0.19.1/nix/">nix crate</a><br><a href="https://doc.rust-lang.org/std/ffi/struct.CString.html">C strings</a></td><td>Rust Programming 2</td><td>Rust Programming 1</td></tr>
+<tr><td>2/3</td><td>Wed</td><td>Unix System Calls</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">6: Direct Execution</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/5</td><td>Fri</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>2/8</td><td>Mon</td><td>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">39: Files and Directories</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/10</td><td>Wed</td><td>File Descriptors<br>Pipelines</td><td><a href="https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html">Pipelines in Rust</a></td><td>Unix Shell</td><td>Rust Programming 2</td></tr>
+<tr><td>2/12</td><td>Fri</td><td>Data structures in Rust</td><td><a href="https://doc.rust-lang.org/book/ch05-00-structs.html">Using Structs to Structure Related Data</a><br><a href="https://doc.rust-lang.org/book/ch06-00-enums.html">Enums and Pattern Matching</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/15</td><td>Mon</td><td>Review of Unix Command Line<br>Review of Rust</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>2/17</td><td>Wed</td><td>The Internet<br>Downloading a web page</td><td><a href="https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html">Overview of TCP/IP</a><br><a href="https://doc.rust-lang.org/std/net/struct.TcpStream.html">TcpStream</a><br><a href="https://doc.rust-lang.org/std/io/trait.Write.html">Write trait</a></td><td>Webget</td><td>Unix Shell</td></tr>
+<tr><td>2/19</td><td>Fri</td><td>Using Transport Layer Security</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf">Cryptography</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/22</td><td>Mon</td><td>Threads vs Processes</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">26: Concurrency and Threads</a></td><td>None</td><td>None</td></tr>
+<tr><td>2/24</td><td>Wed</td><td>Threads in Rust</td><td><a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">Fearless Concurrency</a></td><td>Web server 1</td><td>Webget</td></tr>
+<tr><td>2/26</td><td>Fri</td><td>Locks</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">28: Locks</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf">29: Locked Data Structures</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/1</td><td>Mon</td><td>Concurrency Problems</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">32: Common Concurrency Problems</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/3</td><td>Wed</td><td>Performance analysis</td><td>None</td><td>Web server 2</td><td>Web server 1</td></tr>
+<tr><td>3/5</td><td>Fri</td><td>Bare metal programming</td><td><a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/8</td><td>Mon</td><td>VGA Buffer</td><td><a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a><br><a href="https://crates.io/crates/pluggable_interrupt_os">Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/10</td><td>Wed</td><td>Pluggable Interrupt OS</td><td><a href="https://crates.io/crates/pluggable_interrupt_os">Pluggable Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td>Bare metal game</td><td>Web server 2</td></tr>
+<tr><td>3/12</td><td>Fri</td><td>Ghost Hunter</td><td><a href="https://github.com/gjf2a/ghost_hunter">Ghost Hunter</a><br><a href="https://github.com/gjf2a/ghost_hunter_core">Ghost Hunter Core</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/15</td><td>Mon</td><td>Interrupts</td><td><a href="https://os.phil-opp.com/cpu-exceptions/">CPU Exceptions</a><br><a href="https://os.phil-opp.com/double-fault-exceptions/">Double Faults</a><br><a href="https://os.phil-opp.com/hardware-interrupts/">Hardware interrupts</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/17</td><td>Wed</td><td>Game Demo Day</td><td>None</td><td>None</td><td>Bare metal game check-in</td></tr>
+<tr><td>3/19</td><td>Fri</td><td>Interrupts</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>3/22</td><td>Mon</td><td>Final Game Demos</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>3/24</td><td>Wed</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>3/26</td><td>Fri</td><td>Interrupt-based multitasking</td><td>None</td><td>Game Kernel</td><td>None</td></tr>
+<tr><td>3/29</td><td>Mon</td><td>Paging</td><td><a href="https://os.phil-opp.com/paging-introduction/">Introduction to Paging</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">18: Introduction to Paging</a></td><td>None</td><td>None</td></tr>
+<tr><td>3/31</td><td>Wed</td><td>Implementation of Paging</td><td><a href="https://os.phil-opp.com/paging-implementation/">Paging Implementation</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf">Translation Lookaside Buffers</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/2</td><td>Fri</td><td>Memory Management: Heap</td><td><a href="https://os.phil-opp.com/heap-allocation/">Heap Allocation</a></td><td>Heap</td><td>Game Kernel</td></tr>
+<tr><td>4/5</td><td>Mon</td><td>Allocator Designs</td><td><a href="https://os.phil-opp.com/allocator-designs/">Allocator Designs</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/7</td><td>Wed</td><td>Heap Management Strategies</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">17: Free Space Management</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/9</td><td>Fri</td><td>Garbage Collection<br>Mark-Sweep Collection</td><td>None</td><td>Garbage Collector</td><td>Heap</td></tr>
+<tr><td>4/12</td><td>Mon</td><td>Copy Collection</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4/14</td><td>Wed</td><td>Generational Collection</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4/16</td><td>Fri</td><td>I/O Devices<br>Hard Disk Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a></td><td>File System</td><td>Garbage Collector</td></tr>
+<tr><td>4/19</td><td>Mon</td><td>File System</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">File System Implementation</a></td><td>File System</td><td>Garbage Collector</td></tr>
+<tr><td>4/21</td><td>Wed</td><td>Solid-State Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a></td><td>None</td><td>None</td></tr>
+<tr><td>4/23</td><td>Fri</td><td>Break: no class</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4/26</td><td>Mon</td><td>Final projects</td><td>None</td><td>Project proposal</td><td>File System</td></tr>
+<tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>4/30</td><td>Fri</td><td>Wrap-up</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>5/10</td><td>Mon</td><td>Final Project Presentations</td><td>None</td><td>None</td><td>Final Project</td></tr>
+</tbody>
+</table>
 
 <hr>
-# Coursework
+# <a name="assessment">Assessment</a>
 
-Each student has **four late days** to spend throughout the semester as they wish.
-Simply inform the instructor any time *prior* to the due date for an assignment
-that you wish to use a late day; you may then turn in the assignment up to 24
-hours late. Multiple late days may be used on the same assignment. There are no
-partial late days; turning in an assignment 2 hours late or 20 hours late will
-both use 1 late day. Note that late days are intended to cover both normal
-circumstances (you simply want more time to work on the assignment) and
-exceptional circumstances (you get sick, travel for a game or family
-obligation, *etc.*). After you have used up your late days, late assignments
-will receive at most half credit.
+## <a name="projects">Projects</a>
 
-## <a name="hwqz">Homework and Quizzes</a>: 140 points
+Every Tuesday, a project will be assigned. Students may complete projects individually or 
+in teams of two. In most projects, students will program their robots to perform a task using
+a new concept introduced that week, potentially incorporating other concepts covered in 
+previous weeks. Each project will typically be due the following Tuesday, with a brief
+video presentation given in class. Some time will typically be available every Thursday
+during the class period for work on that week's project.
 
-| #  | Name | Assigned | Due |
-|:--:|-----||:--------:|:---:|
-|0 | [Info Sheet](https://docs.google.com/forms/d/e/1FAIpQLSdtxgmw2tL6IzzK0qq3Fw2h2FTFmGHoTRs8p6wTfTToUn7pZg/viewform?usp=sf_link) | W Aug 28 | F Aug 30 |
-|1 | [Sample Homework]({{site.baseurl}}/homework/function-reading.pdf) | F Sep 27 | W Oct 2 |
-|2 | [Sample Homework]({{site.baseurl}}/homework/function-reading.pdf) | F Sep 27 | W Oct 2 |
-|3 | [Sample Homework]({{site.baseurl}}/homework/function-reading.pdf) | F Sep 27 | W Oct 2 |
+### Project Reports
+For each project, each student (even if part of a team) should submit an individual project
+report. Each report includes the following:
+* A project log, which includes the following for every work session:
+  * Date of the work session, including start and end times.
+  * Goals for the session.
+  * Brief descriptions of activities undertaken.
+  * Observations of activities.
+  * Assessment of the degree to which session goals were met.
+* Answers to project-specific questions.
+* A conclusion detailing the degree of success of the project.
 
-There will often be short homework assignments to be completed over the weekend, assigned on Friday and due Wednesday, sometimes with a corresponding quiz at the beginning of class on Wednesday.
+### Project Presentations
 
-## <a name="labs">Labs</a>: 260 points
+On the due date of each project, each team will play a video in class. The video should meet the following constraints:
+* It must be between 80 and 90 seconds in duration.
+  * For team projects, the video should be 160 to 180 seconds in duration.
+* It should include brief narration of the strategy for the project.
+* It should demonstrate the student's robots performing the required tasks for the week's project. Narration should contextualize each demonstrated activity.
 
-| #  | Name | Assigned | Due |
-|:--:|-----||:--------:|:---:|
-|1 | [Sample Lab]({{site.baseurl}}/labs/sample-lab.html) | Aug 28-29 | Sep 4-5 |
-|2 | [Sample Lab]({{site.baseurl}}/labs/sample-lab.html) | Sep 4-5 | Sep 11-12 |
-|3 | [Sample Lab]({{site.baseurl}}/labs/sample-lab.html) | Sep 11-12 | Sep 18-19 |
+## <a name="finalproject">Final Project</a>
+In the last three weeks of the semester, each student will undertake a final project. 
+In this final project, you will build and program a robot that fulfills a contextualized 
+purpose. A public demonstration will be made of the robot's capabilities, and a paper 
+reflecting upon lessons learned will be submitted as well. In keeping with the Odyssey 
+Special Project guidelines, the project will require at least 30 hours of work. As with 
+the other course projects, final projects may be undertaken either individually or in 
+teams of two.
 
-Much of your experience with programming in this course will be through weekly labs. Each lab will be assigned in lab with time allotted to work through the materials, and will be due **by the start of the following lab**. All labs are weighted equally within the lab portion of your final grade.
+## <a name="participation">Class Participation</a>
 
-On these labs, you will work with a partner on the lab assignments. Their name must be listed on any code you hand in as joint work. A partnership should only turn in a **single copy** of the assignment. If students working as partners wish to turn in a lab late, both students must use a late day.
+### Presentation Questions
+* Students should be prepared to answer questions after their video presentation concludes. 
+* Each student is expected to ask one question on each class day that includes presentations.
 
-**Lab attendance is required**. Labs take place in the **Snoddy Computer Lab**, in the Bailey Library. As you go through the exterior door of the library, turn immediately to your left and enter the Snoddy Academic Resource Center. Continue through the door at the far end of the hall into the first computer lab, and then enter the second lab at the back.
+### Office Hours
+* Each student should schedule and attend at least three online Office Hour meetings with the instructor at some point during the semester.
 
-## <a name="projects">Projects</a>: 350 points
 
-| #  | Name | Points | Assigned | Due |
-|:--:|-----||:------:|:--------:|:---:|
-|1 | [Sample Project]({{site.baseurl}}/projects/sample-project.html)  | 50  | Sep 21 | Sep 30 |
-|2 | [Sample Project]({{site.baseurl}}/projects/sample-project.html) | 100 | Oct 16 | Nov 1 |
-|3 | [Sample Project]({{site.baseurl}}/projects/sample-project.html) | 200 | Nov 18 | Final Exam Day |
+## <a name="grading">Specifications Grading</a>
+Each assignment is graded on a pass-fail basis. To earn a passing grade, the assignment
+must be substantively complete; minor imperfections are perfectly acceptable. Final course
+grades are earned based on completed passing assignments, as follows:
 
-You will have three projects in this course, one about every five weeks. These projects will cover concepts we have discussed in class and in labs, and will be due approximately one week after they are assigned.
+* To earn an A in the course, a student will:
+  * Complete all nine projects
+  * Complete the final project
+  * Submit a course feedback form
+  * Ask six presentation questions
+  * Schedule and attend at least three Office Hours meetings
+* To earn a B in the course, a student will: 
+  * Complete any seven projects
+  * Complete the final project
+  * Submit a course feedback form
+  * Ask four presentation questions
+  * Schedule and attend at least two Office Hours meetings
+* To earn a C in the course, a student will:
+  * Complete any five projects
+  * Complete the final project
+  * Submit a course feedback form
+  * Ask two presentation questions
+  * Schedule and attend at least one Office Hours meeting
+* To earn a D in the course, a student will:
+  * Complete any four projects
 
-**You must work individually on the first two projects.** You may discuss concepts and ideas with your classmates, but the code you turn in must be your own. You will be graded not only on correctness, but also technique, documentation and evaluation of your solution. Further details on the grading standards and handin instructions for each project will be given when they are assigned.
+### Revising submitted work
+If a submitted project is not of sufficient quality to receive a passing grade:
+* The instructor will give feedback identifying revisions that, if applied, would result in a passing grade.
+* The student will schedule and attend an Office Hours meeting to discuss the necessary revisions and establish a deadline for their submission.
+* If the student submits the revisions by the agreed deadline, the revised project will receive a passing grade.
 
-## <a name="exams">Exams</a>: 250 points
+## <a name="latedays">Late Policy</a>
+If a student needs an extension, the instructor must be notified by email by 4 pm on the 
+day prior to the due date. This notification email must state the duration of the requested 
+extension. The instructor reserves the right to decline a request for an extension, but 
+the intention is that most requests for extensions will be granted.
 
-There will be three in-class exams, the first worth 50 points and the second and
-third worth 100 of your final grade. They will consist of short answer
-questions along with writing and debugging code.
+## <a name="equipment">Equipment</a>
+Each student will be issued the following equipment:
+* One robot kit, containing:
+  * Two motors and wheels
+  * A battery case
+  * A plexiglas chassis
+* One breadboard
+* One motor control chip
+* One Arduino board
 
-* Exam 1: Sep 20, covering functions, math, numerical data, conditionals, and binary encoding
-* Exam 2: Oct 16, covering input/output, while loops, lists, and strings
-* Exam 3: Nov 25, covering for loops, dictionaries, classes and objects
+This equipment should be returned to the instructor at the end of the semester. Students will
+be billed for any unreturned equipment.
 
-There is no final exam; you will complete a final project instead, as described above under Projects.
-
-## <a name="scale">Grading Scale</a>
-
-| Score  | Grade  |
-|:------:|:------:|
-| 900-1000  | A   |
-| 800-899   | B   |
-| 700-799   | C   |
-| 600-699   | D   |
-| 0-599     | F   |
+Each student will need to supply a smartphone or tablet running the Android operating system.
+Students for whom this presents a difficulty should contact the instructor, who will investigate
+possible arrangements.
