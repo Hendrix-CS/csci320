@@ -92,10 +92,10 @@ recommend creating a `struct` to represent the different components of the parse
 	  * Redirect output to the current output file descriptor.
       * Execute the first command in the pipeline.
   * The pipeline stage function:
-    * Create a [pipe](https://docs.rs/nix/0.19.1/nix/unistd/fn.pipe.html). The pipe will 
+    * Creates a [pipe](https://docs.rs/nix/0.19.1/nix/unistd/fn.pipe.html). The pipe will 
 	  receive data from the current command's predecessor, and send data to the current 
 	  command. 	  
-    * Use [fork](https://docs.rs/nix/0.19.1/nix/unistd/fn.fork.html) to create the child process.
+    * Uses [fork](https://docs.rs/nix/0.19.1/nix/unistd/fn.fork.html) to create the child process.
 	  * In the parent (corresponding to the current command):
 	    * Close the pipe's input. It is unnecessary here, as the pipe will receive data from
 		  the preceding command.
