@@ -36,17 +36,17 @@ Upon completing this course, our goal is for you to be able to:
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 1/20 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a> | Shell Commands, introduction |  |
-| 1/22 | Fri | Processes<br>Pipes<br>I/O Redirection | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a> | Shell Commands, complete | Shell Commands, introduction |
-| 1/25 | Mon | Rust<br>File I/O | <a href="https://doc.rust-lang.org/book/ch01-00-getting-started.html">Getting Started</a><br><a href="https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html">Programming a Guessing Game</a><br><a href="https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html">Common Programming Concepts</a><br><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a> | Rust Programming 1 | Shell Commands, complete |
-| 1/27 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | <a href="https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html">Understanding Ownership</a><br><a href="https://doc.rust-lang.org/std/io/trait.Read.html">Read trait</a><br><a href="https://gjf2a.blogspot.com/2017/02/strings-in-rust.html">String in Rust</a><br><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">BufReader</a><br><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html">BufRead trait</a> |  |  |
-| 1/29 | Fri | Rust Collection Types | <a href="https://doc.rust-lang.org/book/ch08-00-common-collections.html">Common Collections</a> |  |  |
-| 2/1 | Mon | Unix Process API | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf">5: Process API</a><br><a href="https://docs.rs/nix/0.19.1/nix/">nix crate</a><br><a href="https://doc.rust-lang.org/std/ffi/struct.CString.html">C strings</a> | Rust Programming 2 | Rust Programming 1 |
-| 2/3 | Wed | Unix System Calls | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">6: Direct Execution</a> |  |  |
+| 1/20 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | [Introduction to Operating Systems](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf) | [Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html) |  |
+| 1/22 | Fri | Processes<br>Pipes<br>I/O Redirection | [Processes](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | [Shell Commands, complete]{{site.baseurl}}/projects/shell_commands.html) | Shell Commands, introduction |
+| 1/25 | Mon | Rust<br>File I/O | [Getting Started](https://doc.rust-lang.org/book/ch01-00-getting-started.html)<br>[Programming a Guessing Game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)<br>[Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)<br>[std::fs](https://doc.rust-lang.org/std/fs/index.html) | Rust Programming 1 | Shell Commands, complete |
+| 1/27 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | [Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)<br>[Read trait](https://doc.rust-lang.org/std/io/trait.Read.html)<br>[String in Rust](https://gjf2a.blogspot.com/2017/02/strings-in-rust.html)<br>[BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)<br>[BufRead trait](https://doc.rust-lang.org/std/io/trait.BufRead.html) |  |  |
+| 1/29 | Fri | Rust Collection Types | [Common Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html) |  |  |
+| 2/1 | Mon | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/0.19.1/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | Rust Programming 2 | Rust Programming 1 |
+| 2/3 | Wed | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) |  |  |
 | 2/5 | Fri | Break: no class |  |  |  |
-| 2/8 | Mon | Files and Directories | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">39: Files and Directories</a> |  |  |
-| 2/10 | Wed | File Descriptors<br>Pipelines | <a href="https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html">Pipelines in Rust</a> | Unix Shell | Rust Programming 2 |
-| 2/12 | Fri | Data structures in Rust | <a href="https://doc.rust-lang.org/book/ch05-00-structs.html">Using Structs to Structure Related Data</a><br><a href="https://doc.rust-lang.org/book/ch06-00-enums.html">Enums and Pattern Matching</a> |  |  |
+| 2/8 | Mon | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) |  |  |
+| 2/10 | Wed | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | Unix Shell | Rust Programming 2 |
+| 2/12 | Fri | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html) |  |  |
 | 2/15 | Mon | Review of Unix Command Line<br>Review of Rust |  |  |  |
 
 
@@ -54,12 +54,12 @@ Upon completing this course, our goal is for you to be able to:
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 2/17 | Wed | The Internet<br>Downloading a web page | <a href="https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html">Overview of TCP/IP</a><br><a href="https://doc.rust-lang.org/std/net/struct.TcpStream.html">TcpStream</a><br><a href="https://doc.rust-lang.org/std/io/trait.Write.html">Write trait</a> | Webget | Unix Shell |
-| 2/19 | Fri | Using Transport Layer Security | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf">Cryptography</a> |  |  |
-| 2/22 | Mon | Threads vs Processes | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">26: Concurrency and Threads</a> |  |  |
-| 2/24 | Wed | Threads in Rust | <a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">Fearless Concurrency</a> | Web server 1 | Webget |
-| 2/26 | Fri | Locks | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">28: Locks</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf">29: Locked Data Structures</a> |  |  |
-| 3/1 | Mon | Concurrency Problems | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">32: Common Concurrency Problems</a> |  |  |
+| 2/17 | Wed | The Internet<br>Downloading a web page | [Overview of TCP/IP](https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html)<br>[TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)<br>[Write trait](https://doc.rust-lang.org/std/io/trait.Write.html) | Webget | Unix Shell |
+| 2/19 | Fri | Using Transport Layer Security | [Cryptography](http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf) |  |  |
+| 2/22 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) |  |  |
+| 2/24 | Wed | Threads in Rust | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) | Web server 1 | Webget |
+| 2/26 | Fri | Locks | [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) |  |  |
+| 3/1 | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
 | 3/3 | Wed | Performance analysis |  | Web server 2 | Web server 1 |
 
 
@@ -67,29 +67,29 @@ Upon completing this course, our goal is for you to be able to:
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 3/5 | Fri | Bare metal programming | <a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a> |  |  |
-| 3/8 | Mon | VGA Buffer | <a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a><br><a href="https://crates.io/crates/pluggable_interrupt_os">Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a> |  |  |
-| 3/10 | Wed | Pluggable Interrupt OS | <a href="https://crates.io/crates/pluggable_interrupt_os">Pluggable Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a> | Bare metal game | Web server 2 |
-| 3/12 | Fri | Ghost Hunter | <a href="https://github.com/gjf2a/ghost_hunter">Ghost Hunter</a><br><a href="https://github.com/gjf2a/ghost_hunter_core">Ghost Hunter Core</a> |  |  |
-| 3/15 | Mon | Interrupts | <a href="https://os.phil-opp.com/cpu-exceptions/">CPU Exceptions</a><br><a href="https://os.phil-opp.com/double-fault-exceptions/">Double Faults</a><br><a href="https://os.phil-opp.com/hardware-interrupts/">Hardware interrupts</a> |  |  |
+| 3/5 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
+| 3/8 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
+| 3/10 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | Bare metal game | Web server 2 |
+| 3/12 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
+| 3/15 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
 | 3/17 | Wed | Game Demo Day |  |  | Bare metal game check-in |
 | 3/19 | Fri | Interrupts |  |  |  |
 | 3/22 | Mon | Final Game Demos |  |  |  |
 | 3/24 | Wed | Break: no class |  |  |  |
 | 3/26 | Fri | Interrupt-based multitasking |  | Game Kernel | Bare metal game |
-| 3/29 | Mon | Paging | <a href="https://os.phil-opp.com/paging-introduction/">Introduction to Paging</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">18: Introduction to Paging</a> |  |  |
-| 3/31 | Wed | Implementation of Paging | <a href="https://os.phil-opp.com/paging-implementation/">Paging Implementation</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf">Translation Lookaside Buffers</a> |  |  |
-| 4/2 | Fri | Memory Management: Heap | <a href="https://os.phil-opp.com/heap-allocation/">Heap Allocation</a> | Heap | Game Kernel |
-| 4/5 | Mon | Allocator Designs | <a href="https://os.phil-opp.com/allocator-designs/">Allocator Designs</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">17: Free Space Management</a> |  |  |
+| 3/29 | Mon | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
+| 3/31 | Wed | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
+| 4/2 | Fri | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
+| 4/5 | Mon | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
 | 4/7 | Wed | Garbage Collection |  |  |  |
-| 4/9 | Fri | Processor Scheduling | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">CPU Scheduling</a> | Scheduling | Heap |
-| 4/12 | Mon | Scheduling with Priorities | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">Multi-Level Feedback</a> |  |  |
-| 4/14 | Wed | Randomized Scheduling | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf">Lottery Scheduling</a> |  |  |
+| 4/9 | Fri | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | Scheduling | Heap |
+| 4/12 | Mon | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
+| 4/14 | Wed | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
 | 4/16 | Fri | Final projects |  | Project proposal | Scheduling |
-| 4/19 | Mon | I/O Devices<br>Hard Disk Drives | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">I/O Devices</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">Hard Disk Drives</a> |  |  |
-| 4/21 | Wed | File System | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">File System Implementation</a> | File System | Project Proposal |
+| 4/19 | Mon | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
+| 4/21 | Wed | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | File System | Project Proposal |
 | 4/23 | Fri | Break: no class |  |  |  |
-| 4/26 | Mon | Solid-State Drives | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a> |  |  |
+| 4/26 | Mon | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
 | 4/28 | Wed | Famous OSs |  |  |  |
 | 4/30 | Fri | Wrap-up |  |  | File System |
 | 5/10 | Mon | Final Project Presentations | | | |
