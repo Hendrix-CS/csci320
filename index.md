@@ -54,6 +54,7 @@ Upon completing this course, our goal is for you to be able to:
 ## Part 2: The Internet
 <table cellspacing="2" cellpadding="3">
 <tbody>
+<tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
 <tr><td>2/17</td><td>Wed</td><td>The Internet<br>Downloading a web page</td><td><a href="https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html">Overview of TCP/IP</a><br><a href="https://doc.rust-lang.org/std/net/struct.TcpStream.html">TcpStream</a><br><a href="https://doc.rust-lang.org/std/io/trait.Write.html">Write trait</a></td><td>Webget</td><td>Unix Shell</td></tr>
 <tr><td>2/19</td><td>Fri</td><td>Using Transport Layer Security</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf">Cryptography</a></td><td></td><td></td></tr>
 <tr><td>2/22</td><td>Mon</td><td>Threads vs Processes</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">26: Concurrency and Threads</a></td><td></td><td></td></tr>
@@ -67,6 +68,7 @@ Upon completing this course, our goal is for you to be able to:
 ## Part 3: The Kernel
 <table cellspacing="2" cellpadding="3">
 <tbody>
+<tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
 <tr><td>3/5</td><td>Fri</td><td>Bare metal programming</td><td><a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a></td><td></td><td></td></tr>
 <tr><td>3/8</td><td>Mon</td><td>VGA Buffer</td><td><a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a><br><a href="https://crates.io/crates/pluggable_interrupt_os">Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td></td><td></td></tr>
 <tr><td>3/10</td><td>Wed</td><td>Pluggable Interrupt OS</td><td><a href="https://crates.io/crates/pluggable_interrupt_os">Pluggable Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td>Bare metal game</td><td>Web server 2</td></tr>
