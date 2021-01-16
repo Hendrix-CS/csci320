@@ -78,8 +78,8 @@ recommend creating a `struct` to represent the different components of the parse
   * The pipeline execution function:
     * Sets up a variable to track the current output file descriptor.
 	  * If output has been redirected to a file, 
-	    [open](https://docs.rs/nix/0.19.1/nix/fcntl/fn.open.html) 
-		[it](https://man7.org/linux/man-pages/man2/open.2.html) and use its file descriptor.
+	    [open](https://docs.rs/nix/0.19.1/nix/fcntl/fn.open.html) that
+		[file](https://man7.org/linux/man-pages/man2/open.2.html) and use its file descriptor.
 	  * Otherwise, set it to 1, the file descriptor for standard output.
 	* Loops through the commands in the pipeline, starting with the **last** one.
 	  * The last command waits for input from its predecessor, so it has to start first.
