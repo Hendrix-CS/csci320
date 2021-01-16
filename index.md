@@ -70,7 +70,7 @@ Upon completing this course, our goal is for you to be able to:
 <tbody>
 <tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
 <tr><td>3/5</td><td>Fri</td><td>Bare metal programming</td><td><a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a></td><td></td><td></td></tr>
-<tr><td>3/8</td><td>Mon</td><td>VGA Buffer</td><td><a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a><br><a href="https://crates.io/crates/pluggable_interrupt_os">Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td></td><td></td></tr>
+<tr><td>3/8</td><td>Mon</td><td>VGA Buffer</td><td><a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a></td><td></td><td></td></tr>
 <tr><td>3/10</td><td>Wed</td><td>Pluggable Interrupt OS</td><td><a href="https://crates.io/crates/pluggable_interrupt_os">Pluggable Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td>Bare metal game</td><td>Web server 2</td></tr>
 <tr><td>3/12</td><td>Fri</td><td>Ghost Hunter</td><td><a href="https://github.com/gjf2a/ghost_hunter">Ghost Hunter</a><br><a href="https://github.com/gjf2a/ghost_hunter_core">Ghost Hunter Core</a></td><td></td><td></td></tr>
 <tr><td>3/15</td><td>Mon</td><td>Interrupts</td><td><a href="https://os.phil-opp.com/cpu-exceptions/">CPU Exceptions</a><br><a href="https://os.phil-opp.com/double-fault-exceptions/">Double Faults</a><br><a href="https://os.phil-opp.com/hardware-interrupts/">Hardware interrupts</a></td><td></td><td></td></tr>
@@ -127,15 +127,14 @@ two primary options for the final project:
 Each student will orally present their final project during the Final Exam period for the 
 course, on Monday, May 10, 2021 from 2-5 pm. 
 
-## <a name="participation">Class Participation</a>
+## <a name="participation">Course Participation</a>
 
-### Office Hours
 * Each student should schedule and attend at least three online Office Hour meetings with the instructor at some point during the semester.
 
 
 ## <a name="grading">Specifications Grading</a>
-Each assignment is graded as **Missing**, **Partial**, or **Complete**. Criteria for the latter
-two categories will be specified for each assignment. Final course
+Each assignment is assessed as **Missing**, **Partial**, or **Complete**. 
+Criteria for the latter two categories will be specified for each assignment. Final course
 grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
@@ -145,24 +144,24 @@ grades are earned based on cumulative assignment outcomes:
   * Submit a course feedback form
 * To earn a B in the course, a student will: 
   * One of the following:
-    * **Complete** the final project and **Complete** at least 7 other projects
-    * **Partial** completion of the final project, and **Complete** at least 10 other projects
+    * **Complete** the final project and **Complete** at least 4 other projects
+    * **Partial** completion of the final project, and **Complete** at least 8 other projects
   * At most two **Missing** projects
   * Schedule and attend at least two Office Hours meetings
   * Submit a course feedback form
 * To earn a C in the course, a student will:
   * One of the following:
-    * **Complete** the final project and **Complete** at least 4 other projects
-	* **Partial** completion of the final project, and **Complete** at least 7 other projects
-	* **Missing** final project, and **Complete** at least 10 other projects
+    * **Complete** the final project and **Complete** at least 2 other projects
+	* **Partial** completion of the final project, and **Complete** at least 4 other projects
+	* **Missing** final project, and **Complete** at least 8 other projects
   * At most four **Missing** projects
   * Schedule and attend at least one Office Hours meeting
   * Submit a course feedback form
 * To earn a D in the course, a student will:
   * One of the following:
-    * **Complete** the final project, and up to eight **Missing** projects
-	* **Partial** completion of the final project, and up to six **Missing** projects
-	* **Missing** final project, and up to four **Missing** projects
+    * **Complete** the final project, and **Partial** completion of at least 4 other projects
+	* **Partial** completion of the final project, and **Partial** completion of at least 6 other projects
+	* **Missing** final project, and **Partial** completion of at least 8 other projects
 
 ### Revising submitted work
 If a submitted project receives a **Partial** assessment:
