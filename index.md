@@ -36,8 +36,8 @@ Upon completing this course, our goal is for you to be able to:
 <table cellspacing="2" cellpadding="3">
 <tbody>
 <tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
-<tr><td>1/20</td><td>Wed</td><td>Three Easy Pieces<br>Command Line<br>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a></td><td>Shell Commands, introduction</td><td></td></tr>
-<tr><td>1/22</td><td>Fri</td><td>Processes<br>Pipes<br>I/O Redirection</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a></td><td>Shell Commands, complete</td><td>Shell Commands, introduction</td></tr>
+<tr><td>1/20</td><td>Wed</td><td>Three Easy Pieces<br>Command Line<br>Files and Directories</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a></td><td>[Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html)</td><td></td></tr>
+<tr><td>1/22</td><td>Fri</td><td>Processes<br>Pipes<br>I/O Redirection</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4: Processes</a></td><td>[Shell Commands, complete]({{site.baseurl}}/projects/shell_commands.html)</td><td>Shell Commands, introduction</td></tr>
 <tr><td>1/25</td><td>Mon</td><td>Rust<br>File I/O</td><td><a href="https://doc.rust-lang.org/book/ch01-00-getting-started.html">Getting Started</a><br><a href="https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html">Programming a Guessing Game</a><br><a href="https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html">Common Programming Concepts</a><br><a href="https://doc.rust-lang.org/std/fs/index.html">std::fs</a></td><td>Rust Programming 1</td><td>Shell Commands, complete</td></tr>
 <tr><td>1/27</td><td>Wed</td><td>Ownership and Borrowing<br>Strings<br>Buffers</td><td><a href="https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html">Understanding Ownership</a><br><a href="https://doc.rust-lang.org/std/io/trait.Read.html">Read trait</a><br><a href="https://gjf2a.blogspot.com/2017/02/strings-in-rust.html">String in Rust</a><br><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">BufReader</a><br><a href="https://doc.rust-lang.org/std/io/trait.BufRead.html">BufRead trait</a></td><td></td><td></td></tr>
 <tr><td>1/29</td><td>Fri</td><td>Rust Collection Types</td><td><a href="https://doc.rust-lang.org/book/ch08-00-common-collections.html">Common Collections</a></td><td></td><td></td></tr>
@@ -138,14 +138,16 @@ Criteria for the latter two categories will be specified for each assignment. Fi
 grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
-  * **Complete** the final project and **Complete** at least 10 other projects.
+  * One of the following:
+    * **Complete** the final project and **Complete** at least 10 other projects.
+	* **Partial** completion of the final project, and **Complete** all 12 other projects.
   * No **Missing** projects
   * Schedule and attend at least three Office Hours meetings
   * Submit a course feedback form
 * To earn a B in the course, a student will: 
   * One of the following:
-    * **Complete** the final project and **Complete** at least 4 other projects
-    * **Partial** completion of the final project, and **Complete** at least 8 other projects
+    * **Complete** the final project and **Complete** at least four other projects
+    * **Partial** completion of the final project, and **Complete** at least eight other projects
   * At most two **Missing** projects
   * Schedule and attend at least two Office Hours meetings
   * Submit a course feedback form
