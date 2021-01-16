@@ -32,6 +32,7 @@ Upon completing this course, our goal is for you to be able to:
 
 # <a name="calendar">Calendar</a>
 
+## Part 1: The Command Line
 <table cellspacing="2" cellpadding="3">
 <tbody>
 <tr><th>Date</th><th>Day</th><th>Topic/Activity</th><th>Reading</th><th>Assigned</th><th>Due</th></tr>
@@ -47,6 +48,12 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>2/10</td><td>Wed</td><td>File Descriptors<br>Pipelines</td><td><a href="https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html">Pipelines in Rust</a></td><td>Unix Shell</td><td>Rust Programming 2</td></tr>
 <tr><td>2/12</td><td>Fri</td><td>Data structures in Rust</td><td><a href="https://doc.rust-lang.org/book/ch05-00-structs.html">Using Structs to Structure Related Data</a><br><a href="https://doc.rust-lang.org/book/ch06-00-enums.html">Enums and Pattern Matching</a></td><td></td><td></td></tr>
 <tr><td>2/15</td><td>Mon</td><td>Review of Unix Command Line<br>Review of Rust</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+
+## Part 2: The Internet
+<table cellspacing="2" cellpadding="3">
+<tbody>
 <tr><td>2/17</td><td>Wed</td><td>The Internet<br>Downloading a web page</td><td><a href="https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html">Overview of TCP/IP</a><br><a href="https://doc.rust-lang.org/std/net/struct.TcpStream.html">TcpStream</a><br><a href="https://doc.rust-lang.org/std/io/trait.Write.html">Write trait</a></td><td>Webget</td><td>Unix Shell</td></tr>
 <tr><td>2/19</td><td>Fri</td><td>Using Transport Layer Security</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf">Cryptography</a></td><td></td><td></td></tr>
 <tr><td>2/22</td><td>Mon</td><td>Threads vs Processes</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">26: Concurrency and Threads</a></td><td></td><td></td></tr>
@@ -54,6 +61,12 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>2/26</td><td>Fri</td><td>Locks</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">28: Locks</a><br><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf">29: Locked Data Structures</a></td><td></td><td></td></tr>
 <tr><td>3/1</td><td>Mon</td><td>Concurrency Problems</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">32: Common Concurrency Problems</a></td><td></td><td></td></tr>
 <tr><td>3/3</td><td>Wed</td><td>Performance analysis</td><td></td><td>Web server 2</td><td>Web server 1</td></tr>
+</tbody>
+</table>
+
+## Part 3: The Kernel
+<table cellspacing="2" cellpadding="3">
+<tbody>
 <tr><td>3/5</td><td>Fri</td><td>Bare metal programming</td><td><a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a></td><td></td><td></td></tr>
 <tr><td>3/8</td><td>Mon</td><td>VGA Buffer</td><td><a href="https://os.phil-opp.com/vga-text-mode/">VGA Buffer</a><br><a href="https://crates.io/crates/pluggable_interrupt_os">Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td></td><td></td></tr>
 <tr><td>3/10</td><td>Wed</td><td>Pluggable Interrupt OS</td><td><a href="https://crates.io/crates/pluggable_interrupt_os">Pluggable Interrupt OS</a><br><a href="https://github.com/gjf2a/bare_metal_tracer">Tracer</a></td><td>Bare metal game</td><td>Web server 2</td></tr>
@@ -79,7 +92,7 @@ Upon completing this course, our goal is for you to be able to:
 <tr><td>4/26</td><td>Mon</td><td>Solid-State Drives</td><td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf">Flash-based SSDs</a></td><td></td><td></td></tr>
 <tr><td>4/28</td><td>Wed</td><td>Famous OSs</td><td></td><td></td><td></td></tr>
 <tr><td>4/30</td><td>Fri</td><td>Wrap-up</td><td></td><td></td><td>File System</td></tr>
-<tr><td>5/10</td><td>Mon</td><td>Final Project Presentations</td><td>None</td><td>None</td><td>Final Project</td></tr>
+<tr><td>5/10</td><td>Mon</td><td>Final Project Presentations</td><td></td><td></td><td>Final Project</td></tr>
 </tbody>
 </table>
 
@@ -89,107 +102,74 @@ Upon completing this course, our goal is for you to be able to:
 ## <a name="projects">Projects</a>
 
 A total of 12 projects will be assigned throughout the semester; approximately one project 
-per week. Each project 
+per week. Each submission will be assessed as either **Partial** or **Complete**. The criteria
+for these assessments will be given for each assignment.
 
-Approximately one project will be assigned per week. 
-
-Every Tuesday, a project will be assigned. Students may complete projects individually or 
-in teams of two. In most projects, students will program their robots to perform a task using
-a new concept introduced that week, potentially incorporating other concepts covered in 
-previous weeks. Each project will typically be due the following Tuesday, with a brief
-video presentation given in class. Some time will typically be available every Thursday
-during the class period for work on that week's project.
-
-### Project Reports
-For each project, each student (even if part of a team) should submit an individual project
-report. Each report includes the following:
-* A project log, which includes the following for every work session:
-  * Date of the work session, including start and end times.
-  * Goals for the session.
-  * Brief descriptions of activities undertaken.
-  * Observations of activities.
-  * Assessment of the degree to which session goals were met.
-* Answers to project-specific questions.
-* A conclusion detailing the degree of success of the project.
-
-### Project Presentations
-
-On the due date of each project, each team will play a video in class. The video should meet the following constraints:
-* It must be between 80 and 90 seconds in duration.
-  * For team projects, the video should be 160 to 180 seconds in duration.
-* It should include brief narration of the strategy for the project.
-* It should demonstrate the student's robots performing the required tasks for the week's project. Narration should contextualize each demonstrated activity.
+Each student should have a [GitHub](https://github.com/) account. For each programming project,
+the student should create a **private** GitHub repository to store the project. The student
+should add [Dr. Ferrer](https://github.com/gjf2a) as a contributor to the project. When the 
+project is due, he will download the repository onto his own machine for grading.
 
 ## <a name="finalproject">Final Project</a>
-In the last three weeks of the semester, each student will undertake a final project. 
-In this final project, you will build and program a robot that fulfills a contextualized 
-purpose. A public demonstration will be made of the robot's capabilities, and a paper 
-reflecting upon lessons learned will be submitted as well. In keeping with the Odyssey 
-Special Project guidelines, the project will require at least 30 hours of work. As with 
-the other course projects, final projects may be undertaken either individually or in 
-teams of two.
+Towards the end of the semester, each student will undertake a final project. There are
+two primary options for the final project:
+1. **Expository Project**
+  * Research two different operating systems.
+  * Discuss the motivation for creating each operating system.
+  * Discuss how each operating system addresses the topics of Virtualization, Concurrency, and Persistence.
+  * Discuss the similarities and differences between them, especially in light of the motivation for their creation.
+2. **Programming Project**:
+  * Implement a working program that extends our exploration of any topic from the course.
+  * Write a short paper describing the program's purpose and the degree to which it fulfills that purpose.
+  
+Each student will orally present their final project during the Final Exam period for the 
+course, on Monday, May 10, 2021 from 2-5 pm. 
 
 ## <a name="participation">Class Participation</a>
-
-### Presentation Questions
-* Students should be prepared to answer questions after their video presentation concludes. 
-* Each student is expected to ask one question on each class day that includes presentations.
 
 ### Office Hours
 * Each student should schedule and attend at least three online Office Hour meetings with the instructor at some point during the semester.
 
 
 ## <a name="grading">Specifications Grading</a>
-Each assignment is graded on a pass-fail basis. To earn a passing grade, the assignment
-must be substantively complete; minor imperfections are perfectly acceptable. Final course
-grades are earned based on completed passing assignments, as follows:
+Each assignment is graded as **Missing**, **Partial**, or **Complete**. Criteria for the latter
+two categories will be specified for each assignment. Final course
+grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
-  * Complete all nine projects
-  * Complete the final project
-  * Submit a course feedback form
-  * Ask six presentation questions
+  * **Complete** the final project and **Complete** at least 10 other projects.
+  * No **Missing** projects
   * Schedule and attend at least three Office Hours meetings
+  * Submit a course feedback form
 * To earn a B in the course, a student will: 
-  * Complete any seven projects
-  * Complete the final project
-  * Submit a course feedback form
-  * Ask four presentation questions
+  * One of the following:
+    * **Complete** the final project and **Complete** at least 7 other projects
+    * **Partial** completion of the final project, and **Complete** at least 10 other projects
+  * At most two **Missing** projects
   * Schedule and attend at least two Office Hours meetings
-* To earn a C in the course, a student will:
-  * Complete any five projects
-  * Complete the final project
   * Submit a course feedback form
-  * Ask two presentation questions
+* To earn a C in the course, a student will:
+  * One of the following:
+    * **Complete** the final project and **Complete** at least 4 other projects
+	* **Partial** completion of the final project, and **Complete** at least 7 other projects
+	* **Missing** final project, and **Complete** at least 10 other projects
+  * At most four **Missing** projects
   * Schedule and attend at least one Office Hours meeting
+  * Submit a course feedback form
 * To earn a D in the course, a student will:
-  * Complete any four projects
+  * One of the following:
+    * **Complete** the final project, and up to eight **Missing** projects
+	* **Partial** completion of the final project, and up to six **Missing** projects
+	* **Missing** final project, and up to four **Missing** projects
 
 ### Revising submitted work
-If a submitted project is not of sufficient quality to receive a passing grade:
-* The instructor will give feedback identifying revisions that, if applied, would result in a passing grade.
+If a submitted project receives a **Partial** assessment:
+* The instructor will give feedback identifying revisions that, if applied, would result in a **Complete** assessment.
 * The student will schedule and attend an Office Hours meeting to discuss the necessary revisions and establish a deadline for their submission.
-* If the student submits the revisions by the agreed deadline, the revised project will receive a passing grade.
+* If the student submits the revisions by the agreed deadline, the revised project will receive a **Complete** assessment.
 
 ## <a name="latedays">Late Policy</a>
-If a student needs an extension, the instructor must be notified by email by 4 pm on the 
-day prior to the due date. This notification email must state the duration of the requested 
-extension. The instructor reserves the right to decline a request for an extension, but 
-the intention is that most requests for extensions will be granted.
-
-## <a name="equipment">Equipment</a>
-Each student will be issued the following equipment:
-* One robot kit, containing:
-  * Two motors and wheels
-  * A battery case
-  * A plexiglas chassis
-* One breadboard
-* One motor control chip
-* One Arduino board
-
-This equipment should be returned to the instructor at the end of the semester. Students will
-be billed for any unreturned equipment.
-
-Each student will need to supply a smartphone or tablet running the Android operating system.
-Students for whom this presents a difficulty should contact the instructor, who will investigate
-possible arrangements.
+If a student needs an extension, the instructor must be notified by email or Teams message by 
+4 pm on the day prior to the due date. This notification email must state the duration of the 
+requested extension. The instructor reserves the right to decline a request for an extension, 
+but the intention is that most requests for extensions will be granted.
