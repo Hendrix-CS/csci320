@@ -33,6 +33,7 @@ Upon completing this course, our goal is for you to be able to:
 # <a name="calendar">Calendar</a>
 
 ## Part 1: The Command Line
+
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
 | 1/20 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">2: Introduction to Operating Systems</a> | Shell Commands, introduction |  |
@@ -50,6 +51,7 @@ Upon completing this course, our goal is for you to be able to:
 
 
 ## Part 2: The Internet
+
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
 | 2/17 | Wed | The Internet<br>Downloading a web page | <a href="https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html">Overview of TCP/IP</a><br><a href="https://doc.rust-lang.org/std/net/struct.TcpStream.html">TcpStream</a><br><a href="https://doc.rust-lang.org/std/io/trait.Write.html">Write trait</a> | Webget | Unix Shell |
@@ -62,6 +64,7 @@ Upon completing this course, our goal is for you to be able to:
 
 
 ## Part 3: The Kernel
+
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
 | 3/5 | Fri | Bare metal programming | <a href="https://os.phil-opp.com/freestanding-rust-binary/">A Freestanding Rust Binary</a><br><a href="https://os.phil-opp.com/minimal-rust-kernel/">A Minimal Rust Kernel</a> |  |  |
