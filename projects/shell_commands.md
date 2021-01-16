@@ -33,7 +33,7 @@ Unix shell commands. Write a shell command that produces each of the following o
 [Submit Part 2 Solutions](https://docs.google.com/forms/d/e/1FAIpQLSc48Ht3M2q5qpdN-x9qy7-Ro0FOnVyrBlJqhOerv9t-kLJPEA/viewform?usp=sf_link)
 
 ## Assessment
-* **Complete**: At least 13/14 commands are correct.
 * **Partial**: At least 8/14 commands are correct.
+* **Complete**: At least 13/14 commands are correct.
 
 ------------------------------------------------------------------------
