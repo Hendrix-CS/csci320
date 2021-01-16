@@ -149,17 +149,17 @@ grades are earned based on cumulative assignment outcomes:
   * Submit a course feedback form
 * To earn a C in the course, a student will:
   * One of the following:
-    * **Complete** the final project and **Complete** at least 2 other projects
-	* **Partial** completion of the final project, and **Complete** at least 4 other projects
-	* **Missing** final project, and **Complete** at least 8 other projects
+    * **Complete** the final project and **Complete** at least two other projects
+	* **Partial** completion of the final project, and **Complete** at least four other projects
+	* **Missing** final project, and **Complete** at least eight other projects
   * At most four **Missing** projects
   * Schedule and attend at least one Office Hours meeting
   * Submit a course feedback form
 * To earn a D in the course, a student will:
   * One of the following:
-    * **Complete** the final project, and **Partial** completion of at least 4 other projects
-	* **Partial** completion of the final project, and **Partial** completion of at least 6 other projects
-	* **Missing** final project, and **Partial** completion of at least 8 other projects
+    * **Complete** the final project, and **Partial** completion of at least four other projects
+	* **Partial** completion of the final project, and **Partial** completion of at least six other projects
+	* **Missing** final project, and **Partial** completion of at least eight other projects
 
 ### Revising submitted work
 If a submitted project receives a **Partial** assessment:
