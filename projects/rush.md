@@ -50,8 +50,8 @@ drwxrwxrwx 1 gjf2a gjf2a  512 Jan 14 23:47 target
 /mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cd src
 /mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ grep fn main.rs | sort
     fn new(line: &str) -> Self {
-	fn run(&self) {
-	fn run_pipeline(&self) {
+    fn run(&self) {
+    fn run_pipeline(&self) {
 fn execute(command: &str, output_descriptor: i32) {
 fn externalize(command: &str) -> Box<[CString]> {
 fn get_input(prompt: &str) -> String {
