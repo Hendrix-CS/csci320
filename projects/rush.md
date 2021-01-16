@@ -8,10 +8,10 @@ worktitle: Unix Shell
 ## Description
 
 Enhance [vssh]({{site.baseurl}}/projects/rust2.html) as follows:
-1. If the line ends with the & symbol, it should run in the background. That is, your shell should not wait for it to terminate; the command line should immediately return. Your shell should print the PID of the process, so that the user may later manage it as needed. This is typically used for long-running programs that perform a lot of computation. It is most often used in conjunction with output redirection, as described in step 2.
-2. If (prior to the & symbol, if present) the line ends with a > symbol that is immediately followed by a string, the command's output goes to the file named by the string. If the file does not exist, it will be created.
-3. The line may contain two or more commands connected with the pipe symbol (|). If this happens, start a process for each command, setting up pipes to send the output of each left-hand command to the input of the following right-hand command. If the input has been redirected by the < symbol, then the leftmost process will receive the input from that file.
-4. If (prior to the & symbol and > symbols, if present) the line ends with a < symbol that is immediately followed by a string, the command's input comes from the file named by the string. If the file does not exist, the command will be aborted.
+1. If the line ends with the `&` symbol, it should run in the background. That is, your shell should not wait for it to terminate; the command line should immediately return. Your shell should print the PID of the process, so that the user may later manage it as needed. This is typically used for long-running programs that perform a lot of computation. It is most often used in conjunction with output redirection, as described in step 2.
+2. If (prior to the `&` symbol, if present) the line ends with a `>` symbol that is immediately followed by a string, the command's output goes to the file named by the string. If the file does not exist, it will be created.
+3. The line may contain two or more commands connected with the pipe symbol (`|`). If this happens, start a process for each command, setting up pipes to send the output of each left-hand command to the input of the following right-hand command. If the input has been redirected by the `<` symbol, then the leftmost process will receive the input from that file.
+4. If (prior to the `&` symbol and `>` symbols, if present) the line ends with a `<` symbol that is immediately followed by a string, the command's input comes from the file named by the string. If the file does not exist, the command will be aborted.
 
 This assignment was adapted from [materials](http://rust-class.org/pages/ps2.html) developed by [David Evans](http://www.cs.virginia.edu/~evans/) at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
 
