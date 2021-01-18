@@ -132,6 +132,7 @@ two primary options for the final project:
   * Discuss the motivation for creating each operating system.
   * Discuss how each operating system addresses the topics of Virtualization, Concurrency, and Persistence.
   * Discuss the similarities and differences between them, especially in light of the motivation for their creation.
+
 2. **Programming Project**:
   * Implement a working program that extends our exploration of any topic from the course.
     * This may include nontrivial extensions to one of our programming projects.
