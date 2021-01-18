@@ -79,6 +79,9 @@ resources:
   - name: Writing an OS in Rust
     image: assets/images/img_241211.png
     url: https://os.phil-opp.com/
+  - name: Qemu
+    image: assets/images/Qemu_logo.svg
+    url: https://www.qemu.org/
 
 extra-resources:
   - name: "How to Think Like a Computer Scientist: Interactive Edition"
