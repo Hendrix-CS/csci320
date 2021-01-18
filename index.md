@@ -111,7 +111,8 @@ project is due, he will download the repository onto his own machine for grading
 ## <a name="finalproject">Final Project</a>
 Towards the end of the semester, each student will undertake a final project. There are
 two primary options for the final project:
-1. **Expository Project**
+
+### Expository Project
 
   * Select two different operating systems to research. One must be from this list of established operating systems:
 	- [Minix](https://www.minix3.org/)
@@ -133,7 +134,8 @@ two primary options for the final project:
   * Discuss how each operating system addresses the topics of Virtualization, Concurrency, and Persistence.
   * Discuss the similarities and differences between them, especially in light of the motivation for their creation.
 
-2. **Programming Project**:
+### Programming Project
+
   * Implement a working program that extends our exploration of any topic from the course.
     * This may include nontrivial extensions to one of our programming projects.
   * Write a short paper describing the program's purpose and the degree to which it fulfills that purpose.
