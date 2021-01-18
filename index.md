@@ -112,7 +112,7 @@ project is due, he will download the repository onto his own machine for grading
 Towards the end of the semester, each student will undertake a final project. There are
 two primary options for the final project:
 1. **Expository Project**
-  * Select two different operating systems to research. One must be from this list of established operating systems:
+  * Select two different operating systems to research. One must be from this list of established operating systems.
 	- [Minix](https://www.minix3.org/)
 	- [FreeBSD](https://www.freebsd.org/)
 	- [Debian](https://www.debian.org/)
@@ -122,7 +122,7 @@ two primary options for the final project:
 	- [Macintosh OS](https://www.apple.com/macos/big-sur/)
 	- [Android](https://www.android.com/)
 	- [iOS](https://www.apple.com/ios/ios-14/)
-  * The other should be from this list of innovating operating systems:
+  * The other should be from this list of innovating operating systems.
     - [seL4](https://sel4.systems/)
     - [Redox](https://www.redox-os.org/)
 	- [Theseus](https://github.com/theseus-os/Theseus)
