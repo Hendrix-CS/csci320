@@ -7,6 +7,10 @@ worktitle: Shell Commands
 
 ## Description
 
+**Note:** If you are using Microsoft Windows, install 
+[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+before starting this assignment.
+
 In this assignment, you will have the opportunity to demonstrate your mastery of
 Unix shell commands. Write a shell command that produces each of the following outputs:
 
