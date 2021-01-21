@@ -71,6 +71,22 @@ Connection: Close
 
 ```
 
+## Alternate Port Numbers
+
+Regular `http` requests default to port 80, and regular `https` requests default to port 443. But sometimes a 
+web server runs on a different port. Our program should allow the user to specify an alternative port number,
+either through the URL or a command-line argument. For example:
+
+```
+webget https://hendrix-cs.github.io/csci320/projects/webget.html:8888
+```
+
+This requests the page using port 8888. The same request in the command-line format would be:
+
+```
+webget -host=hendrix-cs.github.io -file=csci320/projects/webget -port=8888 -https
+```
+
 ## Responses
 
 When a file is successfully retrieved, you will first receive an HTTP header before the file contents. 
@@ -127,22 +143,26 @@ From here, you can use `stream` as if it were a regular TCP socket. The `http` p
 * Whether one encounters a URL or the other command-line arguments, build the same data structure.
 * Write a function or method to create a string containing the `GET` message to be sent over the socket.
   * This facilitates debugging as well, as it makes it easy to print the `GET` message to the command line.
+* Work incrementally
+  * Get the program working with the simplest command-line arguments first.
+  * Once the basic version works, then add multi-file downloads, security, URL parsing, and alternate port numbers.
   
 ## Checklist
 
 * Downloads web pages using `http`.
 * Downloads web pages securely using `https`.
+* Specifies web pages using specialized command-line arguments.
 * Specifies web pages using a URL.
-* Specifies web pages using specialized command-line arguments, including an alternate port number.
-* Downloads multiple web pages from a single server.
 * Saves downloaded pages onto one local file per page.
+* Enables the use of alternate port numbers.
+* Downloads multiple web pages from a single server.
 
 ## Submissions
 * Create a **private** GitHub repository for your webget program.
 * [Submit the repository URL](https://docs.google.com/forms/d/e/1FAIpQLSeCE51hAA4VV1jN_E4pVH1FDB3G6x7-GrIg5_MAP_qqMd6fAg/viewform?usp=sf_link).
 
 ## Assessment
-* **Partial**: Any three items from the checklist.
-* **Complete**: All six items from the checklist.
+* **Partial**: Any four items from the checklist.
+* **Complete**: All items from the checklist.
 
 ------------------------------------------------------------------------
