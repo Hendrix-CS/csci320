@@ -70,6 +70,71 @@ Connection: Close
 
 ```
 
+## Responses
+
+When a file is successfully retrieved, you will first receive an HTTP header before the file contents. 
+Here is the beginning of a sample HTTP header:
+
+```
+HTTP/1.1 200 OK                                                                                                         Connection: close                                                                                                       Content-Length: 14140                                                                                                   
+Server: GitHub.com                                                                                                      
+Content-Type: text/html; charset=utf-8                                                                                  
+Strict-Transport-Security: max-age=31556952                                                                             
+last-modified: Thu, 21 Jan 2021 00:44:30 GMT
+```
+
+You will need to extract each HTML file from the returned characters. To do so:
+* Skip each line that is **not** the `HTTP/1.1 200 OK` header.
+* After the header completes, but before the HTML text, there will be a blank line. Skip each line that is **not** blank.
+* Then take each line from the socket until you see the `HTTP/1.1 200 OK` header again, or you run out of input.
+* The first file should be saved in `file1.html`, the second in `file2.html`, and so forth.
+
+## Security
+
+The original `http` protocol had no security features. Messages could easily be inspected while in transit. The 
+`https` protocol superimposes the `http` protocol atop the 
+[Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) (TLS) protocol. TLS provides
+end-to-end encryption to prevent messages from being inspected in transit.
+
+Place the following line in the `dependencies` section of your `Cargo.toml` to use the [OpenSSL](https://crates.io/crates/openssl) crate:
+```
+openssl = { version = "0.10", features = ["vendored"] }
+```
+
+On Windows, you'll want to compile under Windows Subsystem for Linux to facilitate the installation. Setting up
+OpenSSL is otherwise extremely annoying under Windows.
+
+Using secured sockets is straightforward:
+
+```
+use openssl::ssl::{SslConnector, SslMethod};
+
+let tcp = TcpStream::connect("hendrix-cs.github.io:443");
+let connector = SslConnector::builder(SslMethod::tls())?.build();
+let mut stream = connector.connect(host, self.get_tcp_stream(host)?).unwrap();
+```
+
+From here, you can use `stream` as if it were a regular TCP socket. The `http` protocol is otherwise unchanged.
+
+## Design Hints
+
+* Separate the processing of command-line arguments from their implementation.
+  * To this end, create a data structure to represent a request. It could contain:
+    * The host name
+	* A list of files to retrieve
+	* Whether it is using `http` or `https`
+* Whether one encounters a URL or the other command-line arguments, build the same data structure.
+* Write a function or method to create a string containing the `GET` message to be sent over the socket.
+  * This facilitates debugging as well, as it makes it easy to print the `GET` message to the command line.
+  
+## Checklist
+
+* Downloads web pages using `http`.
+* Downloads web pages securely using `https`.
+* Specifies web pages using a URL.
+* Specifies web pages using specialized command-line arguments.
+* Downloads multiple web pages from a single server.
+* Saves downloaded pages onto one local file per page.
 
 
 ## Submissions
@@ -77,7 +142,7 @@ Connection: Close
 * [Submit the repository URL](https://docs.google.com/forms/d/e/1FAIpQLSeCE51hAA4VV1jN_E4pVH1FDB3G6x7-GrIg5_MAP_qqMd6fAg/viewform?usp=sf_link).
 
 ## Assessment
-* **Partial**: 
-* **Complete**: 
+* **Partial**: Any three items from the checklist.
+* **Complete**: All six items from the checklist.
 
 ------------------------------------------------------------------------
