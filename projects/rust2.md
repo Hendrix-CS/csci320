@@ -5,8 +5,6 @@ num: 3
 worktitle: Advanced Shell Commands Using Rust
 ---
 
-## Description
-
 Implement the following shell commands as Rust programs:
 * `findtext`: Output every line that contains a specified pattern. The first command-line argument is the fixed-string pattern. Remaining arguments are the names of the files to inspect.
 * `order`: Works like `cat`, except the output lines must be sorted before being output. All lines from all files will be mixed together and then sorted. If the "-r" command-line argument is provided, they should be sorted in reverse order.

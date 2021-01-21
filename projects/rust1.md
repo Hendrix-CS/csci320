@@ -5,8 +5,6 @@ num: 2
 worktitle: Creating Shell Commands Using Rust
 ---
 
-## Description
-
 Implement the following shell commands as Rust programs. 
 You might find the [fs crate](https://doc.rust-lang.org/std/fs/index.html) useful in 
 writing many of these programs:

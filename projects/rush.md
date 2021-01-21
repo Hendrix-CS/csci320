@@ -5,8 +5,6 @@ num: 4
 worktitle: Unix Shell
 ---
 
-## Description
-
 Enhance [vssh]({{site.baseurl}}/projects/rust2.html) as follows:
 1. If the line ends with the `&` symbol, it should run in the background. That is, your shell should not wait for it to terminate; the command line should immediately return. Your shell should print the PID of the process, so that the user may later manage it as needed. This is typically used for long-running programs that perform a lot of computation. It is most often used in conjunction with output redirection, as described in step 2.
 2. If (prior to the `&` symbol, if present) the line ends with a `>` symbol that is immediately followed by a string, the command's output goes to the file named by the string. If the file does not exist, it will be created.
