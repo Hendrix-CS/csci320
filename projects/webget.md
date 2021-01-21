@@ -9,8 +9,9 @@ Write a command-line program called `webget` that downloads web pages and prints
 them out on the command line. Its command-line interface is as follows:
 
 ```
-Usage: webget [url] [-host=hostaddr] [-file=filepath] [-http] [-https]
+Usage: webget [url] [-host=hostaddr] [-file=filepath] [-port=number] [-http] [-https]
   A url parameter results in an immediate request.
+  A port parameter redirects the default port to the specified number.
   A more complex request is set up by first designating a host and files,
   then selecting whether to use the http or https protocol.
 ```
@@ -132,10 +133,9 @@ From here, you can use `stream` as if it were a regular TCP socket. The `http` p
 * Downloads web pages using `http`.
 * Downloads web pages securely using `https`.
 * Specifies web pages using a URL.
-* Specifies web pages using specialized command-line arguments.
+* Specifies web pages using specialized command-line arguments, including an alternate port number.
 * Downloads multiple web pages from a single server.
 * Saves downloaded pages onto one local file per page.
-
 
 ## Submissions
 * Create a **private** GitHub repository for your webget program.
