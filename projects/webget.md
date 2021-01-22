@@ -78,7 +78,7 @@ web server runs on a different port. Our program should allow the user to specif
 either through the URL or a command-line argument. For example:
 
 ```
-webget https://hendrix-cs.github.io/csci320/projects/webget.html:8888
+webget https://hendrix-cs.github.io:8888/csci320/projects/webget.html
 ```
 
 This requests the page using port 8888. The same request in the command-line format would be:
@@ -101,10 +101,14 @@ last-modified: Thu, 21 Jan 2021 00:44:30 GMT
 ```
 
 You will need to extract each HTML file from the returned characters. To do so:
-* Skip each line that is **not** the `HTTP/1.1 200 OK` header.
-* After the header completes, but before the HTML text, there will be a blank line. Skip each line that is **not** blank.
-* Then take each line from the socket until you see the `HTTP/1.1 200 OK` header again, or you run out of input.
-* The first file should be saved in `file1.html`, the second in `file2.html`, and so forth.
+* When you encounter a line that starts with the string `HTTP/1.1`:
+  * Print out the header line.
+  * Skip all following lines until a blank line is encountered.
+* Once a blank line is encountered:
+  * All lines that follow should be saved in a file, until either:
+    * Another header line is encountered, or:
+	* No lines remain.
+* The first file should be named `file1.html`, the second `file2.html`, and so forth.
 
 ## Security
 
