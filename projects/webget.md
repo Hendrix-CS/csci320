@@ -38,7 +38,7 @@ file is `csci320/projects/webget.html`.
 Given that command, `webget` would send the following `GET` message:
 
 ```
-GET csci320/projects/webget.html HTTP/1.1                                                                               
+GET /csci320/projects/webget.html HTTP/1.1                                                                               
 Host: hendrix-cs.github.io                                                                                              
 Connection: Close
 
@@ -62,10 +62,10 @@ webget -host=hendrix-cs.github.io -file=csci320/projects/webget -file=csci320/pr
 Given that command, `webget` would send two `GET` messages:
 
 ```
-GET csci320/projects/webget.html HTTP/1.1                                                                               
+GET /csci320/projects/webget.html HTTP/1.1                                                                               
 Host: hendrix-cs.github.io                                                                                              
 
-GET csci320/projects/webget.html HTTP/1.1                                                                               
+GET /csci320/projects/webget.html HTTP/1.1                                                                               
 Host: hendrix-cs.github.io                                                                                              
 Connection: Close
 
@@ -121,7 +121,7 @@ openssl = { version = "0.10", features = ["vendored"] }
 On Windows, you'll want to compile under Windows Subsystem for Linux to facilitate the installation. Setting up
 OpenSSL is otherwise extremely annoying under Windows.
 
-Using secured sockets is straightforward:
+Using sockets secured by TLS is straightforward:
 
 ```
 use openssl::ssl::{SslConnector, SslMethod};
