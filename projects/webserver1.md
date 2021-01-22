@@ -5,7 +5,7 @@ num: 6
 worktitle: Web Server Part 1
 ---
 
-Write a command-line program called `webserver`. This program will listen for `https` requests
+Write a command-line program called `webserver`. This program will listen for `http` requests
 on port 8888. To achieve this, set up a 
 [TcpListener](https://doc.rust-lang.org/std/net/struct.TcpListener.html) that is bound to 
 `localhost:8888`. 
