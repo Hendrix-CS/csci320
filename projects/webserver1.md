@@ -31,7 +31,7 @@ any data, the filename doesn't matter. Using `http` avoids a panic when it does 
 a TLS secured connection.
 
 Note that you can also make this request using your web browser. Just paste 
-`webget http://localhost:8888/test` into its URL bar.
+`http://localhost:8888/test` into its URL bar.
 
 ## Step 2: Display Message
 
@@ -40,7 +40,7 @@ Refine your program as follows:
   to handle the connection.
 * In this new thread, it should await a message from the client. I recommend using 
   [read()](https://doc.rust-lang.org/stable/std/io/trait.Read.html#tymethod.read) with a 500-byte buffer. 
-  Using read_to_end() and read_to_string() can result in a hanging connection when dealing with certain clients.
+  Using `read_to_end()` and `read_to_string()` can result in a hanging connection when dealing with certain clients.
 * It should then print the message it received.
 
 In the above example, it would print somemthing akin to the following:
@@ -98,7 +98,6 @@ working directory.
 The [PathBuf](https://doc.rust-lang.org/std/path/struct.PathBuf.html) data type has several 
 methods that you may find helpful in validating the file request.
 
-If a request is valid, add the message `Request Valid` to the reply from the previous step. 
 If the file does not exist, send a message with the header `HTTP/1.1 404 Not Found`.
 If the file exists but it violates our security policy, send a message with the 
 header `HTTP/1.1 403 Forbidden`.
