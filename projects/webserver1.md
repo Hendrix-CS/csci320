@@ -169,4 +169,10 @@ Once you have generated these files, you can set up TLS when accepting connectio
 * **Partial**: Steps 1-4 complete.
 * **Complete**: All six steps complete.
 
+## Acknowledgement
+
+This assignment was adapted from [materials](http://rust-class.org/pages/ps1.html) developed by 
+[David Evans](http://www.cs.virginia.edu/~evans/) at the 
+[University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
+
 ------------------------------------------------------------------------

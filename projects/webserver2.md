@@ -26,7 +26,6 @@ Once it is installed, you can write a Python program as a configuration file. Fo
 ```
 from locust import HttpUser, task
 
-
 class WebsiteUser(HttpUser):
     @task(2)
     def f100(self):
@@ -39,6 +38,7 @@ class WebsiteUser(HttpUser):
 
 This program issues GET requests for the files `file100.html` and `file1000.html`. It issues requests 
 for `file100.html` twice as often as requests for `file1000.html`.  
+
 To run a test using the above program (named `benchmark1.py`), 
 assuming a server running at 192.168.0.102 and listening to port 8888, type:
 
@@ -54,6 +54,9 @@ you a nice summary of the test results.
 Devise at least three different performance workloads using [locust.io](https://locust.io/). Feel free
 to use these [files of varying sizes]({{site.baseurl}}/projects/workloads.zip) in creating your 
 performance workloads.
+
+Note that, in general, it is best to run your tests on a different machine than that which is running your 
+server. Each of your workloads should represent a different type of stress on the server.
 
 ## Baseline
 
@@ -97,5 +100,11 @@ Track the number of requests for each file. The `n` most popular files will be k
 ## Assessment
 * **Partial**: Created benchmark workloads. Implemented either caching or streaming. Described workloads and performance in the paper.
 * **Complete**:  Implemented both caching and streaming. Analysis is complete and comprehensive.
+
+## Acknowledgement
+
+This assignment was adapted from [materials](http://rust-class.org/pages/ps3.html) developed by 
+[David Evans](http://www.cs.virginia.edu/~evans/) at the 
+[University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
 
 ------------------------------------------------------------------------
