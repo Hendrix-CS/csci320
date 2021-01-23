@@ -61,6 +61,7 @@ Once the client message is received, the server should reply to the client with 
 ```
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
+Content-Length: [Number of bytes in HTML message]
 
 <html>
 <body>
@@ -75,6 +76,7 @@ In our example from earlier, the response would be:
 ```
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
+Content-Length: 82
 
 <html>
 <body>
