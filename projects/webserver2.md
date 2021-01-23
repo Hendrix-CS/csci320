@@ -11,8 +11,9 @@ In this project, you will seek to improve the performance of your
 ## Creating Benchmarks
 
 Use [locust.io](https://locust.io/) to test the performance of your server. This program 
-allows you to write Python scripts to describe workload tests. It will then spawn as many 
-test users as you would like. Install it on the command line on a machine with Python3 installed:
+allows you to [write Python scripts to describe workload tests](https://docs.locust.io/en/stable/quickstart.html). 
+It will then spawn as many test users as you would like. Install it on the command line on a machine with 
+Python3 installed:
 
 ```
 python3 -m pip install locust
