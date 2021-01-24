@@ -69,7 +69,7 @@ Upon completing this course, our goal is for you to be able to:
 | --- | --- | --- | --- | --- | --- |
 | 3/5 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
 | 3/8 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
-| 3/10 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | Bare metal game | Web server 2 |
+| 3/10 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server 2 |
 | 3/12 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
 | 3/15 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
 | 3/17 | Wed | Game Demo Day |  |  | Bare metal game check-in |
