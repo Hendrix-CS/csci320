@@ -36,15 +36,7 @@ interrupt handlers. You will create two interrupt handlers for this project:
 ## Setup
 
 The [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os) provides a convenient framework for
-specifying to the CPU the code to be executed to handle each interrupt. Here is a 
-[minimal example](https://github.com/gjf2a/pluggable_interrupt_template):
-
-In this example, we begin with our interrupt handlers. The **tick()** handler prints a period
-on every timer event, and the **key()** handler displays the character typed whenever the
-key is pressed. The **_start()** function kicks everything off by placing references to these
-two functions in a **HandlerTable** object. Invoking **.start()** on the **HandlerTable**
-starts execution. The PIOS sits back and loops endlessly, relying on the event handlers to
-perform any events of interest or importance.
+specifying to the CPU the code to be executed to handle each interrupt. 
 
 I have created a [template](https://github.com/gjf2a/pluggable_interrupt_template) 
 for you to use as a starting point for your projects. To start your project, clone 
@@ -100,6 +92,11 @@ fn key(key: DecodedKey) {
 }
 ```
 
+The **_start()** function kicks everything off by placing references to our interrupt handling functions
+in a **HandlerTable** object. Invoking **.start()** on the **HandlerTable**
+starts execution. The PIOS sits back and loops endlessly, relying on the event handlers to
+perform any events of interest or importance.
+
 I created the [`LetterMover`](https://github.com/gjf2a/pluggable_interrupt_template/blob/master/src/lib.rs)
 `struct` to represent the application state. As interrupts are inherently concurrent, we wrap the object in a 
 [`Mutex`](https://doc.rust-lang.org/book/ch16-03-shared-state.html). In order to delay constructing the 
@@ -109,7 +106,7 @@ object until it is first referenced, we employ the
 This shows the basic design that all of these projects should employ:
 * Create a `main.rs` that sets up the interrupt handlers.
 * Write one-line handlers for the timer and keyboard that reference a shared game-state object.
-* Place all of the game functionality within the game-state object.
+* Place all of the game functionality within the game-state object, defined in **lib.rs**.
 
 The **tick()** function calls the `LetterMover::tick()` method after unlocking the object. 
 Similarly, the **key()** function calls the `LetterMover::key()` method, again after unlocking
