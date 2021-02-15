@@ -13,10 +13,10 @@ computation. It is most often used in conjunction with output redirection, as de
 2. The line may contain two or more commands connected with the pipe symbol (`|`). If this happens, start a process 
 for each command, setting up pipes to send the output of each left-hand command to the input of the following 
 right-hand command. 
-3. The last command in the pipeline (or the only command, if there is no pipeline) may be followed by the '>' symbol
+3. The last command in the pipeline (or the only command, if there is no pipeline) may be followed by the `>` symbol
 and a filename. The command's output should be stored in the designated file. If the file does not exist, 
 it should be created.
-4. The first command in the pipeline (or the only command, if there is no pipeline) may be followed by the '<' symbol
+4. The first command in the pipeline (or the only command, if there is no pipeline) may be followed by the `<` symbol
 and a filename. The command's input should be taken from the designated file. If the file does not exist,
 the command should abort.
 
