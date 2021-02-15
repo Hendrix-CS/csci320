@@ -89,7 +89,7 @@ recommend creating a `struct` to represent the different components of the parse
   * A vector of its pipelined commands.
 * Here is one approach to parsing the command:
   * Check if it ends with an ampersand (`&`). If so, set the background command flag to `true`, and shave the `&` from the end.
-  * Split the string based on the `|` symbol, and collect the results into a vector.
+  * Split the string based on the `|` symbol, and place the results into a vector.
     * Be sure to use `.to_string()` to convert them to fully owned objects, not borrowed objects.
   * Check the last element to see if it contains the `>` symbol. If so, put the output filename into your `struct`, 
     then remove it from the command entry.
