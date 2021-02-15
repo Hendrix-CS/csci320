@@ -6,10 +6,19 @@ worktitle: Unix Shell
 ---
 
 Enhance [vssh]({{site.baseurl}}/projects/rust2.html) as follows:
-1. If the line ends with the `&` symbol, it should run in the background. That is, your shell should not wait for it to terminate; the command line should immediately return. Your shell should print the PID of the process, so that the user may later manage it as needed. This is typically used for long-running programs that perform a lot of computation. It is most often used in conjunction with output redirection, as described in step 2.
-2. If (prior to the `&` symbol, if present) the line ends with a `>` symbol that is immediately followed by a string, the command's output goes to the file named by the string. If the file does not exist, it will be created.
-3. The line may contain two or more commands connected with the pipe symbol (`|`). If this happens, start a process for each command, setting up pipes to send the output of each left-hand command to the input of the following right-hand command. If the input has been redirected by the `<` symbol, then the leftmost process will receive the input from that file.
-4. If (prior to the `&` symbol and `>` symbols, if present) the line ends with a `<` symbol that is immediately followed by a string, the command's input comes from the file named by the string. If the file does not exist, the command will be aborted.
+1. If the line ends with the `&` symbol, it should run in the background. That is, your shell should not wait for it 
+to terminate; the command line should immediately return. Your shell should print the PID of the process, so that 
+the user may later manage it as needed. This is typically used for long-running programs that perform a lot of 
+computation. It is most often used in conjunction with output redirection, as described in step 3.
+2. The line may contain two or more commands connected with the pipe symbol (`|`). If this happens, start a process 
+for each command, setting up pipes to send the output of each left-hand command to the input of the following 
+right-hand command. 
+3. The last command in the pipeline (or the only command, if there is no pipeline) may be followed by the '>' symbol
+and a filename. The command's output should be stored in the designated file. If the file does not exist, 
+it should be created.
+4. The first command in the pipeline (or the only command, if there is no pipeline) may be followed by the '<' symbol
+and a filename. The command's input should be taken from the designated file. If the file does not exist,
+the command should abort.
 
 ## Example Execution
 ```
@@ -53,7 +62,20 @@ fn externalize(command: &str) -> Box<[CString]> {
 fn get_input(prompt: &str) -> String {
 fn main() {
 fn pipeline_stage(command: &str, out: i32) -> i32 {	    
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ exit 
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cat < main.rs | sort | tail -8 > eight.out
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cat eight.out                          
+use std::io::{stdin, stdout, Write};
+}
+}
+}
+}
+}
+}
+}
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cd ..
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cat < Cargo.toml > toml2.out
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ diff Cargo.toml toml2.out
+/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ exit 
 gjf2a@18837FDRL:/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$
 ```
 
@@ -65,6 +87,14 @@ recommend creating a `struct` to represent the different components of the parse
   * Its output file, if redirected.
   * Its input file, if redirected.
   * A vector of its pipelined commands.
+* Here is one approach to parsing the command:
+  * Check if it ends with an ampersand (`&`). If so, set the background command flag to `true`, and shave the `&` from the end.
+  * Split the string based on the `|` symbol, and collect the results into a vector.
+    * Be sure to use `.to_string()` to convert them to fully owned objects, not borrowed objects.
+  * Check the last element to see if it contains the `>` symbol. If so, put the output filename into your `struct`, 
+    then remove it from the command entry.
+  * Check the first element to see if it contains the `<` symbol. If so, put the input filename into your `struct`, 
+    then remove it from the command entry.
 * Redirecting standard output can make debugging difficult; I recommend using 
   [eprintln!](https://doc.rust-lang.org/std/macro.eprintln.html), which prints to standard error.
 * Break the execution of the command line into a series of functions:

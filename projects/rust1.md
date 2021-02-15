@@ -9,7 +9,7 @@ Implement the following shell commands as Rust programs.
 You might find the [fs crate](https://doc.rust-lang.org/std/fs/index.html) useful in 
 writing many of these programs:
 
-* `dir`: Prints out all of the names of the files in the current directory. It will not employ any command-line arguments.
+* `dir`: Prints out all of the names of the files and directories in the current directory. It will not employ any command-line arguments.
 * `destroy`: Delete every file in the list of command-line arguments.
 * `newname`: This program expects two command-line arguments. It will give a "usage" message if it does not receive them. It will change the name of the file given by the first argument to be the name given by the second argument.
 * `duplicate`: This program also expects two command-line arguments. It will give a "usage" message if it does not receive them. It will make a copy of the file given by the first argument with the name given by the second argument.

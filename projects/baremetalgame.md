@@ -43,11 +43,11 @@ for you to use as a starting point for your projects. To start your project, clo
 the [Pluggable Interrupt Template](https://github.com/gjf2a/pluggable_interrupt_template) 
 project. In order to build the project, you'll also need to install:
 * [Qemu](https://www.qemu.org/)
-* Nightly Rust. To install:
+* Nightly Rust:
   * `rustup default nightly`
-* `llvm-tools-preview`. To install:
+* `llvm-tools-preview`:
   * `rustup component add llvm-tools-preview`
-* The [bootimage](https://github.com/rust-osdev/bootimage) tool. To install it:
+* The [bootimage](https://github.com/rust-osdev/bootimage) tool:
   * `cargo install bootimage`
   
 Once the template is up and running, you will be ready to implement your own interrupt handlers! Of course,
@@ -121,6 +121,7 @@ use pluggable_interrupt_os::vga_buffer::{BUFFER_WIDTH, BUFFER_HEIGHT, plot, Colo
 use pc_keyboard::{DecodedKey, KeyCode};
 use num::traits::SaturatingAdd;
 
+#[derive(Copy,Debug,Clone,Eq,PartialEq)]
 pub struct LetterMover {
     letters: [char; BUFFER_WIDTH],
     num_letters: ModNum<usize>,
