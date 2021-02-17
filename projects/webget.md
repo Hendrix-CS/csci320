@@ -5,8 +5,8 @@ num: 5
 worktitle: Webget
 ---
 
-Write a command-line program called `webget` that downloads web pages and prints 
-them out on the command line. Its command-line interface is as follows:
+Write a command-line program called `webget` that downloads web pages and saves them locally. 
+Its command-line interface is as follows:
 
 ```
 Usage: webget [url] 
@@ -47,8 +47,8 @@ the message is incomplete, and you will not receive a response.
 ## Alternate Port Numbers
 
 Regular `http` requests default to port 80, and regular `https` requests default to port 443. But sometimes a 
-web server runs on a different port. Our program should allow the user to specify an alternative port number,
-either through the URL or a command-line argument. For example:
+web server runs on a different port. Our program should allow the user to specify an alternative port number 
+through the URL. For example:
 
 ```
 webget https://hendrix-cs.github.io:8888/csci320/projects/webget.html
@@ -70,7 +70,7 @@ last-modified: Thu, 21 Jan 2021 00:44:30 GMT
 ```
 
 You will need to extract the HTML file from the returned characters. To do so:
-* Until you encounter a blank line, print out each header line.
+* Until you encounter a blank line, print out each header line to the command line.
 * Once a blank line is encountered:
   * All lines that follow should be saved in a file.
   * The local filename should be the name of the requested file from the server.
