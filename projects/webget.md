@@ -94,10 +94,15 @@ Using sockets secured by TLS is straightforward:
 
 ```
 use openssl::ssl::{SslConnector, SslMethod};
+use std::io;
 
-let tcp = TcpStream::connect("hendrix-cs.github.io:443");
-let connector = SslConnector::builder(SslMethod::tls())?.build();
-let mut stream = connector.connect(host, self.get_tcp_stream(host)?).unwrap();
+fn send_message(host: &str, port: usize, message: &str) -> io::Result<()> {
+    let tcp = TcpStream::connect(format!("{}:{}", host, port))?;
+	let connector = SslConnector::builder(SslMethod::tls())?.build();
+	let mut stream = connector.connect(host, tcp).unwrap();
+	stream.write(message.as_bytes())?;
+	Ok(())
+}
 ```
 
 From here, you can use `stream` as if it were a regular TCP socket. The `http` protocol is otherwise unchanged.
