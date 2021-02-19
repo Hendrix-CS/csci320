@@ -98,10 +98,10 @@ use std::io;
 
 fn send_message(host: &str, port: usize, message: &str) -> io::Result<()> {
     let tcp = TcpStream::connect(format!("{}:{}", host, port))?;
-	let connector = SslConnector::builder(SslMethod::tls())?.build();
-	let mut stream = connector.connect(host, tcp).unwrap();
-	stream.write(message.as_bytes())?;
-	Ok(())
+    let connector = SslConnector::builder(SslMethod::tls())?.build();
+    let mut stream = connector.connect(host, tcp).unwrap();
+    stream.write(message.as_bytes())?;
+    Ok(())
 }
 ```
 
