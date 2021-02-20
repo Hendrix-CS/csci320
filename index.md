@@ -128,6 +128,7 @@ two primary options for the final project:
   * The other should be from this list of innovating operating systems:
     - [seL4](https://sel4.systems/)
     - [Redox](https://www.redox-os.org/)
+	- [Fuchsia](https://fuchsia.dev/)
 	- [Theseus](https://github.com/theseus-os/Theseus)
 	
   * Discuss the motivation for creating each operating system.
