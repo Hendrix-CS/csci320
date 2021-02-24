@@ -16,12 +16,6 @@ When your server receives a connection, it should print the IP address of the pe
 contacted it. Test it using your [webget]({{site.baseurl}}/projects/webget) program as follows:
 
 ```
-webget -host=localhost -port=8888 -file=test -http
-```
-
-or
-
-```
 webget http://localhost:8888/test
 ```
 
