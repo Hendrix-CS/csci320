@@ -41,7 +41,10 @@ Connection: Close
 ```
 
 **Note**: There is a blank line after the `Connection: Close` line. Without this blank line,
-the message is incomplete, and you will not receive a response. 
+the message is incomplete, and you will not receive a response. The `http` 
+protocol requires that each line end with both a carriage return and a linefeed.
+Each line in your message, then, should end with `\r\n`, and the last four characters
+in your message as a whole should be `\r\n\r\n`. 
 
 
 ## Alternate Port Numbers

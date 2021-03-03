@@ -32,9 +32,20 @@ Note that you can also make this request using your web browser. Just paste
 Refine your program as follows:
 * Whenever it receives a connection, the program should [spawn a new thread](https://doc.rust-lang.org/std/thread/)
   to handle the connection.
-* In this new thread, it should await a message from the client. I recommend using 
-  [read()](https://doc.rust-lang.org/stable/std/io/trait.Read.html#tymethod.read) with a 500-byte buffer. 
-  Using `read_to_end()` and `read_to_string()` can result in a hanging connection when dealing with certain clients.
+* In this new thread, it should await a message from the client. Create a mutable
+  `String` to store the accumulated message. Then, within a loop:
+  * Use [read()](https://doc.rust-lang.org/stable/std/io/trait.Read.html#tymethod.read) 
+  with a 500-byte buffer. 
+  * Use [`std::str::from_utf8`](https://doc.rust-lang.org/std/str/fn.from_utf8.html)
+    to convert the buffer into a `&str`.
+  * Use the [`push_str()`](https://doc.rust-lang.org/std/string/struct.String.html#method.push_str)
+  method to append it to the accumulated message.
+  * As the client is awaiting a reply, it will not close the
+  connection. Even after it finishes its transmission, the `read()` will still block,
+  waiting for more data.  Since the `http` protocol specifies that a client's message ends with
+  the character sequence `\r\n\r\n`, once the accumulated message 
+  [ends with](https://doc.rust-lang.org/std/string/struct.String.html#method.ends_with)
+  that sequence, the loop can end.
 * It should then print the message it received.
 
 In the above example, it would print somemthing akin to the following:
