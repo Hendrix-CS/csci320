@@ -19,6 +19,12 @@ Python3 installed:
 python3 -m pip install locust
 ```
 
+If that command yields an error message, try the following first (in `bash`):
+```
+sudo apt update
+sudo apt install python3-pip
+```
+
 (You can also install it [directly from PyCharm](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html),
 but the `locust` command-line program will not be readily invocable.)
 
@@ -48,7 +54,7 @@ locust -f benchmark1.py --host=http://192.168.0.102:8888
 ```
 
 When you execute this, the UI for the program will be viewable through your web browser at 
-http://127.0.0.1:8089/. From there, you specify the number of users to simulate and the number 
+`http://localhost:8089/`. From there, you specify the number of users to simulate and the number 
 of users created per second. The test will continue indefinitely until you stop it. It will give 
 you a nice summary of the test results.
 
