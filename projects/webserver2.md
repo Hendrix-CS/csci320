@@ -19,7 +19,7 @@ Python3 installed:
 python3 -m pip install locust
 ```
 
-If that command yields an error message, try the following first (in `bash`):
+**Windows Subsystem for Linux only**: If that command yields an error message, try the following first (in `bash`):
 ```
 sudo apt update
 sudo apt install python3-pip

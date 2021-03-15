@@ -66,29 +66,42 @@ Here is its [`main.rs`](https://github.com/gjf2a/pluggable_interrupt_template/bl
 
 use lazy_static::lazy_static;
 use spin::Mutex;
-use pc_keyboard::DecodedKey;
-use pluggable_interrupt_template::LetterMover;
+use pc_keyboard::{DecodedKey, KeyCode};
 use pluggable_interrupt_os::HandlerTable;
+use pluggable_interrupt_os::vga_buffer::clear_screen;
+use pluggable_interrupt_template::LetterMover;
+use crossbeam::atomic::AtomicCell;
+use pluggable_interrupt_os::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
     HandlerTable::new()
         .keyboard(key)
         .timer(tick)
+        .startup(startup)
         .start()
 }
 
 lazy_static! {
     static ref LETTERS: Mutex<LetterMover> = Mutex::new(LetterMover::new());
+    static ref LAST_KEY: AtomicCell<Option<DecodedKey>> = AtomicCell::new(None);
 }
 
-
 fn tick() {
-    LETTERS.lock().tick();
+    let mut letters = LETTERS.lock();
+    match LAST_KEY.swap(None) {
+        None => {}
+        Some(key) => letters.key(key)
+    }
+    letters.tick();
 }
 
 fn key(key: DecodedKey) {
-    LETTERS.lock().key(key);
+    LAST_KEY.store(Some(key));
+}
+
+fn startup() {
+    clear_screen();
 }
 ```
 
@@ -116,7 +129,7 @@ Here is the rest of its code, found in its [`lib.rs`](https://github.com/gjf2a/p
 ```
 #![cfg_attr(not(test), no_std)]
 
-use bare_metal_modulo::{ModNum, ModNumIterator};
+use bare_metal_modulo::{ModNumC, MNum, ModNumIterator};
 use pluggable_interrupt_os::vga_buffer::{BUFFER_WIDTH, BUFFER_HEIGHT, plot, ColorCode, Color, is_drawable};
 use pc_keyboard::{DecodedKey, KeyCode};
 use num::traits::SaturatingAdd;
@@ -124,51 +137,33 @@ use num::traits::SaturatingAdd;
 #[derive(Copy,Debug,Clone,Eq,PartialEq)]
 pub struct LetterMover {
     letters: [char; BUFFER_WIDTH],
-    num_letters: ModNum<usize>,
-    next_letter: ModNum<usize>,
-    col: ModNum<usize>,
-    row: ModNum<usize>,
-    dx: ModNum<usize>,
-    dy: ModNum<usize>
+    num_letters: ModNumC<usize, BUFFER_WIDTH>,
+    next_letter: ModNumC<usize, BUFFER_WIDTH>,
+    col: ModNumC<usize, BUFFER_WIDTH>,
+    row: ModNumC<usize, BUFFER_HEIGHT>,
+    dx: ModNumC<usize, BUFFER_WIDTH>,
+    dy: ModNumC<usize, BUFFER_HEIGHT>
 }
 
 impl LetterMover {
     pub fn new() -> Self {
         LetterMover {
             letters: ['A'; BUFFER_WIDTH],
-            num_letters: ModNum::new(1, BUFFER_WIDTH),
-            next_letter: ModNum::new(1, BUFFER_WIDTH),
-            col: ModNum::new(BUFFER_WIDTH / 2, BUFFER_WIDTH),
-            row: ModNum::new(BUFFER_HEIGHT / 2, BUFFER_HEIGHT),
-            dx: ModNum::new(0, BUFFER_WIDTH),
-            dy: ModNum::new(0, BUFFER_HEIGHT)
+            num_letters: ModNumC::new(1),
+            next_letter: ModNumC::new(1),
+            col: ModNumC::new(BUFFER_WIDTH / 2),
+            row: ModNumC::new(BUFFER_HEIGHT / 2),
+            dx: ModNumC::new(0),
+            dy: ModNumC::new(0)
         }
     }
-```
 
-This data structure represents the letters the user has typed, the total number of typed letters,
-the position of the next letter to type, the position of the string, and its motion. Initially,
-the string consists of the letter `A`, motionless, and situated in the middle of the screen.
-
-The [`ModNum` data type](https://crates.io/crates/bare_metal_modulo) represents an integer 
-(modulo m). It is very useful for keeping all of these values within the constraints of the 
-VGA buffer.
-
-```
     fn letter_columns(&self) -> impl Iterator<Item=usize> {
         ModNumIterator::new(self.col)
             .take(self.num_letters.a())
             .map(|m| m.a())
     }
-```
 
-Also from the [bare_metal_modulo](https://crates.io/crates/bare_metal_modulo) crate, the 
-`ModNumIterator` data type starts at the specified value and loops around through the ring.
-In this case, it takes just enough values to represent all of the columns to use when plotting
-our string. Using `ModNum` ensures that all the column values are legal and wrap around 
-appropriately. 
-
-```
     pub fn tick(&mut self) {
         self.clear_current();
         self.update_location();
@@ -180,25 +175,18 @@ appropriately.
             plot(' ', x, self.row.a(), ColorCode::new(Color::Black, Color::Black));
         }
     }
-    
+
     fn update_location(&mut self) {
         self.col += self.dx;
         self.row += self.dy;
     }
-    
+
     fn draw_current(&self) {
         for (i, x) in self.letter_columns().enumerate() {
             plot(self.letters[i], x, self.row.a(), ColorCode::new(Color::Cyan, Color::Black));
         }
     }
-```
 
-On each tick:
-* Clear the current string.
-* Update its position.
-* Redraw the string in its new location.
-
-```
     pub fn key(&mut self, key: DecodedKey) {
         match key {
             DecodedKey::RawKey(code) => self.handle_raw(code),
@@ -228,7 +216,7 @@ On each tick:
         if is_drawable(key) {
             self.letters[self.next_letter.a()] = key;
             self.next_letter += 1;
-            self.num_letters = self.num_letters.saturating_add(&ModNum::new(1, self.num_letters.m()));
+            self.num_letters = self.num_letters.saturating_add(&ModNumC::new(1));
         }
     }
 }
@@ -237,32 +225,6 @@ On each tick:
 The keyboard handler receives each character as it is typed. Keys representable as a `char`
 are added to the moving string. The arrow keys change how the string is moving.
 
-The `start()` function is identical to the previous example; it is the handlers that differ. Both handlers
-update a [GhostHunterGame](https://github.com/gjf2a/ghost_hunter_core/blob/master/src/lib.rs) object.
-As interrupts are inherently concurrent, we wrap the object in a 
-[`Mutex`](https://doc.rust-lang.org/book/ch16-03-shared-state.html). In order to delay constructing the 
-object until it is first referenced, we employ the 
-[Lazy Static](https://os.phil-opp.com/vga-text-mode/#lazy-statics) macro.
-
-This shows the basic design that all of these projects should employ:
-* Create a `main.rs` that sets up the interrupt handlers.
-* Write one-line handlers for the timer and keyboard that reference a shared game-state object.
-* Place all of the game functionality within the game-state object.
-
-To get started, clone the [Pluggable Interrupt Template](https://github.com/gjf2a/pluggable_interrupt_template) 
-project. In order to build the project, you'll also need to install:
-* [Qemu](https://www.qemu.org/)
-* Nightly Rust:
-  * `rustup default nightly`
-* `llvm-tools-preview`:
-  * `rustup component add llvm-tools-preview`
-* The [bootimage](https://github.com/rust-osdev/bootimage) tool:
-  * `cargo install bootimage`
-  
-Once the template is up and running, you will be ready to implement your own interrupt handlers! Of course,
-you'll want to change the project name and authors in 
-[Cargo.toml](https://github.com/gjf2a/pluggable_interrupt_template/blob/master/Cargo.toml), and you'll also 
-want to set up your own GitHub repository for it.
   
 ## Requirements
 
