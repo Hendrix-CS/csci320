@@ -241,7 +241,9 @@ This project is very flexible in its requirements. A successful submission will:
 
 ## Submissions
 * Create a **public** GitHub repository for your bare metal game.
-* [Submit the repository URL](https://docs.google.com/forms/d/e/1FAIpQLSdNMxeqYMW7Awk7GFseKOx6E_VWaE2Ft9lg7Fdw6AiH-JxXtw/viewform?usp=sf_link)
+* Post the repository URL to the General channel in the CSCI 320 Teams page by 5pm on Thursday, March 25.
+* Pick four games. Download and play them. Then post reviews of each game in your private Teams channel by 
+  Friday, March 26 at 5 pm.
 
 ## Assessment
 * **Partial**: Meets requirements 1, 2, and 3, and either requirement 4 or requirement 5.
