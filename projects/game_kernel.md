@@ -120,6 +120,28 @@ that you are welcome to use in yours:
 		}
 	}
 	
+## Other configuration issues
+
+To include the other projects from GitHub in your project, add these lines to
+`Cargo.toml`:
+
+	ghost_hunter = {git = "https://github.com/gjf2a/ghost_hunter"}
+	bare_metal_tracer = {git = "https://github.com/gjf2a/bare_metal_tracer"}
+	pluggable_interrupt_template = {git = "https://github.com/gjf2a/pluggable_interrupt_template"}
+	baremetal_game = {git = "https://github.com/scgaskins/baremetal_game"}
+	chicken_invaders = {git = "https://github.com/juliebdick/chicken_invaders"}
+	nom_noms = {git = "https://github.com/cally-cmd/nom_noms"}
+	baremetal_snake = {git = "https://github.com/Haedge/baremetal_snake"}
+	
+To import them into your source file:
+
+	use ghost_hunter::GhostHunterGame;
+	use bare_metal_tracer::TracerGame;
+	use pluggable_interrupt_template::LetterMover;
+	use baremetal_game::game_core::SpaceInvadersGame;
+	use chicken_invaders::Game;
+	use baremetal_snake::MainGame;
+	
 ## Submissions
 * Create a **private** GitHub repository for your webserver program.
 * Paste the repository URL into your Teams channel.
