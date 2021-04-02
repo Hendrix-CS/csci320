@@ -76,7 +76,7 @@ Upon completing this course, our goal is for you to be able to:
 | 3/19 | Fri | Interrupts |  |  |  |
 | 3/22 | Mon | Final Game Demos |  |  | Bare metal game |
 | 3/24 | Wed | Break: no class |  |  |  |
-| 3/26 | Fri | Interrupt-based multitasking |  | Game Kernel |  |
+| 3/26 | Fri | Interrupt-based multitasking |  | [Game Kernel]({{site.baseurl}}/projects/game_kernel) |  |
 | 3/29 | Mon | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 | 3/31 | Wed | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
 | 4/2 | Fri | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
