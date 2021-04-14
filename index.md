@@ -82,7 +82,7 @@ Upon completing this course, our goal is for you to be able to:
 | 4/2 | Fri | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
 | 4/5 | Mon | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
 | 4/7 | Wed | Garbage Collection |  |  |  |
-| 4/9 | Fri | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | Scheduling | Heap |
+| 4/9 | Fri | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Scheduling]({{site.baseurl}}/projects/coop_os) | Heap |
 | 4/12 | Mon | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 | 4/14 | Wed | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
 | 4/16 | Fri | Final projects |  | Project proposal | Scheduling |
