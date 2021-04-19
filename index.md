@@ -156,8 +156,8 @@ grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
   * One of the following:
-    * **Complete** the final project and **Complete** at least 10 other projects.
-	* **Partial** completion of the final project, and **Complete** all 12 other projects.
+    * **Complete** the final project and **Complete** at least 8 other projects.
+	* **Partial** completion of the final project, and **Complete** all 10 other projects.
   * No **Missing** projects
   * Schedule and attend at least three Office Hours meetings
   * Submit a course feedback form
