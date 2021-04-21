@@ -120,9 +120,7 @@ The only policy currently implemented is to run the current process to
 completion. Add `enum` alternatives for the following policies:
 * From [Scheduling: Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf)
   * Round Robin
-* Pick one:
-  * [Multi-Level Feedback Queue](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)
-  * [Lottery](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf)
+* [Multi-Level Feedback Queue](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)
   
 Try out your kernel with your different schedulers. How do they perform?
 Do they work as advertised? Feel free to add additional information to 
