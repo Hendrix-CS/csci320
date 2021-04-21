@@ -118,8 +118,7 @@ In the [provided code](https://github.com/gjf2a/coop_os_starter) is a
 `Policy` type. This `enum` represents possible alternative scheduling policies.
 The only policy currently implemented is to run the current process to 
 completion. Add `enum` alternatives for the following policies:
-* From [Scheduling: Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf)
-  * Round Robin
+* From [Scheduling: Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf): Round Robin
 * [Multi-Level Feedback Queue](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)
   
 Try out your kernel with your different schedulers. How do they perform?
