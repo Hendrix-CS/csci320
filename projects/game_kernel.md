@@ -25,8 +25,9 @@ instructions. The instructions read as follows:
   * `Type 'k' to end a game`
 * Below the instructions is a list of all available games.
 * One game is always highlighted. 
-  * If the user types `s`, the highlighted game
-  will start. 
+  * If the user types `s`, the highlighted game will start. 
+  * Note that starting a game more than once will create distinct processes 
+    running the same game.
   * The highlight is changed by using the up and down arrow keys.
 * When a game is in progress, pressing the Escape key will pause the game
   and return to the starting screen.
@@ -37,6 +38,9 @@ instructions. The instructions read as follows:
   * If the user types `k`, the highlighted game is terminated. Terminated games
     are no longer displayed in the column. All other running games retain
 	their process IDs.
+  * Note that multiple instances of a game may appear in the list. The correct
+    instance should be resumed or terminated on request, without disturbing the
+	other instances.
 	
 ## Design
 

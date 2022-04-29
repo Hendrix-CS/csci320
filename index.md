@@ -18,8 +18,7 @@ Upon completing this course, our goal is for you to be able to:
   * Hard disk and Flash memory through the **file system** abstraction.
   * The Internet through the **TCP socket** abstraction.
 * Write useful programs that:
-  * Deliver operating system services to a user.
-  * Interact directly with the CPU, keyboard, monitor, and RAM.
+  * Interact directly with the CPU, RAM, keyboard, and monitor on behalf of a user.
   * Operate concurrently without errors.
 * Empirically analyze the performance of operating system components.
 * Address cybersecurity issues that arise in these contexts.
@@ -36,70 +35,70 @@ Upon completing this course, our goal is for you to be able to:
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 1/20 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | [Introduction to Operating Systems](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf) | [Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html) |  |
-| 1/22 | Fri | Processes<br>Pipes<br>I/O Redirection | [Processes](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | [Shell Commands, complete]({{site.baseurl}}/projects/shell_commands.html) | Shell Commands, introduction |
-| 1/25 | Mon | Rust<br>File I/O | [Getting Started](https://doc.rust-lang.org/book/ch01-00-getting-started.html)<br>[Programming a Guessing Game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)<br>[Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)<br>[std::fs](https://doc.rust-lang.org/std/fs/index.html) | [Rust Programming 1]({{site.baseurl}}/projects/rust1.html) | Shell Commands, complete |
-| 1/27 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | [Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)<br>[Read trait](https://doc.rust-lang.org/std/io/trait.Read.html)<br>[String in Rust](https://gjf2a.blogspot.com/2017/02/strings-in-rust.html)<br>[BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)<br>[BufRead trait](https://doc.rust-lang.org/std/io/trait.BufRead.html) |  |  |
-| 1/29 | Fri | Rust Collection Types | [Common Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html) |  |  |
-| 2/1 | Mon | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/0.19.1/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | [Rust Programming 2]({{site.baseurl}}/projects/rust2.html) | Rust Programming 1 |
-| 2/3 | Wed | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) |  |  |
-| 2/5 | Fri | Break: no class |  |  |  |
-| 2/8 | Mon | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) |  |  |
-| 2/10 | Wed | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | [Unix Shell]({{site.baseurl}}/projects/rush.html) | Rust Programming 2 |
-| 2/12 | Fri | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html) |  |  |
-| 2/15 | Mon | Review of Unix Command Line<br>Review of Rust |  |  |  |
+| 1/18 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | [Introduction to Operating Systems](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf) | [Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html) |  |
+| 1/20 | Fri | Processes<br>Pipes<br>I/O Redirection | [Processes](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | [Shell Commands, complete]({{site.baseurl}}/projects/shell_commands.html) | Shell Commands, introduction |
+| 1/23 | Mon | Rust<br>File I/O | [Getting Started](https://doc.rust-lang.org/book/ch01-00-getting-started.html)<br>[Programming a Guessing Game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)<br>[Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)<br>[std::fs](https://doc.rust-lang.org/std/fs/index.html) | [Rust Programming 1]({{site.baseurl}}/projects/rust1.html) | Shell Commands, complete |
+| 1/25 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | [Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)<br>[Read trait](https://doc.rust-lang.org/std/io/trait.Read.html)<br>[String in Rust](https://gjf2a.blogspot.com/2017/02/strings-in-rust.html)<br>[BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)<br>[BufRead trait](https://doc.rust-lang.org/std/io/trait.BufRead.html) |  |  |
+| 1/27 | Fri | Rust Collection Types | [Common Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html) |  |  |
+| 1/30 | Mon | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/0.19.1/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | [Rust Programming 2]({{site.baseurl}}/projects/rust2.html) | Rust Programming 1 |
+| 2/1 | Wed | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) |  |  |
+| 2/3 | Fri | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) |  |  |
+| 2/6 | Mon | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | [Unix Shell]({{site.baseurl}}/projects/rush.html) | Rust Programming 2 |
+| 2/8 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html) |  |  |
+| 2/10 | Fri | Review of Unix Command Line<br>Review of Rust |  |  |  |
 
 
 ## Part 2: The Internet
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 2/17 | Wed | The Internet<br>Downloading a web page | [Overview of TCP/IP](https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html)<br>[TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)<br>[Write trait](https://doc.rust-lang.org/std/io/trait.Write.html) | [Webget](https://hendrix-cs.github.io/csci320/projects/webget) | Unix Shell |
-| 2/19 | Fri | Using Transport Layer Security | [Cryptography](http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf) |  |  |
-| 2/22 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) |  |  |
-| 2/24 | Wed | Threads in Rust | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) | [Web server 1]({{site.baseurl}}/projects/webserver1) | Webget |
-| 2/26 | Fri | Locks | [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) |  |  |
-| 3/1 | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
-| 3/3 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 **extended to 3/5** |
+| 2/13 | Mon | The Internet<br>Downloading a web page | [Overview of TCP/IP](https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html)<br>[TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)<br>[Write trait](https://doc.rust-lang.org/std/io/trait.Write.html) | [Webget](https://hendrix-cs.github.io/csci320/projects/webget) | Unix Shell |
+| 2/15 | Wed | Using Transport Layer Security | [Cryptography](http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf) |  |  |
+| 2/17 | Fri | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) |  |  |
+| 2/20 | Mon | Winter Break: No class |
+| 2/22 | Wed | Threads in Rust | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) | [Web server 1]({{site.baseurl}}/projects/webserver1) | Webget |
+| 2/24 | Fri | Locks | [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) |  |  |
+| 2/27 | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
+| 3/1 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 **extended to 3/5** |
 
 
 ## Part 3: The Kernel
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 3/5 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
-| 3/8 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
-| 3/10 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server 2 |
-| 3/12 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
-| 3/15 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
-| 3/17 | Wed | Game Demo Day |  |  | Bare metal game check-in |
-| 3/19 | Fri | Interrupts |  |  |  |
-| 3/22 | Mon | Final Game Demos |  |  | Bare metal game |
-| 3/24 | Wed | Break: no class |  |  |  |
-| 3/26 | Fri | Interrupt-based multitasking |  | [Game Kernel]({{site.baseurl}}/projects/game_kernel) |  |
-| 3/29 | Mon | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
-| 3/31 | Wed | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
-| 4/2 | Fri | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
-| 4/5 | Mon | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
-| 4/7 | Wed | Garbage Collection |  |  |  |
-| 4/9 | Fri | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Scheduling]({{site.baseurl}}/projects/coop_os) | Heap |
-| 4/12 | Mon | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
-| 4/14 | Wed | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
-| 4/16 | Fri | Final projects |  | Project proposal | Scheduling |
-| 4/19 | Mon | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
-| 4/21 | Wed | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | File System | Project Proposal |
-| 4/23 | Fri | Break: no class |  |  |  |
-| 4/26 | Mon | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
-| 4/28 | Wed | Famous OSs |  |  |  |
-| 4/30 | Fri | Wrap-up |  |  | File System |
-| 5/10 | Mon | Final Project Presentations | | | |
+| 3/3 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
+| 3/6 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
+| 3/8 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server 2 |
+| 3/10 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
+| 3/13 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
+| 3/15 | Wed | Game Demo Day |  |  | Bare metal game check-in |
+| 3/17 | Fri | Interrupts |  |  |  |
+| 3/20 | Mon | Spring Break: no class |  |  |  |
+| 3/22 | Wed | Spring Break: no class |  |  |  |
+| 3/24 | Fri | Spring Break: no class |  |  |  |
+| 3/27 | Mon | Final Game Demos |  |  | Bare metal game |
+| 3/29 | Wed | Interrupt-based multitasking |  | [Game Kernel]({{site.baseurl}}/projects/game_kernel) |  |
+| 3/31 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
+| 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
+| 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
+| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
+| 4/10 | Mon | Garbage Collection |  |  |  |
+| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Scheduling]({{site.baseurl}}/projects/coop_os) | Heap |
+| 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
+| 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
+| 4/19 | Wed | Final projects |  | Project proposal | Scheduling |
+| 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
+| 4/24 | Mon | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | File System | Project Proposal |
+| 4/26 | Wed | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
+| 4/28 | Fri | Wrap-up |  |  | File System |
+| 5/5 | Fri | Final Project Presentations | | | |
 
 <hr>
 # <a name="assessment">Assessment</a>
 
 ## <a name="projects">Projects</a>
 
-A total of 12 projects will be assigned throughout the semester; approximately one project 
+A total of 10 projects will be assigned throughout the semester; approximately one project 
 per week. Each submission will be assessed as either **Partial** or **Complete**. The criteria
 for these assessments will be given for each assignment.
 
@@ -142,12 +141,13 @@ two primary options for the final project:
   * Write a short paper describing the program's purpose and the degree to which it fulfills that purpose.
   
 Each student will orally present their final project during the Final Exam period for the 
-course, on Monday, May 10, 2021 from 2-5 pm. 
+course, on Friday, May 5, 2023 from 2-5 pm. 
 
-## <a name="participation">Course Participation</a>
+### <a name="groupwork">In-Class Assignments</a>
 
-* Each student should schedule and attend at least three online Office Hour meetings with the instructor at some point during the semester.
-
+Many class periods will involve in-class assignments. These may involve informal discussion as well as 
+more formal hands-on activities. Each student will be expected to contribute either in the context of a 
+group or the class as a whole.
 
 ## <a name="grading">Specifications Grading</a>
 Each assignment is assessed as **Missing**, **Partial**, or **Complete**. 
@@ -159,36 +159,38 @@ grades are earned based on cumulative assignment outcomes:
     * **Complete** the final project and **Complete** at least 8 other projects.
 	* **Partial** completion of the final project, and **Complete** all 10 other projects.
   * No **Missing** projects
-  * Schedule and attend at least three Office Hours meetings
-  * Submit a course feedback form
+  * Participate actively in at least 90% of in-class assignments.
 * To earn a B in the course, a student will: 
   * One of the following:
     * **Complete** the final project and **Complete** at least four other projects
     * **Partial** completion of the final project, and **Complete** at least eight other projects
   * At most two **Missing** projects
-  * Schedule and attend at least two Office Hours meetings
-  * Submit a course feedback form
+  * Participate actively in at least 80% of in-class assignments.
 * To earn a C in the course, a student will:
   * One of the following:
     * **Complete** the final project and **Complete** at least two other projects
 	* **Partial** completion of the final project, and **Complete** at least four other projects
 	* **Missing** final project, and **Complete** at least eight other projects
   * At most four **Missing** projects
-  * Schedule and attend at least one Office Hours meeting
-  * Submit a course feedback form
+  * Participate actively in at least 70% of in-class assignments.
 * To earn a D in the course, a student will:
   * One of the following:
     * **Complete** the final project, and **Partial** completion of at least four other projects
 	* **Partial** completion of the final project, and **Partial** completion of at least six other projects
 	* **Missing** final project, and **Partial** completion of at least eight other projects
-
+  * Participate actively in at least 50% of in-class assignments.
+  
 ### Revising submitted work
 If a submitted project receives a **Partial** assessment and the student seeks a **Complete** assessment:
 * The student will schedule and attend an Office Hours meeting to discuss the necessary revisions and establish a deadline for their submission.
 * If the student submits the revisions by the agreed deadline, the revised project will receive a **Complete** assessment.
 
 ## <a name="latedays">Late Policy</a>
-If a student needs an extension, the instructor must be notified by email or Teams message by 
-4 pm on the day prior to the due date. This notification email must state the duration of the 
-requested extension. The instructor reserves the right to decline a request for an extension, 
-but the intention is that most requests for extensions will be granted.
+Students in need of an extension should: 
+* Notify the instructor in their Teams channel prior to the deadline. 
+  * The notification message must state the duration of the requested extension.
+* Schedule a meeting with the instructor as close as possible to the missed deadline 
+  to discuss present progress on the assignment. 
+
+The instructor reserves the right to decline a request for an extension, but the intention is that most requests for 
+extensions will be granted if they meet the above criteria.
