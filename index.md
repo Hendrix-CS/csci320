@@ -59,7 +59,7 @@ Upon completing this course, our goal is for you to be able to:
 | 2/22 | Wed | Threads in Rust | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html) | [Web server 1]({{site.baseurl}}/projects/webserver1) | Webget |
 | 2/24 | Fri | Locks | [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) |  |  |
 | 2/27 | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
-| 3/1 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 **extended to 3/5** |
+| 3/1 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 |
 
 
 ## Part 3: The Kernel
