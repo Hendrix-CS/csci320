@@ -155,29 +155,28 @@ Criteria for the latter two categories will be specified for each assignment. Fi
 grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
-  * One of the following:
-    * **Complete** the final project and **Complete** at least 8 other projects.
-	* **Partial** completion of the final project, and **Complete** all 10 other projects.
-  * No **Missing** projects
+  * **Complete** the final project
+  * **Complete** at least 9 out of 10 regular projects, including all 
+    kernel projects; at least **Partially Complete** the remaining project.
   * Participate actively in at least 90% of in-class assignments.
 * To earn a B in the course, a student will: 
   * One of the following:
-    * **Complete** the final project and **Complete** at least four other projects
-    * **Partial** completion of the final project, and **Complete** at least eight other projects
-  * At most two **Missing** projects
+    * **Complete** the final project, **Complete** at least six other projects,
+      including at least two kernel projects, and at least **Partially Complete**
+      two more projects.
+    * **Partial** completion of the final project, **Complete** at least nine other projects, and **Partially Complete** the remaining project.
   * Participate actively in at least 80% of in-class assignments.
 * To earn a C in the course, a student will:
   * One of the following:
-    * **Complete** the final project and **Complete** at least two other projects
-	* **Partial** completion of the final project, and **Complete** at least four other projects
-	* **Missing** final project, and **Complete** at least eight other projects
-  * At most four **Missing** projects
+    * **Complete** the final project and **Complete** at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two more projects.
+    * **Partial** completion of the final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
+    * **Missing** final project, **Complete** at least 9 out of 10 regular projects, including all kernel projects; at least **Partially Complete** the remaining project.
   * Participate actively in at least 70% of in-class assignments.
 * To earn a D in the course, a student will:
   * One of the following:
-    * **Complete** the final project, and **Partial** completion of at least four other projects
-	* **Partial** completion of the final project, and **Partial** completion of at least six other projects
-	* **Missing** final project, and **Partial** completion of at least eight other projects
+    * **Complete** the final project, **Complete** at least two regular projects, and at least **Partially Complete** two more projects
+    * **Partially Complete** the final project and at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two other projects
+    * **Missing** final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
   * Participate actively in at least 50% of in-class assignments.
   
 ### Revising submitted work
