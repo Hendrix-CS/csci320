@@ -64,7 +64,7 @@ Upon completing this course, our goal is for you to be able to:
 | 2/24 | Fri | Locks | [Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf) |  |  |
 |      |
 | 2/27 | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
-| 3/1 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 **extended to 3/5** |
+| 3/1 | Wed | Performance analysis |  | [Web server 2]({{site.baseurl}}/projects/webserver2) | Web server 1 |
 
 
 ## Part 3: The Kernel
@@ -94,7 +94,7 @@ Upon completing this course, our goal is for you to be able to:
 | 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
 |     |
 | 4/10 | Mon | Garbage Collection |  |  |  |
-| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Scheduling]({{site.baseurl}}/projects/coop_os) | Heap |
+| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os) | Heap |
 | 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
@@ -169,29 +169,28 @@ Criteria for the latter two categories will be specified for each assignment. Fi
 grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
-  * One of the following:
-    * **Complete** the final project and **Complete** at least 8 other projects.
-	* **Partial** completion of the final project, and **Complete** all 10 other projects.
-  * No **Missing** projects
+  * **Complete** the final project
+  * **Complete** at least 9 out of 10 regular projects, including all 
+    kernel projects; at least **Partially Complete** the remaining project.
   * Participate actively in at least 90% of in-class assignments.
 * To earn a B in the course, a student will: 
   * One of the following:
-    * **Complete** the final project and **Complete** at least four other projects
-    * **Partial** completion of the final project, and **Complete** at least eight other projects
-  * At most two **Missing** projects
+    * **Complete** the final project, **Complete** at least six other projects,
+      including at least two kernel projects, and at least **Partially Complete**
+      two more projects.
+    * **Partial** completion of the final project, **Complete** at least nine other projects, and **Partially Complete** the remaining project.
   * Participate actively in at least 80% of in-class assignments.
 * To earn a C in the course, a student will:
   * One of the following:
-    * **Complete** the final project and **Complete** at least two other projects
-	* **Partial** completion of the final project, and **Complete** at least four other projects
-	* **Missing** final project, and **Complete** at least eight other projects
-  * At most four **Missing** projects
+    * **Complete** the final project and **Complete** at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two more projects.
+    * **Partial** completion of the final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
+    * **Missing** final project, **Complete** at least 9 out of 10 regular projects, including all kernel projects; at least **Partially Complete** the remaining project.
   * Participate actively in at least 70% of in-class assignments.
 * To earn a D in the course, a student will:
   * One of the following:
-    * **Complete** the final project, and **Partial** completion of at least four other projects
-	* **Partial** completion of the final project, and **Partial** completion of at least six other projects
-	* **Missing** final project, and **Partial** completion of at least eight other projects
+    * **Complete** the final project, **Complete** at least two regular projects, and at least **Partially Complete** two more projects
+    * **Partially Complete** the final project and at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two other projects
+    * **Missing** final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
   * Participate actively in at least 50% of in-class assignments.
   
 ### Revising submitted work
