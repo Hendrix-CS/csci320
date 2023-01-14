@@ -85,25 +85,25 @@ Upon completing this course, our goal is for you to be able to:
 | 3/22 | Wed | Spring Break: no class |  |  |  |
 | 3/24 | Fri | Spring Break: no class |  |  |  |
 |      |
-| 3/27 | Mon | TBA |  |  | |
-| 3/29 | Wed | Interrupt-based multitasking |  | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)-->Bare Metal Programming 2 |  |
+| 3/27 | Mon | TBA |  |Bare Metal Programming 2  | |
+| 3/29 | Wed | Interrupt-based multitasking |  | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)--> |  |
 | 3/31 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 |      |
 | 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
-| 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Bare Metal Programming 2 |
-| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
+| 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | | Bare Metal Programming 2 |
+| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  | Bare Metal Programming 2  |
 |     |
-| 4/10 | Mon | Garbage Collection |  |  |  |
-| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | <!--[Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os)-->Bare Metal Programming 3 | Heap |
+| 4/10 | Mon | Garbage Collection |  | Bare Metal Programming 3 |  |
+| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | <!--[Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os)--> |  |
 | 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
-| 4/19 | Wed | Final projects |  | Project proposal | Scheduling |
-| 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
+| 4/19 | Wed | Final projects |  | Project proposal |  |
+| 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  | Bare Metal Programming 3  |
 |      |
-| 4/24 | Mon | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | File System | Project Proposal |
+| 4/24 | Mon | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) |  | Project Proposal |
 | 4/26 | Wed | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
-| 4/28 | Fri | Wrap-up |  |  | File System |
+| 4/28 | Fri | Wrap-up |  |  |  |
 |      |
 | 5/5 | Fri | Final Project Presentations | | | |
 
