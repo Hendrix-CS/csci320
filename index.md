@@ -74,27 +74,27 @@ Upon completing this course, our goal is for you to be able to:
 | 3/3 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
 |     |
 | 3/6 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
-| 3/8 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server 2 |
+| 3/8 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | <!--[Bare metal game]({{site.baseurl}}/projects/baremetalgame)-->Bare Metal Programming 1 | Web server 2 |
 | 3/10 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
 |      |
 | 3/13 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
-| 3/15 | Wed | Game Demo Day |  |  | Bare metal game check-in |
-| 3/17 | Fri | Interrupts |  |  |  |
+| 3/15 | Wed | Interrupts |  |  |  |
+| 3/17 | Fri | Interrupts |  |  | Bare Metal Programming 1 |
 |      |
 | 3/20 | Mon | Spring Break: no class |  |  |  |
 | 3/22 | Wed | Spring Break: no class |  |  |  |
 | 3/24 | Fri | Spring Break: no class |  |  |  |
 |      |
-| 3/27 | Mon | Final Game Demos |  |  | Bare metal game |
-| 3/29 | Wed | Interrupt-based multitasking |  | [Game Kernel]({{site.baseurl}}/projects/game_kernel) |  |
+| 3/27 | Mon | TBA |  |  | |
+| 3/29 | Wed | Interrupt-based multitasking |  | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)-->Bare Metal Programming 2 |  |
 | 3/31 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 |      |
 | 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
-| 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Game Kernel |
+| 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | Heap | Bare Metal Programming 2 |
 | 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) |  |  |
 |     |
 | 4/10 | Mon | Garbage Collection |  |  |  |
-| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os) | Heap |
+| 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | <!--[Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os)-->Bare Metal Programming 3 | Heap |
 | 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
