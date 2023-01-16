@@ -73,6 +73,9 @@ resources:
   - name: Rust Programming Language
     image: assets/images/rust-logo-blk.svg
     url: https://www.rust-lang.org/
+  - name: Visual Studio Code
+    image: assets/images/vscode.png
+    url: https://code.visualstudio.com
   - name: The Rust Book
     image: assets/images/Rust2018_front.webp
     url: https://doc.rust-lang.org/book/
