@@ -12,7 +12,7 @@ before starting this assignment.
 In this assignment, you will have the opportunity to demonstrate your mastery of
 Unix shell commands. Write a shell command that produces each of the following outputs:
 
-## Part 1: Due Friday, 1/22
+## Part 1: Due Friday, 1/20
 1. Listing of all files in a directory, including "hidden" files.
 2. A long-list of files in a directory, with file sizes in the most appropriate of the following: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte
 3. The first fifteen lines of a file.
@@ -22,7 +22,7 @@ Unix shell commands. Write a shell command that produces each of the following o
 
 [Submit Part 1 Solutions](https://docs.google.com/forms/d/e/1FAIpQLSeCS8Jwi9OSJmfnUQEHCS3GH845gVi2wPY6m-K_DfGU3FXhwg/viewform?usp=sf_link)
 
-## Part 2: Due Monday, 1/25
+## Part 2: Due Monday, 1/23
 1. The five most recently modified files in the current directory.
 2. The five least recently modified files in the current directory.
 3. The number of files in the current directory.
@@ -36,6 +36,6 @@ Unix shell commands. Write a shell command that produces each of the following o
 
 ## Assessment
 * **Partial**: At least 8/14 commands are correct.
-* **Complete**: At least 13/14 commands are correct.
+* **Complete**: 14/14 commands are correct.
 
 ------------------------------------------------------------------------
