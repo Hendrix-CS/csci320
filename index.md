@@ -74,31 +74,31 @@ Upon completing this course, our goal is for you to be able to:
 | 3/3 | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/) |  |  |
 |     |
 | 3/6 | Mon | VGA Buffer | [VGA Buffer](https://os.phil-opp.com/vga-text-mode/) |  |  |
-| 3/8 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | <!--[Bare metal game]({{site.baseurl}}/projects/baremetalgame)-->Bare Metal Programming 1 | Web server 2 |
+| 3/8 | Wed | Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)<br>[Tracer](https://github.com/gjf2a/bare_metal_tracer) | <!--[Bare metal game]({{site.baseurl}}/projects/baremetalgame)-->Kernel Programming 1 | Web server 2 |
 | 3/10 | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
 |      |
 | 3/13 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |  |  |
 | 3/15 | Wed | Interrupts |  |  |  |
-| 3/17 | Fri | Interrupts |  |  | Bare Metal Programming 1 |
+| 3/17 | Fri | Interrupts |  |  | Kernel Programming 1 |
 |      |
 | 3/20 | Mon | Spring Break: no class |  |  |  |
 | 3/22 | Wed | Spring Break: no class |  |  |  |
 | 3/24 | Fri | Spring Break: no class |  |  |  |
 |      |
-| 3/27 | Mon | TBA |  |Bare Metal Programming 2  | |
+| 3/27 | Mon | TBA |  | Kernel Programming 2  | |
 | 3/29 | Wed | Interrupt-based multitasking |  | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)--> |  |
 | 3/31 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 |      |
 | 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
 | 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | | |
-| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | Bare Metal Programming 3  | Bare Metal Programming 2  |
+| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | Kernel Programming 3  | Kernel Programming 2  |
 |     |
 | 4/10 | Mon | Garbage Collection |  | |  |
 | 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | <!--[Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os)--> |  |
 | 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
-| 4/19 | Wed | Final projects |  | Project proposal | Bare Metal Programming 3 |
+| 4/19 | Wed | Final projects |  | Project proposal | Kernel Programming 3 |
 | 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
 |      |
 | 4/24 | Mon | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) |  | Project Proposal |
@@ -112,18 +112,19 @@ Upon completing this course, our goal is for you to be able to:
 
 ## <a name="projects">Projects</a>
 
-A total of 10 projects will be assigned throughout the semester; approximately one project 
-per week. Each submission will be assessed as either **Partial** or **Complete**. The criteria
-for these assessments will be given for each assignment.
+A total of 10 projects will be assigned throughout the semester; approximately one 
+project per week. Each submission will be assessed as either **Partial** or 
+**Complete**. The criteria for these assessments will be given for each assignment.
 
-Each student should have a [GitHub](https://github.com/) account. For each programming project,
-the student should create a **private** GitHub repository to store the project. The student
-should add [Dr. Ferrer](https://github.com/gjf2a) as a contributor to the project. When the 
-project is due, he will download the repository onto his own machine for grading.
+Each student should have a [GitHub](https://github.com/) account. For each 
+programming project, the student should create a **private** GitHub repository to 
+store the project. The student should add [Dr. Ferrer](https://github.com/gjf2a) as 
+a contributor to the project. When the project is due, he will download the 
+repository onto his own machine for grading.
 
 ## <a name="finalproject">Final Project</a>
-Towards the end of the semester, each student will undertake a final project. There are
-two primary options for the final project:
+Towards the end of the semester, each student will undertake a final project. There 
+are two primary options for the final project:
 
 ### Expository Project
 
@@ -141,8 +142,8 @@ two primary options for the final project:
   * The other should be from this list of innovating operating systems:
     - [seL4](https://sel4.systems/)
     - [Redox](https://www.redox-os.org/)
-	- [Fuchsia](https://fuchsia.dev/)
-	- [Theseus](https://github.com/theseus-os/Theseus)
+    - [Fuchsia](https://fuchsia.dev/)
+    - [Theseus](https://github.com/theseus-os/Theseus)
 	
   * Discuss the motivation for creating each operating system.
   * Discuss how each operating system addresses the topics of Virtualization, Concurrency, and Persistence.
@@ -154,56 +155,38 @@ two primary options for the final project:
     * This may include nontrivial extensions to one of our programming projects.
   * Write a short paper describing the program's purpose and the degree to which it fulfills that purpose.
   
-Each student will orally present their final project during the Final Exam period for the 
-course, on Friday, May 5, 2023 from 2-5 pm. 
-
-### <a name="groupwork">In-Class Assignments</a>
-
-Many class periods will involve in-class assignments. These may involve informal discussion as well as 
-more formal hands-on activities. Each student will be expected to contribute either in the context of a 
-group or the class as a whole.
+Each student will orally present their final project during the Final Exam period 
+for the course, on Friday, May 5, 2023 from 2-5 pm. 
 
 ## <a name="grading">Specifications Grading</a>
 Each assignment is assessed as **Missing**, **Partial**, or **Complete**. 
-Criteria for the latter two categories will be specified for each assignment. Final course
-grades are earned based on cumulative assignment outcomes:
+Criteria for the latter two categories will be specified for each assignment. Final course grades are earned based on cumulative assignment outcomes:
 
 * To earn an A in the course, a student will:
   * **Complete** the final project
-  * **Complete** at least 9 out of 10 regular projects, including all 
-    kernel projects; at least **Partially Complete** the remaining project.
-  * Participate actively in at least 90% of in-class assignments.
+  * **Complete** all 10 regular projects
 * To earn a B in the course, a student will: 
   * One of the following:
     * **Complete** the final project, **Complete** at least six other projects,
       including at least two kernel projects, and at least **Partially Complete**
       two more projects.
-    * **Partial** completion of the final project, **Complete** at least nine other projects, and **Partially Complete** the remaining project.
-  * Participate actively in at least 80% of in-class assignments.
+    * **Partial** completion of the final project, **Complete** all 10 regular projects.
 * To earn a C in the course, a student will:
   * One of the following:
     * **Complete** the final project and **Complete** at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two more projects.
     * **Partial** completion of the final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
     * **Missing** final project, **Complete** at least 9 out of 10 regular projects, including all kernel projects; at least **Partially Complete** the remaining project.
-  * Participate actively in at least 70% of in-class assignments.
 * To earn a D in the course, a student will:
   * One of the following:
     * **Complete** the final project, **Complete** at least two regular projects, and at least **Partially Complete** two more projects
     * **Partially Complete** the final project and at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two other projects
     * **Missing** final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
-  * Participate actively in at least 50% of in-class assignments.
   
-### Revising submitted work
-If a submitted project receives a **Partial** assessment and the student seeks a **Complete** assessment:
-* The student will schedule and attend an Office Hours meeting to discuss the necessary revisions and establish a deadline for their submission.
-* If the student submits the revisions by the agreed deadline, the revised project will receive a **Complete** assessment.
-
-## <a name="latedays">Late Policy</a>
-Students in need of an extension should: 
-* Notify the instructor in their Teams channel prior to the deadline. 
-  * The notification message must state the duration of the requested extension.
-* Schedule a meeting with the instructor as close as possible to the missed deadline 
-  to discuss present progress on the assignment. 
-
-The instructor reserves the right to decline a request for an extension, but the intention is that most requests for 
-extensions will be granted if they meet the above criteria.
+## Tokens
+* Each student starts the semester with four **tokens**. 
+  * A student may spend one token in order to:
+    * Submit a project after the posted deadline.
+    * Submit a revised version of a project in the event the submission receives
+      a **Partial** assessment.
+* Scheduling and attending an [office hours meeting](https://drferrer.youcanbook.me) 
+  with Dr. Ferrer earns one additional token.
