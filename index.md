@@ -190,3 +190,5 @@ Criteria for the latter two categories will be specified for each assignment. Fi
       a **Partial** assessment.
 * Scheduling and attending an [office hours meeting](https://drferrer.youcanbook.me) 
   with Dr. Ferrer earns one additional token.
+* **Note**: All late submissions/revisions must be received before 5 pm on Tuesday, 
+  May 9, the last day of the semester.
