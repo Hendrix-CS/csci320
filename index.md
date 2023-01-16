@@ -105,7 +105,7 @@ Upon completing this course, our goal is for you to be able to:
 | 4/26 | Wed | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
 | 4/28 | Fri | Wrap-up |  |  | File System |
 |      |
-| 5/5 | Fri | Final Project Presentations | | | |
+| 5/5  | Fri 2-5 pm | Final Project Presentations | | | |
 
 <hr>
 # <a name="assessment">Assessment</a>
