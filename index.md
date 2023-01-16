@@ -182,8 +182,9 @@ Criteria for the latter two categories will be specified for each assignment. Fi
     * **Partially Complete** the final project and at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two other projects
     * **Missing** final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
   
-## Tokens
-* Each student starts the semester with four **tokens**. 
+## <a name="tokens">Tokens</a>
+* Each student starts the semester with three **tokens**. 
+  * Send Dr. Ferrer a message on Teams to spend a token.
   * A student may spend one token in order to:
     * Submit a project after the posted deadline.
     * Submit a revised version of a project in the event the submission receives

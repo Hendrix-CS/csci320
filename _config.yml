@@ -47,8 +47,8 @@ navigation:
       url: '#participation'
     - page: Specifications Grading
       url: '#grading'
-    - page: Late Days
-      url: '#latedays'
+    - page: Tokens
+      url: '#tokens'
   - page: Commitments
     url: '#commitments'
 
