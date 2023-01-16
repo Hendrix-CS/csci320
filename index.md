@@ -184,10 +184,10 @@ Criteria for the latter two categories will be specified for each assignment. Fi
   
 ## <a name="tokens">Tokens</a>
 * Each student starts the semester with three **tokens**. 
-  * Send Dr. Ferrer a message on Teams to spend a token.
-  * A student may spend one token in order to:
-    * Submit a project after the posted deadline.
-    * Submit a revised version of a project in the event the submission receives
+* Send Dr. Ferrer a message on Teams to spend a token.
+* A student may spend one token in order to:
+  * Submit a project after the posted deadline.
+  * Submit a revised version of a project in the event the submission receives
       a **Partial** assessment.
 * Scheduling and attending an [office hours meeting](https://drferrer.youcanbook.me) 
   with Dr. Ferrer earns one additional token.
