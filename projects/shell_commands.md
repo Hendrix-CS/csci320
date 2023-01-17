@@ -7,7 +7,7 @@ worktitle: Shell Commands
 
 **Note:** If you are using Microsoft Windows, install 
 [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-before starting this assignment.
+before starting this assignment. I recommend [enabling copy-and-paste](https://devblogs.microsoft.com/commandline/copy-and-paste-arrives-for-linuxwsl-consoles/).
 
 In this assignment, you will have the opportunity to demonstrate your mastery of
 Unix shell commands. Write a shell command that produces each of the following outputs:
