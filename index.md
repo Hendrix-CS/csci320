@@ -29,6 +29,8 @@ Upon completing this course, our goal is for you to be able to:
 
 <hr>
 
+# NEW: [Interactive Rust Book](https://rust-book.cs.brown.edu/)
+
 # <a name="calendar">Calendar</a>
 
 ## Part 1: The Command Line
