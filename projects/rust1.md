@@ -17,7 +17,7 @@ Install Rust:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Install [Visual Studio Code](https://code.visualstudio.com/). Click on the Extensions icon: <img src="assets/images/ExtensionsIcon.png"></img>
+Install [Visual Studio Code](https://code.visualstudio.com/). Click on the Extensions icon: ![Extensions Icon]("assets/images/ExtensionsIcon.PNG")
 
 Install:
 * `rust-analyzer`
@@ -26,7 +26,7 @@ Install:
 * `Even Better TOML`
 * (On WSL) `Remote Development`
 
-You can open a Unix shell within Visual Studio Code with `CTRL-\``.
+You can open a Unix shell within Visual Studio Code with `` CTRL-` ``.
 
 ## Creating a Cargo Project
 
