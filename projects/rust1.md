@@ -17,7 +17,7 @@ Install Rust:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Install [Visual Studio Code](https://code.visualstudio.com/). Click on the Extensions icon: ![Extensions Icon]("assets/images/ExtensionsIcon.PNG")
+Install [Visual Studio Code](https://code.visualstudio.com/). Click on the Extensions icon: ![Extensions Icon](/"{{site.baseurl}}/assets/images/ExtensionsIcon.PNG)
 
 Install:
 * `rust-analyzer`
