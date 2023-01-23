@@ -9,10 +9,11 @@ worktitle: Creating Shell Commands Using Rust
 
 If using Windows Subsystem for Linux (WSL), start with:
 ```
+sudo apt-get update
 sudo apt install build-essential
 ```
 
-Install Rust:
+Then install Rust:
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
