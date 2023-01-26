@@ -1,0 +1,40 @@
+Grade is out of 14 points. 
+* 0-7 points:  Not complete
+* 8-13 points: Partially complete
+* 14 points:   Complete
+
+Score: 9. Good job. Partially complete.
+
+Each question with an incorrect answer is included with your solution and
+a brief explanation of the problem with the submitted solution.
+
+You may spend a token to resubmit your solutions if you wish to improve your
+grade. You are invited to ask questions about your solution prior to submitting
+a revision either via chat or in office hours. Resubmit by replying to this 
+message with an improved solution for each problem that you wish to 
+re-attempt.
+
+"The first fifteen lines of a file."
+$ ls | head -15 filename
+* Works, but the ls is gratuitious
+"The last fifteen lines of a file."
+$ ls | tail -15 filename
+* Works, but the ls is gratuitious
+"Every line in a file containing the word "red"."
+$ ls | grep -i 'red' filename
+* Works, but the ls is gratuitious
+"The five most recently modified files in the current directory."
+$ ls | -mtime head -5
+* Error
+"The five least recently modified files in the current directory."
+$  ls | -mtime tail -5
+* Error
+"All Python files in the current directory that import the math module. Do not include the text from the file, only the filename."
+$ find ./ -name "*.py" | grep "import math"
+* Not quite
+"All files in the current directory, sorted from the largest number of lines to the smallest. Include the number of lines in the output."
+$ find ./ type -f -exec wc -l | sort -rn 
+* Error
+"All files in the current directory, sorted from the smallest number of lines to the largest. Include the number of lines in the output."
+$ find ./ type -f -exec wc -m | sort -n
+* Error

@@ -1,0 +1,19 @@
+Grade is out of 14 points. 
+* 0-7 points:  Not complete
+* 8-13 points: Partially complete
+* 14 points:   Complete
+
+Score: 13. Good job. Partially complete.
+
+Each question with an incorrect answer is included with your solution and
+a brief explanation of the problem with the submitted solution.
+
+You may spend a token to resubmit your solutions if you wish to improve your
+grade. You are invited to ask questions about your solution prior to submitting
+a revision either via chat or in office hours. Resubmit by replying to this 
+message with an improved solution for each problem that you wish to 
+re-attempt.
+
+"A long-list of files in a directory, with file sizes in the most appropriate of the following: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte"
+$ ls -la
+* Does not break down the sizes correctly.

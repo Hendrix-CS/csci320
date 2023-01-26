@@ -1,0 +1,22 @@
+Agahozo,1,1,1,1,1,1,1,1,1,Error,Error,Error,Error,Error
+Aishman,1,1,1,1,1,1,1,1,1,Error,Error,1,Doesn't use lines of text,Doesn't use lines of text
+Allen,1,1,1,1,1,1,1,1,1,Incorrect,1,1,1,1
+Brock,Error,~ l causes error; otherwise ok,1,1,1,1,Only shows four files,A bit too clever - one reversal too many,1,1,1,1,1,1
+Campbell,1,1,1,1,1,1,1,1,Not all unix files are *.*,1,1,1,1,1
+Coleman,1,1,No pipe needed - use filename,No pipe needed - use filename,No pipe needed - use filename,1,1,1,Incomplete,Incorrect,Incorrect,Blank,Incorrect,Incorrect
+Dusenge,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+England,1,1,1,1,1,1,1,1,Not quite!,1,Blank,Blank,1,1
+Escajeda,1,1,1,1,1,1,Only shows four files,1,1,1,1,1,1,1
+Fuller,1,Does not break down the sizes correctly.,1,1,1,1,1,1,1,"Right idea, but doesn't quite work.",1,1,No sorting,No sorting
+Hoopchuk,1,1,1,1,1,1,Only shows four files,1,Error,1,1,1,1,1
+Hopkins,1,1,Lower case; dash joined with parameter,Lower case; dash joined with parameter,"Need filename, no dash",Incomplete,Error,Error,Error,1,Error,Need to filter for Python,Error,Error
+Johnson,Doesn't list hidden files,Doesn't break down file sizes properly,Not looking for a directory listing - need a specific file,Not looking for a directory listing - need a specific file,Does not work.,1,Only shows four files,1,1,Doesn't work,The grep by itself suffices - the other stuff just causes errors,The * kills it,1,1
+Khounborine,1,1,1,1,1,1,1,1,"Goes too deep, I think. Far more complicated than necessary.",1,1,1,Not just python files,Not just python files
+Mariza,1,Does not break down the sizes correctly.,1,1,1,1,1,1,1,1,1,1,1,1
+Mason,1,Not a long-list,1,1,1,1,1,1,1,1,1,Not quite...,Not just *.txt,Not just *.txt
+Moslander,1,1,1,1,1,1,Only shows four files,Only shows four files,1,Subtle error on recursive directories,Similar error as previous problem,Can't pipe top,Can't wc a directory,Can't wc a directory
+Ntambara,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+Reid,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+Stoyanow,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+Thomas,1,No file sizes listed,Specify 15 lines,Specify 15 lines,"No reference to ""red"", and needlessly complex",1,Only shows four files,1,1,Not quite,1,1,1,1
+Wright,1,1,"Works, but the ls is gratuitious","Works, but the ls is gratuitious","Works, but the ls is gratuitious",1,Error,Error,1,1,Not quite,1,Error,Error

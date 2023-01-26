@@ -1,0 +1,31 @@
+Grade is out of 14 points. 
+* 0-7 points:  Not complete
+* 8-13 points: Partially complete
+* 14 points:   Complete
+
+Score: 9. Good job. Partially complete.
+
+Each question with an incorrect answer is included with your solution and
+a brief explanation of the problem with the submitted solution.
+
+You may spend a token to resubmit your solutions if you wish to improve your
+grade. You are invited to ask questions about your solution prior to submitting
+a revision either via chat or in office hours. Resubmit by replying to this 
+message with an improved solution for each problem that you wish to 
+re-attempt.
+
+"All Python files in the current directory or any of its recursive subdirectories."
+$ shopt -s nullglob for i in /scs/sp[1-4].py; do     python3.7 "$i" done
+* Error
+"All Python files in the current directory that import the math module. Do not include the text from the file, only the filename."
+$ import sys sys.path.append('/ufs/guido/lib/python')
+* Error
+"All currently executing Python programs."
+$ # Importing required module import os  os.system('pwd')
+* Error
+"All files in the current directory, sorted from the largest number of lines to the smallest. Include the number of lines in the output."
+$ find filepath -type f -exec wc -l {} + | sort -rn
+* Error
+"All files in the current directory, sorted from the smallest number of lines to the largest. Include the number of lines in the output."
+$ for file in ./*; do [ -f "$file" ] && wc -l "$file"; done | sort -n
+* Error

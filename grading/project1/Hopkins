@@ -1,0 +1,49 @@
+Grade is out of 14 points. 
+* 0-7 points:  Not complete
+* 8-13 points: Partially complete
+* 14 points:   Complete
+
+Score: 3. Needs improvement. Not complete.
+
+Each question with an incorrect answer is included with your solution and
+a brief explanation of the problem with the submitted solution.
+
+You may spend a token to resubmit your solutions if you wish to improve your
+grade. You are invited to ask questions about your solution prior to submitting
+a revision either via chat or in office hours. Resubmit by replying to this 
+message with an improved solution for each problem that you wish to 
+re-attempt.
+
+"The first fifteen lines of a file."
+$ Head - 15
+* Lower case; dash joined with parameter
+"The last fifteen lines of a file."
+$ Tail - 15
+* Lower case; dash joined with parameter
+"Every line in a file containing the word "red"."
+$ Grep- red
+* Need filename, no dash
+"All files in a directory ending with "txt"."
+$ Grep - .txt
+* Incomplete
+"The five most recently modified files in the current directory."
+$ lst-5
+* Error
+"The five least recently modified files in the current directory."
+$ lst | tail - 5
+* Error
+"The number of files in the current directory."
+$ ls-1
+* Error
+"All Python files in the current directory that import the math module. Do not include the text from the file, only the filename."
+$ ls *py math
+* Error
+"All currently executing Python programs."
+$ ps aux
+* Need to filter for Python
+"All files in the current directory, sorted from the largest number of lines to the smallest. Include the number of lines in the output."
+$ grep -rcl 
+* Error
+"All files in the current directory, sorted from the smallest number of lines to the largest. Include the number of lines in the output."
+$ grep-rlc 
+* Error
