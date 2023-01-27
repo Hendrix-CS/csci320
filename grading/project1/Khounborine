@@ -15,11 +15,11 @@ message with an improved solution for each problem that you wish to
 re-attempt.
 
 "The number of files in the current directory."
-$ head -15 TEXTFILENAMEHERE
+$ find . -maxdepth 1 -type f | wc -l
 * Goes too deep, I think. Far more complicated than necessary.
 "All files in the current directory, sorted from the largest number of lines to the smallest. Include the number of lines in the output."
-$ ls -ltc | head -6
+$ wc -l *.py | sort -r
 * Not just python files
 "All files in the current directory, sorted from the smallest number of lines to the largest. Include the number of lines in the output."
-$ ls -ltc | tail -5
+$ wc -c *.py | sort -s
 * Not just python files
