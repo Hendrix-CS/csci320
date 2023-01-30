@@ -18,8 +18,8 @@ Implement the following shell command-line interpreter:
   * Execute any other command the user types by spawning a new process:
     * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml`. 
 	* Use [fork](https://docs.rs/nix/0.26.2/nix/unistd/fn.fork.html) to create the child process.
-	* Within the child process, use [execvp](https://docs.rs/nix/0.19.1/nix/unistd/fn.execvp.html) to execute the command.
-	* Within the parent process, use [waitpid](https://docs.rs/nix/0.19.1/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
+	* Within the child process, use [execvp](https://docs.rs/nix/0.26.2/nix/unistd/fn.execvp.html) to execute the command.
+	* Within the parent process, use [waitpid](https://docs.rs/nix/0.26.2/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
 * The `vssh` assignment was adapted from [materials](http://rust-class.org/pages/ps2.html) developed by [David Evans](http://www.cs.virginia.edu/~evans/) at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
 
 Here is an example execution of `vssh`:
