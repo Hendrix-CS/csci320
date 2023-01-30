@@ -55,6 +55,13 @@ fn externalize(command: &str) -> Box<[CString]> {
 }
 ```
 
+To access these system calls, be sure to include the following crates
+in `Cargo.toml`:
+```
+nix = "0.26.2"
+libc = "0.2.139"
+```
+
 ## Submissions
 * Create a separate **private** GitHub repository for each of these programs.
 * [Submit GitHub URLs](https://docs.google.com/forms/d/e/1FAIpQLSee88rfIgOzg1MsoFPNPBncW76kfVXSu8eYElAgpI9WgLsiLg/viewform?usp=sf_link)
