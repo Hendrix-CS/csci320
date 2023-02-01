@@ -47,11 +47,10 @@ The `execvp` system call requires the command to be formatted as a fixed-size ar
 below will perform this conversion for you:
 
 ```
-fn externalize(command: &str) -> Box<[CString]> {
-    let converted = command.split_whitespace()
+fn externalize(command: &str) -> Vec<CString> {
+    command.split_whitespace()
         .map(|s| CString::new(s).unwrap())
-        .collect::<Vec<_>>();
-    converted.into_boxed_slice()
+        .collect()
 }
 ```
 
