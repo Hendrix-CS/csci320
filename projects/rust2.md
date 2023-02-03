@@ -16,7 +16,8 @@ Implement the following shell command-line interpreter:
   * If the user types `cd [dir]`, change [current working directory](https://doc.rust-lang.org/std/env/fn.set_current_dir.html) accordingly.
   * If the user types a blank line, ignore it and display the prompt once again.
   * Execute any other command the user types by spawning a new process:
-    * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml`. 
+    * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml` using the following line under `[dependencies]`:
+      * `nix = {version = "0.26.2", features = ["process"]}`
 	* Use [fork](https://docs.rs/nix/0.26.2/nix/unistd/fn.fork.html) to create the child process.
 	* Within the child process, use [execvp](https://docs.rs/nix/0.26.2/nix/unistd/fn.execvp.html) to execute the command.
 	* Within the parent process, use [waitpid](https://docs.rs/nix/0.26.2/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
@@ -55,16 +56,15 @@ fn externalize(command: &str) -> Box<[CString]> {
 }
 ```
 
-To access these system calls, be sure to include the following crates
-in `Cargo.toml`:
-```
-nix = "0.26.2"
-libc = "0.2.139"
-```
+If the compiler requests a parameterized type for `execvp`, use `CString`. 
 
 ## Submissions
-* Create a separate **private** GitHub repository for each of these programs.
-* [Submit GitHub URLs](https://docs.google.com/forms/d/e/1FAIpQLSee88rfIgOzg1MsoFPNPBncW76kfVXSu8eYElAgpI9WgLsiLg/viewform?usp=sf_link)
+* You may place your files in the GitHub repository you used for the 
+  previous project, or you can create a new one for this project. Make
+  sure your repository is private, and that you add the instructor
+  as a collaborator.
+* Post the GitHub URL you would like me to examine in your private
+  channel of the CSCI 320 Team.
 
 ## Assessment
 * **Partial**: Correctly complete either `vssh` or both of `findtext` and `order`.
