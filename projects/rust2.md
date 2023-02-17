@@ -10,7 +10,7 @@ Implement the following shell commands as Rust programs:
 * `order`: Works like `cat`, except the output lines must be sorted before being output. All lines from all files will be mixed together and then sorted. If the "-r" command-line argument is provided, they should be sorted in reverse order.
 
 Implement the following shell command-line interpreter:
-* `vssh`, the Very Simple SHell: 
+* `vssh1`, the Very Simple SHell, version 1: 
   * Displays the [current working directory](https://doc.rust-lang.org/std/env/fn.current_dir.html) while awaiting user input.
   * If the user types `exit`, the program ends.
   * If the user types `cd [dir]`, change [current working directory](https://doc.rust-lang.org/std/env/fn.set_current_dir.html) accordingly.
@@ -21,29 +21,29 @@ Implement the following shell command-line interpreter:
 	* Use [fork](https://docs.rs/nix/0.26.2/nix/unistd/fn.fork.html) to create the child process.
 	* Within the child process, use [execvp](https://docs.rs/nix/0.26.2/nix/unistd/fn.execvp.html) to execute the command.
 	* Within the parent process, use [waitpid](https://docs.rs/nix/0.26.2/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
-  * `vssh` **should not panic**. Be sure to explicitly handle every possible error.  
+  * `vssh1` **should not panic**. Be sure to explicitly handle every possible error.  
   * There is no need to implement pipes (`|`) or input/output redirection (`<` 
     and `>`). That is a topic for the next project.
-* The `vssh` assignment was adapted from [materials](http://rust-class.org/pages/ps2.html) developed by [David Evans](http://www.cs.virginia.edu/~evans/) at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
+* The `vssh1` assignment was adapted from [materials](http://rust-class.org/pages/ps2.html) developed by [David Evans](http://www.cs.virginia.edu/~evans/) at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
 
-Here is an example execution of `vssh`:
+Here is an example execution of `vssh1`:
 
 ```
-gjf2a@18837FDRL:/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cargo run
-   Compiling vssh v0.1.0 (/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh)   
-   Finished dev [unoptimized + debuginfo] target(s) in 1.89s                                    
-   Running `target/debug/vssh`                                                               
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cd src                   
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ grep fn main.rs     
-fn main() {                                                                             
-fn get_input(prompt: &str) -> String {                                                     
-fn run(command: &str) {                                                            
-fn externalize(command: &str) -> Box<[CString]> {                 
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cd ..
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ ls        
-Cargo.lock  Cargo.toml  src  target  vssh.iml                           
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ exit 
-gjf2a@18837FDRL:/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$   
+gjf2a@20003LPUX:~/solutions320$ cargo run --bin vssh1
+   Compiling solutions320 v0.1.0 (/home/gjf2a/solutions320)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.75s
+     Running `target/debug/vssh1`
+/home/gjf2a/solutions320$ cd src/bin
+/home/gjf2a/solutions320/src/bin$ grep fn vssh1.rs
+fn main() {
+fn process_next_line() -> anyhow::Result<Status> {
+fn run_command(command: &str) -> anyhow::Result<()> {
+fn externalize(command: &str) -> Vec<CString> {
+/home/gjf2a/solutions320/src/bin$ cd ..
+/home/gjf2a/solutions320/src$ cd ..
+/home/gjf2a/solutions320$ ls
+Cargo.lock  Cargo.toml  grep_test.out  src  target  toml.out
+/home/gjf2a/solutions320$ exit
 ```
 
 The `execvp` system call requires the command to be formatted as a fixed-size array of 
@@ -69,7 +69,7 @@ If the compiler requests a parameterized type for `execvp`, use `CString`.
   channel of the CSCI 320 Team.
 
 ## Assessment
-* **Partial**: Correctly complete either `vssh` or both of `findtext` and `order`.
+* **Partial**: Correctly complete either `vssh1` or both of `findtext` and `order`.
 * **Complete**: All three programs correctly completed.
 
 ------------------------------------------------------------------------

@@ -5,7 +5,9 @@ num: 4
 worktitle: Unix Shell
 ---
 
-Enhance [vssh]({{site.baseurl}}/projects/rust2.html) as follows:
+Create a new version of [vssh1]({{site.baseurl}}/projects/rust2.html) 
+that is enhanced in the following ways. This new version should be a 
+separate executable called `vssh2`.
 1. If the line ends with the `&` symbol, it should run in the background. That is, your shell should not wait for it 
 to terminate; the command line should immediately return. Your shell should print the PID of the process, so that 
 the user may later manage it as needed. This is typically used for long-running programs that perform a lot of 
@@ -22,49 +24,49 @@ the command should abort.
 
 ## Example Execution
 ```
-gjf2a@18837FDRL:/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cargo run
-  Finished dev [unoptimized + debuginfo] target(s) in 0.06s
-   Running `target/debug/vssh`
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ ls -l | grep Cargo | sort
--rwxrwxrwx 1 gjf2a gjf2a  240 Jan 14 22:40 Cargo.toml
--rwxrwxrwx 1 gjf2a gjf2a 2088 Jan 14 22:40 Cargo.lock
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ ls -l | grep Cargo > output.txt
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cat < output.txt
--rwxrwxrwx 1 gjf2a gjf2a 2088 Jan 14 22:40 Cargo.lock
--rwxrwxrwx 1 gjf2a gjf2a  240 Jan 14 22:40 Cargo.toml
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ ls -l
-total 4
--rwxrwxrwx 1 gjf2a gjf2a 2088 Jan 14 22:40 Cargo.lock
--rwxrwxrwx 1 gjf2a gjf2a  240 Jan 14 22:40 Cargo.toml
--rwxrwxrwx 1 gjf2a gjf2a  108 Jan 16 00:14 output.txt
--rwxrwxrwx 1 gjf2a gjf2a  491 Jan 14 22:40 vssh.iml
-drwxrwxrwx 1 gjf2a gjf2a  512 Jan 15 23:55 src
-drwxrwxrwx 1 gjf2a gjf2a  512 Jan 14 23:47 target
--rwxrwxrwx 1 gjf2a gjf2a   50 Jan 15 00:24 test.out
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ ls -l &
-child in background: 12817
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ total 4
--rwxrwxrwx 1 gjf2a gjf2a 2088 Jan 14 22:40 Cargo.lock
--rwxrwxrwx 1 gjf2a gjf2a  240 Jan 14 22:40 Cargo.toml
--rwxrwxrwx 1 gjf2a gjf2a  108 Jan 16 00:14 output.txt
--rwxrwxrwx 1 gjf2a gjf2a  491 Jan 14 22:40 vssh.iml
-drwxrwxrwx 1 gjf2a gjf2a  512 Jan 15 23:55 src
-drwxrwxrwx 1 gjf2a gjf2a  512 Jan 14 23:47 target
--rwxrwxrwx 1 gjf2a gjf2a   50 Jan 15 00:24 test.out
-
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cd src
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ grep fn main.rs | sort
-    fn new(line: &str) -> Self {
-    fn run(&self) {
-    fn run_pipeline(&self) {
-fn execute(command: &str, output_descriptor: i32) {
-fn externalize(command: &str) -> Box<[CString]> {
-fn get_input(prompt: &str) -> String {
+/home/gjf2a/solutions320$ ls -l | grep Cargo | sort
+-rw-r--r-- 1 gjf2a gjf2a  262 Feb 12 12:31 Cargo.toml
+-rw-r--r-- 1 gjf2a gjf2a 5264 Feb 12 12:31 Cargo.lock
+/home/gjf2a/solutions320$ ls -l | grep Cargo > output.txt
+/home/gjf2a/solutions320$ cat < output.txt
+-rw-r--r-- 1 gjf2a gjf2a 5264 Feb 12 12:31 Cargo.lock
+-rw-r--r-- 1 gjf2a gjf2a  262 Feb 12 12:31 Cargo.toml
+/home/gjf2a/solutions320$ ls -l
+total 32
+-rw-r--r-- 1 gjf2a gjf2a 5264 Feb 12 12:31 Cargo.lock
+-rw-r--r-- 1 gjf2a gjf2a  262 Feb 12 12:31 Cargo.toml
+-rw------- 1 gjf2a gjf2a  108 Feb 11 10:21 grep_test.out
+-rw------- 1 gjf2a gjf2a  108 Feb 15 09:08 output.txt
+drwxr-xr-x 3 gjf2a gjf2a 4096 Feb 10 13:21 src
+drwxr-xr-x 3 gjf2a gjf2a 4096 Feb 10 13:21 target
+-rw------- 1 gjf2a gjf2a  106 Feb 11 10:22 toml.out
+/home/gjf2a/solutions320$ ls -l &
+Starting background process 1871
+/home/gjf2a/solutions320$ total 32
+-rw-r--r-- 1 gjf2a gjf2a 5264 Feb 12 12:31 Cargo.lock
+-rw-r--r-- 1 gjf2a gjf2a  262 Feb 12 12:31 Cargo.toml
+-rw------- 1 gjf2a gjf2a  108 Feb 11 10:21 grep_test.out
+-rw------- 1 gjf2a gjf2a  108 Feb 15 09:08 output.txt
+drwxr-xr-x 3 gjf2a gjf2a 4096 Feb 10 13:21 src
+drwxr-xr-x 3 gjf2a gjf2a 4096 Feb 10 13:21 target
+-rw------- 1 gjf2a gjf2a  106 Feb 11 10:22 toml.out
+cd src
+/home/gjf2a/solutions320/src$ cd bin
+/home/gjf2a/solutions320/src/bin$ grep fn vssh2.rs | sort
+    fn default() -> Self {
+    fn execute_pipeline(&self) -> anyhow::Result<()> {
+    fn final_input_fd(&self) -> anyhow::Result<i32> {
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+    fn initial_output_fd(&self) -> anyhow::Result<i32> {
+fn disassemble_redirect(pipes: &mut Vec<String>, i: usize, redirector: char) -> Option<String> {
+fn execute(cmd: &str) {
+fn externalize(command: &str) -> Vec<CString> {
 fn main() {
-fn pipeline_stage(command: &str, out: i32) -> i32 {	    
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cat < main.rs | sort | tail -8 > eight.out
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cat eight.out                          
-use std::io::{stdin, stdout, Write};
+fn process_next_line() -> anyhow::Result<Status> {
+fn run_command(command: &str) -> anyhow::Result<()> {
+fn run_stage(cmd: &str, output_fd: i32) -> anyhow::Result<i32> {
+/home/gjf2a/solutions320/src/bin$ cat < vssh2.rs | sort | tail -8 > eight.out
+/home/gjf2a/solutions320/src/bin$ cat eight.out
 }
 }
 }
@@ -72,11 +74,11 @@ use std::io::{stdin, stdout, Write};
 }
 }
 }
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh/src$ cd ..
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ cat < Cargo.toml > toml2.out
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ diff Cargo.toml toml2.out
-/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$ exit 
-gjf2a@18837FDRL:/mnt/c/Users/ferrer/Documents/Courses/2020_2S/CSCI320/Solutions/vssh$
+}
+/home/gjf2a/solutions320/src/bin$ cd ../..
+/home/gjf2a/solutions320$ cat < Cargo.toml > toml2.out
+/home/gjf2a/solutions320$ diff Cargo.toml toml2.out 
+/home/gjf2a/solutions320$ exit
 ```
 
 ## Design Hints
