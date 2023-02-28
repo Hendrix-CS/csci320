@@ -44,7 +44,7 @@ Refine your program as follows:
   connection. Even after it finishes its transmission, the `read()` will still block,
   waiting for more data.  Since the `http` protocol specifies that a client's message ends with
   the character sequence `\r\n\r\n`, once the accumulated message 
-  [ends with](https://doc.rust-lang.org/std/string/struct.String.html#method.ends_with)
+  [contains](https://doc.rust-lang.org/std/string/struct.String.html#method.contains)
   that sequence, the loop can end. As some clients end with `\n\n`, the `http`
   specification allows servers to end with that sequence too. 
 * It should then print the message it received.
