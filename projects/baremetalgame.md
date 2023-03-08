@@ -28,10 +28,6 @@ occurs, it notifies the CPU by signaling an interrupt. The CPU responds to the i
 of whatever code it is running and running the code designated for handling the interrupt. Naturally, 
 interrupt-handling code should complete as quickly as possible so that the CPU can resume normal execution.
 
-This project will be very different in flavor, because **all** of the code you write will be executed by 
-interrupt handlers. You will create two interrupt handlers for this project:
-* Your **keyboard interrupt handler** will update the game based on player input.
-* Your **timer interrupt handler** will update the game based on time-dependent gameplay elements of your design.
 
 ## Setup
 
@@ -44,7 +40,7 @@ the [Pluggable Interrupt Template](https://github.com/gjf2a/pluggable_interrupt_
 project. In order to build the project, you'll also need to install:
 * [Qemu](https://www.qemu.org/)
 * Nightly Rust:
-  * `rustup default nightly`
+  * `rustup override set nightly`
 * `llvm-tools-preview`:
   * `rustup component add llvm-tools-preview`
 * The [bootimage](https://github.com/rust-osdev/bootimage) tool:
@@ -64,14 +60,11 @@ Here is its [`main.rs`](https://github.com/gjf2a/pluggable_interrupt_template/bl
 #![no_std]
 #![no_main]
 
-use lazy_static::lazy_static;
-use spin::Mutex;
-use pc_keyboard::{DecodedKey, KeyCode};
+use pc_keyboard::DecodedKey;
 use pluggable_interrupt_os::HandlerTable;
 use pluggable_interrupt_os::vga_buffer::clear_screen;
 use pluggable_interrupt_template::LetterMover;
 use crossbeam::atomic::AtomicCell;
-use pluggable_interrupt_os::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
@@ -79,21 +72,31 @@ pub extern "C" fn _start() -> ! {
         .keyboard(key)
         .timer(tick)
         .startup(startup)
+        .cpu_loop(cpu_loop)
         .start()
 }
 
-lazy_static! {
-    static ref LETTERS: Mutex<LetterMover> = Mutex::new(LetterMover::new());
-    static ref LAST_KEY: AtomicCell<Option<DecodedKey>> = AtomicCell::new(None);
+static LAST_KEY: AtomicCell<Option<DecodedKey>> = AtomicCell::new(None);
+static TICKS: AtomicCell<usize> = AtomicCell::new(0);
+
+fn cpu_loop() -> ! {
+    let mut kernel = LetterMover::new();
+    let mut last_tick = 0;
+    loop {
+        if let Some(key) = LAST_KEY.load() {
+            LAST_KEY.store(None);
+            kernel.key(key);
+        }
+        let current_tick = TICKS.load();
+        if current_tick > last_tick {
+            last_tick = current_tick;
+            kernel.tick();
+        }
+    }
 }
 
 fn tick() {
-    let mut letters = LETTERS.lock();
-    match LAST_KEY.swap(None) {
-        None => {}
-        Some(key) => letters.key(key)
-    }
-    letters.tick();
+    TICKS.fetch_add(1);
 }
 
 fn key(key: DecodedKey) {
@@ -107,23 +110,30 @@ fn startup() {
 
 The **_start()** function kicks everything off by placing references to our interrupt handling functions
 in a **HandlerTable** object. Invoking **.start()** on the **HandlerTable**
-starts execution. The PIOS sits back and loops endlessly, relying on the event handlers to
-perform any events of interest or importance.
+sets up the interrupt handlers, then starts execution of the `cpu_loop()` function.
 
 I created the [`LetterMover`](https://github.com/gjf2a/pluggable_interrupt_template/blob/master/src/lib.rs)
-`struct` to represent the application state. As interrupts are inherently concurrent, we wrap the object in a 
-[`Mutex`](https://doc.rust-lang.org/book/ch16-03-shared-state.html). In order to delay constructing the 
-object until it is first referenced, we employ the 
-[Lazy Static](https://os.phil-opp.com/vga-text-mode/#lazy-statics) macro.
+`struct` to represent the application state. It is maintained inside of 
+`cpu_loop()`. It gets updated in response to messages from the interrupt
+handlers. Those messages are sent by updating shared `AtomicCell` objects.
+
+Whenever a timer interrupt occurs, `tick()` increases `TICKS` by one. Whenever a
+keyboard interrupt occurs, `key()` updates `LAST_KEY` to contain the most
+recent keypress.
+
+The `cpu_loop()` checks `TICKS` constantly. Whenever a new tick occurs,
+it instructs the `LetterMover` to update its state accordingly. Similarly, 
+whenever a new keypress appears, `cpu_loop()` relays that keystroke
+to `LetterMover`. 
 
 This shows the basic design that all of these projects should employ:
 * Create a `main.rs` that sets up the interrupt handlers.
-* Write one-line handlers for the timer and keyboard that reference a shared game-state object.
+* Write a `cpu_loop()` function that contains the main data structures
+  and monitors concurrent state for updates from interrupts.
+* Write one-line handlers for the timer and keyboard that reference shared
+  state that `cpu_loop()` can employ.
 * Place all of the game functionality within the game-state object, defined in **lib.rs**.
 
-The **tick()** function calls the `LetterMover::tick()` method after unlocking the object. 
-Similarly, the **key()** function calls the `LetterMover::key()` method, again after unlocking
-the object.
 
 Here is the rest of its code, found in its [`lib.rs`](https://github.com/gjf2a/pluggable_interrupt_template/blob/master/src/lib.rs) file:
 ```
