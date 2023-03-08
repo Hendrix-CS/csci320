@@ -238,6 +238,8 @@ This project is very flexible in its requirements. A successful submission will:
 6. Run indefinitely without any panics.
 7. Allow the user to restart the game when it ends.
 8. Display the user's current score.
+9. If multiple students collaborate, the features of the game should be proportionate
+to the number of contributors.
 
 ## Submissions
 * Create a **public** GitHub repository for your bare metal game.
@@ -248,6 +250,9 @@ This project is very flexible in its requirements. A successful submission will:
 ## Assessment
 * **Partial**: Meets requirements 1, 2, and 3, and either requirement 4 or requirement 5.
 * **Complete**: Meets all requirements given above.
+* **Bonus Token**: If the program meets all requirements, and additionally 
+demonstrates creativity or innovation in a striking way, each contributor will earn
+a bonus token. 
 
 ## Acknowledgement
 
