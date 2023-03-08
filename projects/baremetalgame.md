@@ -243,13 +243,13 @@ to the number of contributors.
 
 ## Submissions
 * Create a **public** GitHub repository for your bare metal game.
-* Post the repository URL to the General channel in the CSCI 320 Teams page by 5pm on Thursday, March 25.
+* Post the repository URL to the General channel in the CSCI 320 Teams page by 5pm on Thursday, March 16.
 * Pick four games. Download and play them. Then post reviews of each game in your private Teams channel by 
-  Friday, March 26 at 5 pm.
+  Friday, March 17 at 5 pm.
 
 ## Assessment
 * **Partial**: Meets requirements 1, 2, and 3, and either requirement 4 or requirement 5.
-* **Complete**: Meets all requirements given above.
+* **Complete**: Meets all requirements given above, including the submitted reviews of other games.
 * **Bonus Token**: If the program meets all requirements, and additionally 
 demonstrates creativity or innovation in a striking way, each contributor will earn
 a bonus token. 
