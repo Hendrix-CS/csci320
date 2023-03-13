@@ -45,6 +45,8 @@ project. In order to build the project, you'll also need to install:
   * `rustup component add llvm-tools-preview`
 * The [bootimage](https://github.com/rust-osdev/bootimage) tool:
   * `cargo install bootimage`
+* On Windows:
+  * `rustup component add rust-src --toolchain nightly-x86_64-pc-windows-msvc`
   
 Once the template is up and running, you will be ready to implement your own interrupt handlers! Of course,
 you'll want to change the project name and authors in 
