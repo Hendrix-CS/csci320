@@ -87,8 +87,8 @@ Upon completing this course, our goal is for you to be able to:
 | 3/22 | Wed | Spring Break: no class |  |  |  |
 | 3/24 | Fri | Spring Break: no class |  |  |  |
 |      |
-| 3/27 | Mon | TBA |  | Kernel Programming 2  | |
-| 3/29 | Wed | Interrupt-based multitasking |  | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)--> |  |
+| 3/27 | Mon | File Systems | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf)  | [Kernel Programming 2: File System]({{site.baseurl}}/projects/filesystem)  | |
+| 3/29 | Wed | File Systems | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | <!--[Game Kernel]({{site.baseurl}}/projects/game_kernel)--> |  |
 | 3/31 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 |      |
 | 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
