@@ -87,10 +87,18 @@ To create a file:
     * Set the bit for inode 0 to 1.
     * Select its first data block.
     * Create an inode for the directory, and save it in the inode table.
-* Select an inode number.
-* Select a data block number for the first block.
-* Create an inode for the new file, and save it in the inode table.
-* Update the directory file with an entry for the new file.
+* If the file already has an inode:
+  * Use the current inode.
+  * Reset its stored-bytes and current-block to a state as if it were
+    newly created.
+  * Clear the in-use bits for its existing data blocks, except for the
+    first data block. We will continue to use that block as we start
+    the write.
+* Otherwise:
+  * Select an inode number.
+  * Select a data block number for the first block.
+  * Create an inode for the new file, and save it in the inode table.
+  * Update the directory file with an entry for the new file.
 * Create a file table entry for the newly created file, and return the file 
   descriptor.
 
@@ -421,6 +429,24 @@ mod tests {
         sys.close(f2).unwrap();
         assert_eq!(one, read_to_string(&mut sys, "one.txt").as_str());
         assert_eq!(two, read_to_string(&mut sys, "two.txt").as_str());
+    }
+    
+    #[test]
+    fn test_complex_3() {
+        let one = "This is a message, a short message, but an increasingly long message.
+        This is a message, a short message, but an increasingly long message.";
+        let two = "This is the second message I have chosen to undertake in this particular test.
+        This is a continuation of this ever-so-controversial second message.\n";
+        let mut sys = make_small_fs();
+        let f1 = sys.open_create("one.txt").unwrap();
+        sys.write(f1, one.as_bytes()).unwrap();
+        sys.close(f1).unwrap();
+
+        let f2 = sys.open_create("one.txt").unwrap();
+        sys.write(f2, two.as_bytes()).unwrap();
+        sys.close(f2).unwrap();
+
+        assert_eq!(two, read_to_string(&mut sys, "one.txt").as_str());
     }
 
     #[test]
