@@ -109,8 +109,10 @@ To open a file to append:
 * Load the directory file, and find the file's inode.
   * If the file is not present in the directory, return an error.
   * If the inode is already open, return an error.
-* Create a file table entry for the newly opened file, and return the file
-  descriptor. The current block and offset should point at the **end** of the file.
+* Create a file table entry for the newly opened file
+  * The current block and offset should point at the **end** of the file.
+  * Read the current block into the file table entry's buffer.
+* Return the file descriptor. 
 
 To read from a file:
 * The user will provide a buffer to store the incoming data.
@@ -564,6 +566,9 @@ If you want to use `println!()` to help debug, comment that line out:
 ```
 
 Once you have gotten the information you need, be sure to restore the line!
+
+Related to this, you can print the ramdisk itself:
+* `println!("{:?}", self.disk);` should display the disk contents.
 
 ## Submissions
 Create a **private** GitHub project entitled `file_system`, and add the instructor
