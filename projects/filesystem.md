@@ -526,22 +526,20 @@ mod tests {
     #[test]
     fn test_disk_full() {
         let mut sys = make_small_fs();
-        println!("max file size: {}", sys.max_file_size());
-        println!("max num files: {}", MAX_FILES_STORED);
-        println!("max bytes in files: {}", sys.max_file_size() * MAX_FILES_STORED);
-        println!("Disk capacity: {}", sys.disk_capacity());
         for i in 0..MAX_FILES_STORED - 1 {
             let filename = format!("file{i}");
             let f = sys.open_create(filename.as_str()).unwrap();
-            for _ in 0..sys.max_file_size() - 1 {
+            for j in 0..sys.max_file_size() - 1 {
                 match sys.write(f, "A".as_bytes()) {
                     FileSystemResult::Ok(_) => {}
                     FileSystemResult::Err(e) => {
+                        assert_eq!(i, 30);
+                        assert_eq!(j, 191);
                         assert_eq!(e, FileSystemError::DiskFull);
                         return;
                     }
                 }
-            } 
+            }
             sys.close(f).unwrap();
         }
         panic!("The disk should have been full!");
