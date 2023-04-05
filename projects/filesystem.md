@@ -289,17 +289,6 @@ impl<
     pub fn first_data_block(&self) -> usize {
         2 + self.num_inode_blocks()
     }
-    
-    pub fn directory_exists(&mut self) -> bool {
-        todo!("Your code here");
-    }
-    
-    pub fn inode_for(
-        &mut self,
-        filename: &str,
-    ) -> FileSystemResult<(usize, Inode<MAX_FILE_BLOCKS, BLOCK_SIZE>)> {
-        todo!("Your code here");
-    }
 
     pub fn open_read(&mut self, filename: &str) -> FileSystemResult<usize> {
         todo!("Your code here");
@@ -342,13 +331,6 @@ mod tests {
 
     fn make_small_fs() -> FileSystem<16, 64, 255, 8, 512, 32, 8> {
         FileSystem::new(ramdisk::RamDisk::new())
-    }
-
-    #[test]
-    fn test_empty() {
-        let mut sys = make_small_fs();
-        assert!(!sys.directory_exists());
-        assert!(sys.inode_for("test") == FileSystemResult::Err(FileSystemError::FileNotFound));
     }
 
     #[test]
