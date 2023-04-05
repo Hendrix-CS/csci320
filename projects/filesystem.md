@@ -325,6 +325,9 @@ tests sufficient to demonstrate that it works.
 mod tests {
     use super::*;
 
+    const BLOCK_SIZE: usize = 64;
+    const MAX_FILES_STORED: usize = 32;
+
     fn make_small_fs() -> FileSystem<16, 64, 255, 8, 512, 32, 8> {
         FileSystem::new(ramdisk::RamDisk::new())
     }
