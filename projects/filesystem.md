@@ -249,6 +249,7 @@ impl<
             disk,
             block_buffer: [0; BLOCK_SIZE],
             file_content_buffer: [0; MAX_FILE_BYTES],
+            open_inodes: [false; MAX_FILES_STORED],
         };
         assert!(result.num_inode_blocks() * 2 < NUM_BLOCKS);
         assert!(result.num_data_blocks() <= block_bits);
@@ -287,6 +288,17 @@ impl<
 
     pub fn first_data_block(&self) -> usize {
         2 + self.num_inode_blocks()
+    }
+    
+    pub fn directory_exists(&mut self) -> bool {
+        todo!("Your code here");
+    }
+    
+    pub fn inode_for(
+        &mut self,
+        filename: &str,
+    ) -> FileSystemResult<(usize, Inode<MAX_FILE_BLOCKS, BLOCK_SIZE>)> {
+        todo!("Your code here");
     }
 
     pub fn open_read(&mut self, filename: &str) -> FileSystemResult<usize> {
