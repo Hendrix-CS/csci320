@@ -2,13 +2,13 @@
 layout: work
 type: Project
 num: 10
-worktitle: Very Simple Kernel
+worktitle: Simple Windowing Machine
 ---
 
 ## Overview
 
-The Very Simple Kernel is, as its name implies, a simple but functional operating
-system. It has the following features:
+The Simple Windowing Machine (SWIM) is, as its name implies, a simple but 
+functional operating system. It has the following features:
 
 * Four distinct windows, each of which can run a program or edit a file.
   * An additional window displays the process manager.
