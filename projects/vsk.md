@@ -39,9 +39,24 @@ After completing Step 1, the kernel should look like this:
 
 <img src="https://hendrix-cs.github.io/csci320/assets/images/vsk_step_1.png" width=500>
 
-## Step 2: File System
+## Step 2: Incorporating the File System
 
-* Add a `list()` method to your file system. 
+* Add a `FileSystem` object to your kernel.
+  * Maximum filename length: 10
+  * Maximum number of files: 30
+  * [Tell them the other constant stats to use]
+* Add a `list()` method to your file system.
+  * Each window should display the names of all of the files in the file system,
+    in three columns.
+* When `F5` is selected, the user can enter a filename of up to 12 characters.
+  * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
+    character.
+* When the user hits one of the other function keys, it switches to the
+  designated buffer and activates the editor. 
+  * The filename appears as part of the window header, after the function key.
+  * As with the filename editing, each keystroke appears in the appropriate window,
+    with the backspace operating properly as well.
+  * Entering `F6` closes the file.
 
 ################################
 
