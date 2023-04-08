@@ -37,7 +37,7 @@ windowing environment as follows:
 
 After completing Step 1, the kernel should look like this:
 
-<img src="https://hendrix-cs.github.io{{site.baseurl}}/assets/images/vsk_step_1.png" width=500>
+<img src="https://hendrix-cs.github.io/csci320/assets/images/vsk_step_1.png" width=500>
 
 ## Step 2: File System
 
