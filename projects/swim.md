@@ -58,7 +58,11 @@ After completing Step 1, SWIM should look like this:
   * [Tell them the other constant stats to use]
 * When you add your `FileSystem` object, create four files and store them, so that
   it has some contents when the OS starts up. Here are four files for you to use:
-  * `hello`: `print("Hello, world!")`
+  * `hello` 
+```
+print("Hello, world!")
+```
+
   * `nums`
 ```
 print(1)
