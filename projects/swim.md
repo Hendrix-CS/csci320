@@ -35,28 +35,101 @@ windowing environment as follows:
 * Function key `F5` is used to select the filename-entry row. None of the windows
   are highlighted when this row is active.
 
-After completing Step 1, the kernel should look like this:
+After completing Step 1, SWIM should look like this:
 
-<img src="https://hendrix-cs.github.io/csci320/assets/images/vsk_step_1.png" width=500>
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_1.png" width=500>
 
 ## Step 2: Incorporating the File System
-
-* Add a `FileSystem` object to your kernel.
-  * Maximum filename length: 10
-  * Maximum number of files: 30
+* Add the method `pub fn list_directory(&mut self) -> FileSystemResult<(usize, [[u8; MAX_FILENAME_BYTES]; MAX_FILES_STORED])>` to `struct FileSystem` 
+  * It will return the total number of files stored, as well as the bytes in the 
+    filename of each file.
+* Add a link to your GitHub repository for your 
+  [Project 9 solution](https://hendrix-cs.github.io/csci320/projects/filesystem)
+  in your `Cargo.toml` file. For example, here is what that line looks like in my
+  own `Cargo.toml`: `file_system_solution = {git = "https://github.com/gjf2a/file_system_solution"}`
+* Add a `FileSystem` object to your kernel, using the following constants:
+  * `const MAX_OPEN: usize = 16;`
+  * `const BLOCK_SIZE: usize = 256;`
+  * `const NUM_BLOCKS: usize = 255;`
+  * `const MAX_FILE_BLOCKS: usize = 64;`
+  * `const MAX_FILE_BYTES: usize = MAX_FILE_BLOCKS * BLOCK_SIZE;`
+  * `const MAX_FILES_STORED: usize = 30;`
+  * `const MAX_FILENAME_BYTES: usize = 10;`
   * [Tell them the other constant stats to use]
-* Add a `list()` method to your file system.
-  * Each window should display the names of all of the files in the file system,
-    in three columns.
-* When `F5` is selected, the user can enter a filename of up to 12 characters.
+* When you add your `FileSystem` object, create four files and store them, so that
+  it has some contents when the OS starts up. Here are four files for you to use:
+  * `hello`: `print("Hello, world!")`
+  * `nums`
+```
+print(1)
+print(257)
+```
+  * `average`
+```
+sum := 0
+count := 0
+done := false
+while not done {
+    num := input("Enter a number:")
+    if num == "quit" {
+        done := true
+    } else {
+        sum := sum + num
+        count := count + 1
+    }
+}
+print(sum / count)
+```
+  * `pi`
+```
+sum := 0
+i := 0
+neg := false
+terms := input("Num terms:")
+while i < terms {
+    term := 1 / ((2 * i) + 1)
+    if neg {
+        term := -term
+    }
+    sum := sum + term
+    neg := not neg
+    i := i + 1
+}
+print(4 * sum)
+```
+* Each file is listed in each of the four main windows. Each file listing is 
+given in three columns, each of which may contain up to 10 rows.
+
+After completing Step 2, SWIM should look like this:
+
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_2.png" width=500>
+
+## Step 3: Selecting and Editing Files
+* When `F5` is selected, the user can enter a filename of up to 10 characters
+  in the top window.
   * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
     character.
+  * When the user types the Enter key:
+    * An empty file is created on the disk with the given name, 
+    * The filename is cleared from the top window
+    * The file listings in the four quadrant windows are updated to include the new file
 * When the user hits one of the other function keys, it switches to the
-  designated buffer and activates the editor. 
-  * The filename appears as part of the window header, after the function key.
+  designated buffer. Within the buffer, the arrow keys are used to navigate among 
+  the columns. Exactly one filename is always highlighted within the selected
+  window.
+* When the user hits the `e` key, the selected window switches into Editor mode:
+  * The selected filename appears as part of the window header, after the function 
+    key.
   * As with the filename editing, each keystroke appears in the appropriate window,
     with the backspace operating properly as well.
-  * Entering `F6` closes the file.
+  * Entering `F6` saves and closes the file, restoring the window to the file 
+    selection screen.
+  * If a file is already open in a different window, trying to edit it will have
+    no effect.
+  * When the file is re-opened, from any of the windows, the changes saved earlier
+    should be reflected.
+
+After completing Step 3, SWIM should look like this:
 
 ################################
 
