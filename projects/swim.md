@@ -146,6 +146,10 @@ While editing the file in the `F1` buffer, it should look like this:
 
 <img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3c.png" width=500>
 
+After saving the file using `F6` and reopening it in the `F2` buffer, it should look
+like this:
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3d.png" width=500>
+
 ## Step 4: A Copying Garbage Collector
 
 ## Step 5: Creating and Managing Processes
