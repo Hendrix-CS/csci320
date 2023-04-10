@@ -114,7 +114,7 @@ After completing Step 2, SWIM should look like this:
   * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
     character.
   * When the user types the Enter key:
-    * An empty file is created on the disk with the given name, 
+    * An empty file with the given name is opened, created, and closed on the disk
     * The filename is cleared from the top window
     * The file listings in the four quadrant windows are updated to include the new file
 * When the user hits one of the other function keys, it switches to the
@@ -124,16 +124,27 @@ After completing Step 2, SWIM should look like this:
 * When the user hits the `e` key, the selected window switches into Editor mode:
   * The selected filename appears as part of the window header, after the function 
     key.
+  * SWIM opens the file and reads its contents so as to be visible. It then closes
+    the file.
   * As with the filename editing, each keystroke appears in the appropriate window,
     with the backspace operating properly as well.
-  * Entering `F6` saves and closes the file, restoring the window to the file 
-    selection screen.
-  * If a file is already open in a different window, trying to edit it will have
-    no effect.
+  * Entering `F6` uses `open_create()` to reopen the file. It writes the contents 
+    of the editor's buffer to disk, then closes the file, restoring the window to 
+    the file selection screen.
   * When the file is re-opened, from any of the windows, the changes saved earlier
     should be reflected.
 
-After completing Step 3, SWIM should look like this:
+After completing Step 3, when creating a file named `test`, SWIM should look like this:
+
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3a.png" width=500>
+
+When navigating to edit the file `test` in the `F1` buffer, it should look like this:
+
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3b.png" width=500>
+
+While editing the file in the `F1` buffer, it should look like this:
+
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3c.png" width=500>
 
 ## Step 4: A Copying Garbage Collector
 
