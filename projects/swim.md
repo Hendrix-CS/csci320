@@ -34,6 +34,8 @@ write a bare-metal program to support a windowing environment as follows:
     selecting that window.
 * Function key `F5` is used to select the filename-entry row. None of the windows
   are highlighted when this row is active.
+* If the file exceeds the buffer size, `F7` scrolls up one line, and `F8` scrolls 
+  down one line.
 
 After completing Step 1, SWIM should look like this:
 
@@ -159,6 +161,7 @@ like this:
 * When the user hits `r` when a file is highlighted, the file should **run**.
 * While the file is running, if the user hits `F6`, the program should immediately
   stop and return to the file selector.
+* Ensure that all processes have a fair opportunity to run on the CPU.
 * The number of instructions executed by each process should be shown in the 
   right window, as seen below:
 
