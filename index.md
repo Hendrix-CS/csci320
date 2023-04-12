@@ -93,15 +93,15 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 4/3 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
 | 4/5 | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | | |
-| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | Kernel Programming 3  | Kernel Programming 2  |
+| 4/7 | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | [Kernel Programming 3](https://hendrix-cs.github.io/csci320/projects/swim)  | Kernel Programming 2  |
 |     |
 | 4/10 | Mon | Garbage Collection |  | |  |
 | 4/12 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | <!--[Cooperative Multitasking Kernel]({{site.baseurl}}/projects/coop_os)--> |  |
 | 4/14 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
-| 4/19 | Wed | Final projects |  | Project proposal | Kernel Programming 3 |
-| 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  |  |
+| 4/19 | Wed | Final projects |  | Project proposal | |
+| 4/21 | Fri | I/O Devices<br>Hard Disk Drives | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf) |  | Kernel Programming 3  |
 |      |
 | 4/24 | Mon | File System | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) |  | Project Proposal |
 | 4/26 | Wed | Solid-State Drives | [Flash-based SSDs](http://pages.cs.wisc.edu/~remzi/OSTEP/file-ssd.pdf) |  |  |
