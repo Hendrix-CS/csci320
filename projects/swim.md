@@ -2,7 +2,7 @@
 layout: work
 type: Project
 num: 10
-worktitle: Simple Windowing Machine
+worktitle: Simple Windowing Machine (SWIM)
 ---
 
 ## Overview
@@ -57,7 +57,6 @@ After completing Step 1, SWIM should look like this:
   * `const MAX_FILE_BYTES: usize = MAX_FILE_BLOCKS * BLOCK_SIZE;`
   * `const MAX_FILES_STORED: usize = 30;`
   * `const MAX_FILENAME_BYTES: usize = 10;`
-  * [Tell them the other constant stats to use]
 * When you add your `FileSystem` object, create four files and store them, so that
   it has some contents when the OS starts up. Here are four files for you to use:
   * `hello` 
