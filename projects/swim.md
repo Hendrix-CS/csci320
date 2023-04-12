@@ -19,10 +19,10 @@ functional operating system. It has the following features:
 
 ## Step 1: Windows
 
-Using the provided template code, write a bare-metal program to support a 
-windowing environment as follows:
+Using the [provided template code](https://github.com/gjf2a/swim_template), 
+write a bare-metal program to support a windowing environment as follows:
 * Divide the VGA buffer into the following areas:
-  * The rightmost 10 columns are reserved for process management.
+  * The rightmost 10 columns are reserved for process status information.
   * Row 0 is reserved for entering filenames.
   * The remaining area is divided into four equal-sized quadrants.
 * The window boundaries are drawn using `.` characters.
@@ -151,8 +151,19 @@ like this:
 <img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3d.png" width=500>
 
 ## Step 4: A Copying Garbage Collector
+* Implement a copying garbage collector.
+* Use [this template](https://github.com/gjf2a/gc_heap_template) for building 
+  your solution. 
 
 ## Step 5: Creating and Managing Processes
+* When the user hits `r` when a file is highlighted, the file should **run**.
+* While the file is running, if the user hits `F6`, the program should immediately
+  stop and return to the file selector.
+* The number of instructions executed by each process should be shown in the 
+  right window, as seen below:
+
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_5.png" width=500>
+
 
 ## Submissions
 * Create a **private** GitHub repository for your SWIM kernel.
@@ -160,7 +171,7 @@ like this:
 
 ## Assessment
 * **Partial**: Completes Step 1 and either Step 2 or Step 4.
-* **Complete**: Meets all requirements given above.
+* **Complete**: Meets all requirements given above. Never panics!
 
 ## Acknowledgement
 
