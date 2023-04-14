@@ -140,8 +140,38 @@ To close a file:
 * If the file was open for writing, update its inode to store its new size.
 * Remove the entry in the file table.
 * Mark the inode as closed in `open_inodes`.
+
+## Error Conditions
+Return each of the conditions below if...
+* `FileNotFound`
+  * ...a filename is not present in the directory
+* `FileNotOpen`
+  * ...the given file descriptor corresponds to a `None` value in the `open` table.
+* `NotOpenForRead`
+  * ...the `writing` flag is `true` for the given file descriptor and
+    the user attempts a `read()`.
+* `NotOpenForWrite`
+  * ...the `writing` flag is `false` for the given file descriptor and
+    the user attempts a `write()`.
+* `TooManyOpen`
+  * ...every entry in `open` is `Some(...)`, and an attempt is made to open
+    another file.
+* `TooManyFiles`
+  * ...every available inode table entry is claimed in block 0, and `open_create()` is called.
+* `AlreadyOpen`
+  * ...the given inode already corresponds to an open file. 
+  * The `open_inodes` array is useful for detecting this.
+* `DiskFull`
+  * ...a new block is requested for a file, but every available data black
+    is already claimed in block 1.
+* `FileTooBig`
+  * ...a new block is requested for a file, but it already uses the 
+    maximum allowed blocks for a single file.
+* `FilenameTooLong`
+  * ...a new file is created in `open_create()`, but the filename exceeds
+    the maximum allowed number of characters.
   
-## Code skeleton
+## Code Skeleton
 
 Create a new Rust project. (On Windows, it does not need to run under WSL.)
 
