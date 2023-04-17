@@ -45,19 +45,7 @@ the message is incomplete, and you will not receive a response. The `http`
 protocol requires that each line end with both a carriage return and a linefeed.
 Each line in your message, then, should end with `\r\n`, and the last four characters
 in your message as a whole should be `\r\n\r\n`. 
-
-
-## Alternate Port Numbers
-
-Regular `http` requests default to port 80, and regular `https` requests default to port 443. But sometimes a 
-web server runs on a different port. Our program should allow the user to specify an alternative port number 
-through the URL. For example:
-
-```
-webget https://hendrix-cs.github.io:8888/csci320/projects/webget.html
-```
-
-This requests the page using port 8888. 
+ 
 
 ## Responses
 
@@ -104,11 +92,28 @@ fn send_message(host: &str, port: usize, message: &str) -> io::Result<()> {
     let connector = SslConnector::builder(SslMethod::tls())?.build();
     let mut stream = connector.connect(host, tcp).unwrap();
     stream.write(message.as_bytes())?;
+    
+    // TODO: ****Write code here to read and process the response from the socket.****
+    
     Ok(())
 }
 ```
 
-From here, you can use `stream` as if it were a regular TCP socket. The `http` protocol is otherwise unchanged.
+To read from a socket, I recommend using [BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html).
+
+
+## Troubleshooting Security
+
+You may get an error message when trying to create an SSL connection about being unable to 
+open a trust certificate. This sometimes happens when an aspect of the SSL installation doesn't
+give enough clues as to where certificates are stored.
+
+If this occurs, use the [openssl-probe](https://crates.io/crates/openssl-probe) crate to fix
+the problem:
+* Add this line to `Cargo.toml`:
+  * `openssl-probe = "0.1.5"`
+* Add this line to your `main()` at the very start:
+  * `openssl_probe::init_ssl_cert_env_vars();`
 
 ## Design Hints
 
@@ -116,26 +121,20 @@ From here, you can use `stream` as if it were a regular TCP socket. The `http` p
   * To this end, create a data structure to represent a request. It could contain:
     * The host name
 	* The file to retrieve
-	* Whether it is using `http` or `https`
 * Write a function or method to create a string containing the `GET` message to be sent over the socket.
   * This facilitates debugging as well, as it makes it easy to print the `GET` message to the command line.
-* Work incrementally
-  * Get the program working with the simplest URLs first.
-  * Once the basic version works, then add security and alternate port numbers.
   
 ## Checklist
 
-* Downloads web pages using `http`.
 * Downloads web pages securely using `https`.
 * Saves downloaded pages into a local file.
-* Enables the use of alternate port numbers.
 
 ## Submissions
 * Create a **private** GitHub repository for your webget program.
 * [Submit the repository URL](https://docs.google.com/forms/d/e/1FAIpQLSeCE51hAA4VV1jN_E4pVH1FDB3G6x7-GrIg5_MAP_qqMd6fAg/viewform?usp=sf_link).
 
 ## Assessment
-* **Partial**: Any two items from the checklist.
-* **Complete**: All items from the checklist.
+* **Partial**: First item from the checklist.
+* **Complete**: Both items from the checklist.
 
 ------------------------------------------------------------------------
