@@ -73,17 +73,17 @@ print(257)
 ```
 sum := 0
 count := 0
-done := false
-while not done {
+averaging := true
+while averaging {
     num := input("Enter a number:")
-    if num == "quit" {
-        done := true
+    if (num == "quit") {
+        averaging := false
     } else {
-        sum := sum + num
-        count := count + 1
+        sum := (sum + num)
+        count := (count + 1)
     }
 }
-print(sum / count)
+print((sum / count))
 ```
   * `pi`
 ```
