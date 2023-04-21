@@ -180,12 +180,13 @@ Criteria for the latter two categories will be specified for each assignment. Fi
   * One of the following:
     * **Complete** the final project and **Complete** at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two more projects.
     * **Partial** completion of the final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
+    * **Partial** completion of the final project, **Complete** at least seven other projects including at least one kernel project, and at least **Partially Complete** two more projects.
     * **Missing** final project, **Complete** at least 9 out of 10 regular projects, including all kernel projects; at least **Partially Complete** the remaining project.
 * To earn a D in the course, a student will:
   * One of the following:
     * **Complete** the final project, **Complete** at least two regular projects, and at least **Partially Complete** two more projects
     * **Partially Complete** the final project and at least four other projects, including at least one kernel project, and at least **Partially Complete** a minimum of two other projects
-    * **Missing** final project, **Complete** at least six other projects, including at least two kernel projects, and at least **Partially Complete** two more projects.
+    * **Missing** final project, **Complete** at least six other projects, including at least one kernel project, and at least **Partially Complete** two more projects.
   
 ## <a name="tokens">Tokens</a>
 * Each student starts the semester with three **tokens**. 
