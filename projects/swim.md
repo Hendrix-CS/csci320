@@ -161,7 +161,7 @@ like this:
   * To run a program, create an `Interpreter` object for it using `Interpreter::new()`.
     The program text (as a `&str`) will be the parameter to `new()`. 
   * The `Interpreter` object's type
-    will be `Interpreter<MAX_TOKENS, MAX_LITERAL_CHARS, STACK_DEPTH, MAX_LOCAL_VARS, HEAP_SIZE, MAX_HEAP_BLOCKS, WINDOW_WIDTH>`.
+    will be `Interpreter<MAX_TOKENS, MAX_LITERAL_CHARS, STACK_DEPTH, MAX_LOCAL_VARS, WINDOW_WIDTH, CopyingHeap<HEAP_SIZE, MAX_HEAP_BLOCKS>>`
     The `Interpreter` type is defined in the [`simple_interp`](https://github.com/gjf2a/simple_interp) crate; a reference to it is included in the `Cargo.toml`
     file in the template.
   * You will need to create a data type that implements the `InterpreterOutput`
