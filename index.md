@@ -101,10 +101,10 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 4/17 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
 | 4/19 | Wed | Final projects |  | Project proposal | |
-| 4/21 | Fri | The GNU Project and Linux |  |  | Kernel Programming 3  |
+| 4/21 | Fri | Unix history, GNU Project, Linux kernel |  |  | Kernel Programming 3  |
 |      |
-| 4/24 | Mon | Microkernels |  |  | Project Proposal |
-| 4/26 | Wed | Embedded Systems |  |  |  |
+| 4/24 | Mon | History of MS-DOS and Windows, evolution of GNU/Linux |  |  | Project Proposal |
+| 4/26 | Wed | Return of the Mac<br>Microkernels |  |  |  |
 | 4/28 | Fri | Wrap-up |  |  |  |
 |      |
 | 5/5  | Fri 2-5 pm | Final Project Presentations | | | |
