@@ -146,7 +146,7 @@ are two primary options for the final project:
     - [Redox](https://www.redox-os.org/)
     - [Fuchsia](https://fuchsia.dev/)
     - [Theseus](https://github.com/theseus-os/Theseus)
-    - [PostMarketOS](https://www.postmarketos.org/)
+    - [postmarketOS](https://www.postmarketos.org/)
     - [KaiOS](https://www.kaiostech.com/)
 	
   * Discuss the motivation for creating each operating system.
