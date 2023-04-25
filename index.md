@@ -104,7 +104,7 @@ Upon completing this course, our goal is for you to be able to:
 | 4/21 | Fri | Unix history, GNU Project, Linux kernel |  |  | Kernel Programming 3  |
 |      |
 | 4/24 | Mon | History of MS-DOS and Windows, evolution of GNU/Linux |  |  | Project Proposal |
-| 4/26 | Wed | Return of the Mac<br>Microkernels |  |  |  |
+| 4/26 | Wed | Free Software vs. Open Source<br>Return of the Mac<br>Microkernels |  |  |  |
 | 4/28 | Fri | Wrap-up |  |  |  |
 |      |
 | 5/5  | Fri 2-5 pm | Final Project Presentations | | | |
