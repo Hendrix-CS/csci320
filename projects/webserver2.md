@@ -47,10 +47,10 @@ This program issues GET requests for the files `file100.html` and `file1000.html
 for `file100.html` twice as often as requests for `file1000.html`.  
 
 To run a test using the above program (named `benchmark1.py`), 
-assuming a server running at 192.168.0.102 and listening to port 8888, type:
+assuming a server running on your own machine and listening to port 8888, type:
 
 ```
-locust -f benchmark1.py --host=http://192.168.0.102:8888
+locust -f benchmark1.py --host=http://localhost:8888
 ```
 
 When you execute this, the UI for the program will be viewable through your web browser at 
