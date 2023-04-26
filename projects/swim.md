@@ -155,6 +155,16 @@ like this:
 * Implement a copying garbage collector.
 * Use [this template](https://github.com/gjf2a/gc_heap_template) for building 
   your solution. 
+* Also examine the [gc_headers](https://github.com/gjf2a/gc_headers)
+  to familiarize yourself with the data structures you will be using.
+* When `malloc()` is called but there is no more space in the heap,
+  the collector will call the `trace()` method of its `Tracer` parameter
+  to find out which blocks are in use.
+  * The collector should provide an array of `MAX_BLOCKS` boolean values
+    to `trace()`. All of the values in the array should initially be `false`.
+  * The `Tracer` will mark `true` for each block it wants to keep.
+  * The collector will then copy each `true` block to the new heap, 
+    updating their addresses as they are moved.
 
 ## Step 5: Creating and Managing Processes
 * When the user hits `r` when a file is highlighted, the file should **run**.
