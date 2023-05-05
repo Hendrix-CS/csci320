@@ -61,6 +61,14 @@ The file system blocks are laid out as follows:
 
 Each inode consists of:
 * A 16-bit value representing total bytes stored in the file.
+  * In the unit tests below, this value is stored in a little-Endian format;
+    that is, the first byte represents the low-order bits, and the 
+    second byte represents the high-order bits. 
+  * For example, the number 300 requires 9 bits to represent it in binary: `100101100`
+    * The bits `00101100` are the low-order bits, and are represented
+      with the decimal value `44` in the first byte.
+    * The bits `00000001` are the high-order bits, and are represented
+      with the decimal value `1` in the second byte.
 * An array of each block in active use. Each block number is represented as a 
   single byte.
 * The directory file is stored in inode 0.
