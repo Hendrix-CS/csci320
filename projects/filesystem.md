@@ -121,7 +121,7 @@ To open a file to read:
 * Return the file descriptor, that is, the index of the file table 
   used for its `FileInfo`.
 
-To open a file to append:
+To open a file to append (*OPTIONAL*):
 * Load the directory file, and find the file's inode.
   * If the file is not present in the directory, return an error.
   * If the inode is already open, return an error.
