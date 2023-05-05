@@ -292,6 +292,13 @@ impl<
         result
     }
 
+    pub fn assert_block(&self, block_num: usize, block_prefix: &[u8]) {
+        assert!(block_num < self.disk.num_blocks());
+        let mut bytes = [0; BLOCK_SIZE];
+        self.disk.read(block_num, &mut bytes);
+        assert_eq!(block_prefix, &bytes[0..block_prefix.len()]);
+    }
+
     pub fn max_file_size(&self) -> usize {
         MAX_FILE_BLOCKS * BLOCK_SIZE
     }
@@ -367,9 +374,15 @@ mod tests {
     fn test_short_write() {
         let mut sys = make_small_fs();
         let f1 = sys.open_create("one.txt").unwrap();
+        sys.assert_block(0, &[3, 0]);
+        sys.assert_block(1, &[255, 1, 0]);
+        sys.assert_block(2, &[16, 0, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 0]);
+        sys.assert_block(7, &[0, 0, 0, 0, 0, 0, 0, 0, 111, 110, 101, 46, 116, 120, 116, 0]);
         sys.write(f1, "This is a test.".as_bytes()).unwrap();
         let mut buffer = [0; 50];
         sys.close(f1).unwrap();
+        sys.assert_block(8, &[84, 104, 105, 115, 32, 105, 115, 32, 97, 32, 116, 101, 115, 116, 46]);
+        sys.assert_block(2, &[16, 0, 7, 7, 7, 7, 7, 7, 7, 7, 15, 0, 8, 8, 8, 8, 8, 8, 8, 8, 0]);
         let f2 = sys.open_read("one.txt").unwrap();
         let bytes_read = sys.read(f2, &mut buffer).unwrap();
         assert_eq!(bytes_read, 15);
