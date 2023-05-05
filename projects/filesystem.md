@@ -404,6 +404,10 @@ mod tests {
         let f1 = sys.open_create("one.txt").unwrap();
         sys.write(f1, LONG_DATA.as_bytes()).unwrap();
         sys.close(f1);
+        sys.assert_block(0, 0, &[3, 0, 0]);
+        sys.assert_block(1, 0, &[255, 31, 0]);
+        sys.assert_block(2, 0, &[16, 0, 7]);
+        sys.assert_block(2, 10, &[9, 1, 8, 9, 10, 11, 12]);
         let read = read_to_string(&mut sys, "one.txt");
         assert_eq!(read.as_str(), LONG_DATA);
     }
