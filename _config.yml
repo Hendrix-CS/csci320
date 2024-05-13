@@ -24,7 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 number: CSCI 320
 title: Operating Systems & Concurrency
-semester: Spring 2023
+semester: Spring 2025
 
 navigation:
   - title: Overview
@@ -43,12 +43,8 @@ navigation:
       url: '#projects'
     - page: Final Project
       url: '#finalproject'
-    - page: Participation
-      url: '#participation'
     - page: Specifications Grading
       url: '#grading'
-    - page: Tokens
-      url: '#tokens'
   - page: Commitments
     url: '#commitments'
 
@@ -61,8 +57,8 @@ instructors:
 
 offerings:
   - name: LECTURE 01
-    loc: MCREY 315
-    time: MWF 8:10am - 9:00am
+    loc: MCREY 110
+    time: MWF 11:10am - 12:00pm
     instructor: ferrer
 
 resources:
