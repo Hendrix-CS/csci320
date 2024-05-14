@@ -87,6 +87,8 @@ To create a file:
     * Set the bit for inode 0 to 1.
     * Select its first data block.
     * Create an inode for the directory, and save it in the inode table.
+* Search the directory file for the filename
+  * 
 * If the file already has an inode:
   * Use the current inode.
   * Reset its stored-bytes and current-block to a state as if it were
