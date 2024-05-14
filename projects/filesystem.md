@@ -61,6 +61,14 @@ The file system blocks are laid out as follows:
 
 Each inode consists of:
 * A 16-bit value representing total bytes stored in the file.
+  * In the unit tests below, this value is stored in a little-Endian format;
+    that is, the first byte represents the low-order bits, and the 
+    second byte represents the high-order bits. 
+  * For example, the number 300 requires 9 bits to represent it in binary: `100101100`
+    * The bits `00101100` are the low-order bits, and are represented
+      with the decimal value `44` in the first byte.
+    * The bits `00000001` are the high-order bits, and are represented
+      with the decimal value `1` in the second byte.
 * An array of each block in active use. Each block number is represented as a 
   single byte.
 * The directory file is stored in inode 0.
@@ -115,7 +123,7 @@ To open a file to read:
 * Return the file descriptor, that is, the index of the file table 
   used for its `FileInfo`.
 
-To open a file to append:
+To open a file to append (*OPTIONAL*):
 * Load the directory file, and find the file's inode.
   * If the file is not present in the directory, return an error.
   * If the inode is already open, return an error.
@@ -294,6 +302,13 @@ impl<
         result
     }
 
+    pub fn assert_block(&self, block: usize, offset: usize, block_segment: &[u8]) {
+        assert!(block < self.disk.num_blocks());
+        let mut bytes = [0; BLOCK_SIZE];
+        self.disk.read(block, &mut bytes);
+        assert_eq!(block_segment, &bytes[offset..offset + block_segment.len()]);
+    }
+
     pub fn max_file_size(&self) -> usize {
         MAX_FILE_BLOCKS * BLOCK_SIZE
     }
@@ -369,9 +384,17 @@ mod tests {
     fn test_short_write() {
         let mut sys = make_small_fs();
         let f1 = sys.open_create("one.txt").unwrap();
+        sys.assert_block(0, 0, &[3, 0]);
+        sys.assert_block(1, 0, &[255, 1, 0]);
+        sys.assert_block(2, 0, &[16, 0, 7]);
+        sys.assert_block(2, 10, &[0, 0, 8]);
+        sys.assert_block(7, 0, &[0, 0, 0, 0, 0, 0, 0, 0, 111, 110, 101, 46, 116, 120, 116, 0]);
         sys.write(f1, "This is a test.".as_bytes()).unwrap();
         let mut buffer = [0; 50];
         sys.close(f1).unwrap();
+        sys.assert_block(8, 0, &[84, 104, 105, 115, 32, 105, 115, 32, 97, 32, 116, 101, 115, 116, 46]);
+        sys.assert_block(2, 0, &[16, 0, 7]);
+        sys.assert_block(2, 10, &[15, 0, 8]);
         let f2 = sys.open_read("one.txt").unwrap();
         let bytes_read = sys.read(f2, &mut buffer).unwrap();
         assert_eq!(bytes_read, 15);
@@ -391,6 +414,10 @@ mod tests {
         let f1 = sys.open_create("one.txt").unwrap();
         sys.write(f1, LONG_DATA.as_bytes()).unwrap();
         sys.close(f1);
+        sys.assert_block(0, 0, &[3, 0, 0]);
+        sys.assert_block(1, 0, &[255, 31, 0]);
+        sys.assert_block(2, 0, &[16, 0, 7]);
+        sys.assert_block(2, 10, &[9, 1, 8, 9, 10, 11, 12]);
         let read = read_to_string(&mut sys, "one.txt");
         assert_eq!(read.as_str(), LONG_DATA);
     }
