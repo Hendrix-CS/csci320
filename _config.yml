@@ -81,20 +81,6 @@ resources:
     image: assets/images/Qemu_logo.svg
     url: https://www.qemu.org/
 
-extra-resources:
-  - name: "How to Think Like a Computer Scientist: Interactive Edition"
-    image: assets/images/runestone_logo.png
-    url: https://runestone.academy/runestone/books/published/thinkcspy/index.html
-  - name: Python Tutor
-    image: assets/images/python_tutor.png
-    url: http://pythontutor.com/
-  - name: CodingBat Python
-    image: assets/images/codingbat.jpg
-    url: https://codingbat.com/python
-  - name: CheckiO Python Practice
-    image: assets/images/checkio_logo_small.png
-    url: https://py.checkio.org/
-
 # Build settings
 markdown: kramdown
 theme: minima
