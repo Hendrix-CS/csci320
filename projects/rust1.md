@@ -35,8 +35,8 @@ You can open a Unix shell within Visual Studio Code with `` CTRL-` ``.
 
 From a command line, type:
 ```
-cargo new shell
-cd shell/src/
+cargo new parts12
+cd parts12/src/
 mkdir bin
 mv main.rs bin/cmd.rs
 ```
@@ -71,11 +71,12 @@ writing many of these programs:
 * `counter`: Prints out the number of words, lines, and characters for each file listed in its command-line arguments. If the first argument begins with a dash, the letters "w", "l", and "c" immediately following the dash indicate which of words, lines, and characters get displayed.
 
 ## Submissions
-* Share the `shells` folder as a **private** GitHub repository.
+* Share the `parts12` project as a **private** GitHub repository.
 * Submit your GitHub URL via Teams.
 
 ## Assessment
-* **Partial**: Any three programs correctly completed.
-* **Complete**: All six programs correctly completed.
+* **Level 1**: Any three programs correctly completed.
+* **Level 2**: Any five programs correctly completed.
+* **Level 3**: All six programs correctly completed.
 
 ------------------------------------------------------------------------
