@@ -126,10 +126,8 @@ given level will receive credit for that level; projects that do not meet all th
 Once a project is graded, if a student wishes to revise it to achieve a higher level, the student should first meet with the
 professor to discuss the planned revisions. The student may thereafter resubmit the revised project when ready.
 
-Each student should have a [GitHub](https://github.com/) account. For each 
-programming project, the student should create a **private** GitHub repository to 
-store the project. The student should add [Dr. Ferrer](https://github.com/gjf2a) as 
-a contributor to the project. When the project is due, he will download the 
+Each student should have a [GitHub](https://github.com/) account. Each student should create one **private** GitHub repository that contains all of their code for Parts 1 and 2 of the course, and an additional **private** GitHub repository for Part 3 of the course.  The student should add [Dr. Ferrer](https://github.com/gjf2a) as 
+a contributor to each repository. When each project is due, he will download the 
 repository onto his own machine for grading.
 
 ## <a name="finalproject">Final Project</a>
