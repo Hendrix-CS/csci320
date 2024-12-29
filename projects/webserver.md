@@ -1,12 +1,15 @@
 ---
 layout: work
 type: Project
-num: 6
-worktitle: Web Server Part 1
+num: 5
+worktitle: Web Server 
 ---
 
-Write a command-line program called `webserver`. This program will listen for `http` requests
-on port 8888. To achieve this, set up a 
+Write a command-line program called `webserver`. 
+* Source file: `src/bin/webserver.rs` in the `part1` project.
+
+This program will listen for `http` requests
+on port 8888. To achieve this, you will set up a 
 [TcpListener](https://doc.rust-lang.org/std/net/struct.TcpListener.html) that is bound to 
 `localhost:8888`. 
 
@@ -167,13 +170,101 @@ Once you have generated these files, you can set up TLS when accepting connectio
 [described in the documentation](https://docs.rs/openssl/0.10.16/openssl/ssl/index.html).
 -->
 
+## Step 7: Creating Benchmarks
+Use [locust.io](https://locust.io/) to test the performance of your server. This program 
+allows you to [write Python scripts to describe workload tests](https://docs.locust.io/en/stable/quickstart.html). 
+It will then spawn as many test users as you would like. Install it on the command line on a machine with 
+Python3 installed:
+
+```
+python3 -m pip install locust
+```
+
+**Windows Subsystem for Linux only**: If that command yields an error message, try the following first (in `bash`):
+```
+sudo apt update
+sudo apt install python3-pip
+```
+
+(You can also install it [directly from PyCharm](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html),
+but the `locust` command-line program will not be readily invocable.)
+
+Once it is installed, you can write a Python program as a configuration file. For example:
+
+```
+from locust import HttpUser, task
+
+class WebsiteUser(HttpUser):
+    @task(2)
+    def f100(self):
+        self.client.get("/file100.html")
+
+    @task
+    def f1000(self):
+        self.client.get("/file1000.html")
+```
+
+This program issues GET requests for the files `file100.html` and `file1000.html`. It issues requests 
+for `file100.html` twice as often as requests for `file1000.html`.  
+
+To run a test using the above program (named `benchmark1.py`), 
+assuming a server running on your own machine and listening to port 8888, type:
+
+```
+locust -f benchmark1.py --host=http://localhost:8888
+```
+
+When you execute this, the UI for the program will be viewable through your web browser at 
+`http://localhost:8089/`. From there, you specify the number of users to simulate and the number 
+of users created per second. The test will continue indefinitely until you stop it. It will give 
+you a nice summary of the test results.
+
+Devise at least three different performance workloads using [locust.io](https://locust.io/). Feel free
+to use these [files of varying sizes]({{site.baseurl}}/projects/workloads.zip) in creating your 
+performance workloads.
+
+Note that, in general, it is best to run your tests on a different machine than that which is running your 
+server. Each of your workloads should represent a different type of stress on the server.
+
+### Baseline
+
+Measure the performance of `webserver` as it stands, without modifications.
+
+## Step 8: Streaming Files
+
+The most straightforward implementation of a web server is to read the entire requested file into 
+RAM from the disk, then send the file over the socket. For large files, this can be undesirable for
+several reasons:
+* It increases the amount of RAM the server uses.
+* The client must wait until the entire file arrives before it can begin to process it.
+
+Modify your server so that it reads a fixed number of bytes from the disk at a time, then sends
+those same bytes to the client. Add a command-line flag (`-s`) to switch streaming on. In the absence
+of the flag, it should read the entire file into RAM and then send it.
+
+## Step 9: Caching
+
+As reading from disk is time consuming, potential speedup gains may be had by caching frequently
+requested files in RAM. There are some significant tradeoffs involved:
+* Caching files can greatly increase the amount of RAM the server uses.
+* Caching popular files tends to have a larger payoff.
+* It is possible that a cached file will have changed on disk, making the results out-of-date.
+
+Modify your server so that it stores up to `n` files in a RAM cache. The value `n` is selected at the 
+command line; add a command line flag (`-c=n`) to specify that value. For example, `c=3` would allow
+the cache to store up to three files. If the `-c` flag is not employed, caching will not be activated.
+
+Track the number of requests for each file. The `n` most popular files will be kept in the cache.
+
+
 ## Submissions
-* Create a **private** GitHub repository for your webserver program.
-* [Submit the repository URL](https://docs.google.com/forms/d/e/1FAIpQLSffhU9tDv0VnoRcVtzLG_afhpMdQX1oijR8nb_Hab6Vhbbcvg/viewform?usp=sf_link)
+* Share the `part1` project as a **private** GitHub repository.
+* Submit your GitHub URL via Teams.
 
 ## Assessment
-* **Partial**: Steps 1-4 complete.
-* **Complete**: All six steps complete.
+* **Level 1**: Steps 1-6 complete.
+* **Level 2**: Step 7 and either Step 8 or Step 9 complete.
+* **Level 3**: All 9 steps complete
 
 ## Acknowledgement
 

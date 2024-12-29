@@ -5,71 +5,143 @@ num: 3
 worktitle: Advanced Shell Commands Using Rust
 ---
 
-Implement the following shell commands as Rust programs:
-* `findtext`: Output every line that contains a specified pattern. The first command-line argument is the fixed-string pattern. Remaining arguments are the names of the files to inspect.
-* `order`: Works like `cat`, except the output lines must be sorted before being output. All lines from all files will be mixed together and then sorted. If the "-r" command-line argument is provided, they should be sorted in reverse order.
+Implement the following shell commands as Rust programs in the `part1` project you created [last time]({{site.baseurl}}/projects/rust1):
+## `findtext`
+* Output every line that contains a specified pattern. The first command-line argument is the fixed-string pattern. Remaining arguments are the names of the files to inspect.
+* Source file: `src/bin/findtext.rs` in the `part1` project.
 
-Implement the following shell command-line interpreter:
-* `vssh1`, the Very Simple SHell, version 1: 
-  * Displays the [current working directory](https://doc.rust-lang.org/std/env/fn.current_dir.html) while awaiting user input.
-  * If the user types `exit`, the program ends.
-  * If the user types `cd [dir]`, change [current working directory](https://doc.rust-lang.org/std/env/fn.set_current_dir.html) accordingly.
-  * If the user types a blank line, ignore it and display the prompt once again.
-  * Execute any other command the user types by spawning a new process:
-    * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml` using the following line under `[dependencies]`:
-      * `nix = {version = "0.26.2", features = ["process"]}`
-	* Use [fork](https://docs.rs/nix/0.26.2/nix/unistd/fn.fork.html) to create the child process.
-	* Within the child process, use [execvp](https://docs.rs/nix/0.26.2/nix/unistd/fn.execvp.html) to execute the command.
-	* Within the parent process, use [waitpid](https://docs.rs/nix/0.26.2/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
-  * `vssh1` **should not panic**. Be sure to explicitly handle every possible error.  
-  * There is no need to implement pipes (`|`) or input/output redirection (`<` 
-    and `>`). That is a topic for the next project.
-* The `vssh1` assignment was adapted from [materials](http://rust-class.org/pages/ps2.html) developed by [David Evans](http://www.cs.virginia.edu/~evans/) at the [University of Virginia](https://engineering.virginia.edu/departments/computer-science).	
+## `order`
+* Works like `cat`, except the output lines must be sorted before being output. All lines from all files will be mixed together and then sorted. If the "-r" command-line argument is provided, they should be sorted in reverse order.
+* Source file: `src/bin/order.rs` in the `part1` project.
 
-Here is an example execution of `vssh1`:
+## `webget`
+* Downloads web pages and saves them locally.
+* Source file: `src/bin/webget.rs` in the `part1` project. 
+* Its command-line interface is as follows:
 
 ```
-gjf2a@20003LPUX:~/solutions320$ cargo run --bin vssh1
-   Compiling solutions320 v0.1.0 (/home/gjf2a/solutions320)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.75s
-     Running `target/debug/vssh1`
-/home/gjf2a/solutions320$ cd src/bin
-/home/gjf2a/solutions320/src/bin$ grep fn vssh1.rs
-fn main() {
-fn process_next_line() -> anyhow::Result<Status> {
-fn run_command(command: &str) -> anyhow::Result<()> {
-fn externalize(command: &str) -> Vec<CString> {
-/home/gjf2a/solutions320/src/bin$ cd ..
-/home/gjf2a/solutions320/src$ cd ..
-/home/gjf2a/solutions320$ ls
-Cargo.lock  Cargo.toml  grep_test.out  src  target  toml.out
-/home/gjf2a/solutions320$ exit
+Usage: webget [url] 
 ```
 
-The `execvp` system call requires the command to be formatted as a fixed-size array of 
-[c-style strings](https://doc.rust-lang.org/std/ffi/struct.CString.html). The function
-below will perform this conversion for you:
+Web pages are retrieved using the `GET` command in the `HTTP` protocol. Here is 
+the basic structure of a `GET`:
 
 ```
-fn externalize(command: &str) -> Vec<CString> {
-    command.split_whitespace()
-        .map(|s| CString::new(s).unwrap())
-        .collect()
+GET [file] HTTP/1.1
+Host: [hostname]
+Connection: Close
+
+```
+
+For example, if we wish to retrieve this web page, we might issue the following command:
+
+```
+webget https://hendrix-cs.github.io/csci320/projects/webget.html
+```
+
+Note that the protocol is `https`, the host is `hendrix-cs.github.io`, and the requested
+file is `csci320/projects/webget.html`.
+
+Given that command, `webget` would send the following `GET` message:
+
+```
+GET /csci320/projects/webget.html HTTP/1.1                                                                               
+Host: hendrix-cs.github.io                                                                                              
+Connection: Close
+
+```
+
+**Note**: There is a blank line after the `Connection: Close` line. Without this blank line,
+the message is incomplete, and you will not receive a response. The `http` 
+protocol requires that each line end with both a carriage return and a linefeed.
+Each line in your message, then, should end with `\r\n`, and the last four characters
+in your message as a whole should be `\r\n\r\n`. 
+ 
+
+## Responses
+
+When a file is successfully retrieved, you will first receive an HTTP header before the file contents. 
+Here is the beginning of a sample HTTP header:
+
+```
+HTTP/1.1 200 OK                                                                                                         Connection: close                                                                                                       Content-Length: 14140                                                                                                   
+Server: GitHub.com                                                                                                      
+Content-Type: text/html; charset=utf-8                                                                                  
+Strict-Transport-Security: max-age=31556952                                                                             
+last-modified: Thu, 21 Jan 2021 00:44:30 GMT
+```
+
+You will need to extract the HTML file from the returned characters. To do so:
+* Until you encounter a blank line, print out each header line to the command line.
+* Once a blank line is encountered:
+  * All lines that follow should be saved in a file.
+  * The local filename should be the name of the requested file from the server.
+
+## Security
+
+The original `http` protocol had no security features. Messages could easily be inspected while in transit. The 
+`https` protocol superimposes the `http` protocol atop the 
+[Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) (TLS) protocol. TLS provides
+end-to-end encryption to prevent messages from being inspected in transit.
+
+Place the following line in the `dependencies` section of your `Cargo.toml` to use the [OpenSSL](https://crates.io/crates/openssl) crate:
+```
+openssl = { version = "0.10", features = ["vendored"] }
+```
+
+On Windows, you'll want to compile under Windows Subsystem for Linux to facilitate the installation. Setting up
+OpenSSL is otherwise extremely annoying under Windows.
+
+Using sockets secured by TLS is straightforward:
+
+```
+use openssl::ssl::{SslConnector, SslMethod};
+use std::io;
+
+fn send_message(host: &str, port: usize, message: &str) -> io::Result<()> {
+    let tcp = TcpStream::connect(format!("{}:{}", host, port))?;
+    let connector = SslConnector::builder(SslMethod::tls())?.build();
+    let mut stream = connector.connect(host, tcp).unwrap();
+    stream.write(message.as_bytes())?;
+    
+    // TODO: ****Write code here to read and process the response from the socket.****
+    
+    Ok(())
 }
 ```
 
-If the compiler requests a parameterized type for `execvp`, use `CString`. 
+To read from a socket, I recommend using [BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html).
 
+
+## Troubleshooting Security
+
+You may get an error message when trying to create an SSL connection about being unable to 
+open a trust certificate. This sometimes happens when an aspect of the SSL installation doesn't
+give enough clues as to where certificates are stored.
+
+If this occurs, use the [openssl-probe](https://crates.io/crates/openssl-probe) crate to fix
+the problem:
+* Add this line to `Cargo.toml`:
+  * `openssl-probe = "0.1.5"`
+* Add this line to your `main()` at the very start:
+  * `openssl_probe::init_ssl_cert_env_vars();`
+
+## Design Hints
+
+* Separate the processing of command-line arguments from their implementation.
+  * To this end, create a data structure to represent a request. It could contain:
+    * The host name
+	* The file to retrieve
+* Write a function or method to create a string containing the `GET` message to be sent over the socket.
+  * This facilitates debugging as well, as it makes it easy to print the `GET` message to the command line.
+  
 ## Submissions
-* You may place your files in the GitHub repository you used for the 
-  previous project, or you can create a new one for this project. Make
-  sure your repository is private, and that you add the instructor
-  as a collaborator.
-* Post the GitHub URL you would like me to examine in your private
-  channel of the CSCI 320 Team.
+* Share the `part1` project as a **private** GitHub repository.
+* Submit your GitHub URL via Teams.
 
 ## Assessment
-* **Partial**: Correctly complete either `vssh1` or both of `findtext` and `order`.
-* **Complete**: All three programs correctly completed.
+* **Level 1**: Correctly complete any one of the three programs.
+* **Level 2**: Correctly complete any two of the three programs.
+* **Level 3**: All three programs correctly completed.
 
 ------------------------------------------------------------------------

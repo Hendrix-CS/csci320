@@ -48,7 +48,7 @@ Upon completing this course, our goal is for you to be able to:
 | 2/5  | Wed | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) |  |  |
 | 2/7  | Fri | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) |  |  |
 |      |
-| 2/10 | Mon | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | [Unix Shell]({{site.baseurl}}/projects/rush.html) | Rust Programming 2 |
+| 2/10 | Mon | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | [Unix Shell]({{site.baseurl}}/projects/vssh.html) | Rust Programming 2 |
 | 2/12 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html) |  |  |
 | 2/14 | Fri | Review of Unix Command Line<br>Review of Rust |  |  |  |
 
