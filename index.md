@@ -49,14 +49,14 @@ Upon completing this course, our goal is for you to be able to:
 | 2/7  | Fri | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/0.26.2/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | 
 |      |
 | 2/10 | Mon | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | |
-| 2/12 | Wed | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) | [vssh]({{site.baseurl}}/projects/vssh.html) | Rust Programming 2 |
-| 2/14 | Fri | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) | [Unix Shell]({{site.baseurl}}/projects/vssh.html) | Rust Programming 2 |
+| 2/12 | Wed | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) | [Unix Shell]({{site.baseurl}}/projects/vssh.html) | Rust Programming 2 |
+| 2/14 | Fri | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) |
 |      |
 | 2/17 | Mon | **Winter Break: No class** |
 | 2/19 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)
 | 2/21 | Fri | In-Class Essay 1: The Unix Shell
 |      |
-| 2/24 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | vssh |
+| 2/24 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | Unix Shell |
 | 2/26 | Wed | Threads in Rust<br>Locks | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
 | 2/28 | Fri | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
 |      |
