@@ -68,11 +68,11 @@ Upon completing this course, our goal is for you to be able to:
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 3/5  | Wed | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/)<br>[VGA Buffer](https://os.phil-opp.com/vga-text-mode/)<br>Pluggable Interrupt OS | [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os) |  [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server |
+| 3/5  | Wed | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/)<br>[VGA Buffer](https://os.phil-opp.com/vga-text-mode/)<br>[Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os) |  [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server |
 | 3/7  | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
 |      |
 | 3/10 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |
-| 3/12 | Wed | Interrupts | |  | Bare Metal Game |
+| 3/12 | Wed | Interrupts | |  |  |
 | 3/14 | Fri | Bare Metal Demos | | [SWIM Part 1: Interface]() | Bare Metal Game |
 |      |
 | 3/17 | Mon | User-space vs. Kernel-space programming: Retrospective |   |  |
@@ -85,7 +85,7 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 3/31 | Mon | Garbage Collection | | [SWIM Part 2: Garbage Collection]() |
 | 4/2  | Wed | Memory Management: Heap | [Heap Allocation](https://os.phil-opp.com/heap-allocation/) | | |
-| 4/4  | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | [Kernel Programming 3: Simple Windowing Machine](https://hendrix-cs.github.io/csci320/projects/swim)  |  |
+| 4/4  | Fri | Allocator Designs | [Allocator Designs](https://os.phil-opp.com/allocator-designs/)<br>[Free Space Management](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf) | |  |
 |      |
 | 4/7  | Mon | File Systems | [I/O Devices](http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf)<br>[Hard Disk Drives](http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf)  | [SWIM Part 3: File System]({{site.baseurl}}/projects/filesystem.html) | SWIM Part 2: Garbage Collection |
 | 4/9  | Wed | File Systems | [File System Implementation](http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf) | |  |
@@ -97,13 +97,13 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 4/21 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
 | 4/23 | Wed | Unix history, GNU Project, Linux kernel
-| 4/25 | Fri | History of MS-DOS and Windows, evolution of GNU/Linux |  |  | SWIM Part 4  |
+| 4/25 | Fri | History of MS-DOS and Windows, evolution of GNU/Linux |  | [Free Project]() | SWIM Part 4  |
 |      |
 | 4/28 | Mon | In-Class Essay 3: The Kernel 
 | 4/30 | Wed | Free Software vs. Open Source<br>Return of the Mac<br>Microkernels |  |  |  |
 | 5/2  | Fri | Wrap-up |  |  |  |
 |      |
-| 5/9  | Fri 8:30-11:30am | Final Essay: What is an Operating System?
+| 5/9  | Fri 8:30-11:30am | Final Essay: Three Easy Pieces | | | Free Project |
 
 <hr>
 # <a name="assessment">Assessment</a>
