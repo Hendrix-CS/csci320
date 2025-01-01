@@ -1,7 +1,7 @@
 ---
 layout: work
 type: Project
-num: 8
+num: 6
 worktitle: Bare Metal Game
 ---
 
@@ -17,8 +17,6 @@ You are encouraged to be creative in using VGA characters to represent your game
 You are welcome to develop an original game or to create your own interpretation of a classic game.
 As an example, feel free to reference [Ghost Hunter](https://github.com/gjf2a/ghost_hunter),
 my own interpretation of a well-known classic.
-
-Unlike our other projects, for this project you are welcome to work in a team of up to three students.
 
 ## Interrupts
 
