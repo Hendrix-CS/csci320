@@ -5,9 +5,19 @@ num: 8
 worktitle: Garbage-Collected Heap
 ---
 
-* Implement a copying garbage collector.
-* Use [this template](https://github.com/gjf2a/gc_heap_template) for building 
-  your solution. 
+At the hardware level, the free RAM in a computer is a giant, undifferentiated mass
+known as the **heap**. A key operating system task is to assign blocks of heap RAM to 
+processes as they request it. Furthermore, the operating system must track and reclaim 
+unused RAM. 
+
+One common approach to heap management is to implement a **garbage-collected heap**.
+A garbage-collected heap allocates blocks of RAM on request, and automatically frees
+blocks of RAM that are no longer in use. One popular type of garbage-collected heap
+is a **copying collector**. In this project, you will implement a copying-collected 
+heap that runs as part of the kernel. 
+
+* Privately fork [this template](https://github.com/gjf2a/gc_heap_template) for 
+  building your solution. 
 * Also examine the [gc_headers](https://github.com/gjf2a/gc_headers)
   to familiarize yourself with the data structures you will be using.
   * `Pointer` objects are the means by which entities using the heap
@@ -36,3 +46,19 @@ worktitle: Garbage-Collected Heap
   * The `Tracer` will mark `true` for each block it wants to keep.
   * The collector will then copy each `true` block to the new heap, 
     updating their addresses as they are moved.
+
+## Submissions
+* Add the instructor as a collaborator on your fork of `gc_heap_template`.
+* Submit your GitHub URL via Teams.
+
+## Assessment
+* **Level 1**
+  * `malloc()` passes the unit tests that assess successful allocation.
+* **Level 2**
+  * `malloc()` and `trace()` pass all of their unit tests.
+* **Level 3**
+  * Implement a **generational** collector.
+    * Any object that survives two collections is copied into a second-generation heap segment.
+    * The second-generation heap will be collected much less often, as most objects won't live
+      long enough to be copied there.
+  * Run the given experiments to document the frequencies of first and second generation collections.
