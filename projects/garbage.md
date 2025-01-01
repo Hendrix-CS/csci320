@@ -55,10 +55,11 @@ heap that runs as part of the kernel.
 * **Level 1**
   * `malloc()` passes the unit tests that assess successful allocation.
 * **Level 2**
-  * `malloc()` and `trace()` pass all of their unit tests.
+  * `malloc()` passes all of its unit tests, including those requiring collections.
 * **Level 3**
   * Implement a **generational** collector.
     * Any object that survives two collections is copied into a second-generation heap segment.
     * The second-generation heap will be collected much less often, as most objects won't live
       long enough to be copied there.
-  * Run the given experiments to document the frequencies of first and second generation collections.
+  * Run the given experiments to document the frequencies of first and second generation collections,
+    as well as statistics about the number of times each block is copied.

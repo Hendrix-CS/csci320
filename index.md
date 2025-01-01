@@ -73,7 +73,7 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 3/10 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |
 | 3/12 | Wed | Interrupts | |  |  |
-| 3/14 | Fri | Bare Metal Demos | | [SWIM Part 1: Interface]() | Bare Metal Game |
+| 3/14 | Fri | Bare Metal Demos | | [SWIM Part 1: Interface]({{site.baseurl}}/projects/bare_metal_editor.html) | Bare Metal Game |
 |      |
 | 3/17 | Mon | User-space vs. Kernel-space programming: Retrospective | | Game Reviews |
 | 3/19 | Wed | In-Class Essay 2: Processes and Threads |  |  |  |
@@ -92,7 +92,7 @@ Upon completing this course, our goal is for you to be able to:
 | 4/11 | Fri | Paging | [Introduction to Paging (OS in Rust)](https://os.phil-opp.com/paging-introduction/)<br>[Introduction to Paging (OSTEP)](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf) |  |  |
 |      |
 | 4/14 | Mon | Implementation of Paging | [Paging Implementation](https://os.phil-opp.com/paging-implementation/)<br>[Translation Lookaside Buffers](http://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf) |  |  |
-| 4/16 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [SWIM Part 4: Processes]() | SWIM Part 3: File System |
+| 4/16 | Wed | Processor Scheduling | [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | [SWIM Part 4: Processes]({{site.baseurl}}/projects/swim.html) | SWIM Part 3: File System |
 | 4/18 | Fri | Scheduling with Priorities | [Multi-Level Feedback](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) |  |  |
 |      |
 | 4/21 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
