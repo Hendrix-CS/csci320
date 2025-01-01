@@ -1,11 +1,11 @@
 ---
 layout: work
 type: Project
-num: 8
+num: 6
 worktitle: Bare Metal Game
 ---
 
-Classic early video games such as [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders), 
+Classic console video games such as [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders), 
 [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)), and
 [Pac-man](https://en.wikipedia.org/wiki/Pac-Man) were implemented without an operating system.
 The games mediated all hardware interaction by themselves.
@@ -17,8 +17,6 @@ You are encouraged to be creative in using VGA characters to represent your game
 You are welcome to develop an original game or to create your own interpretation of a classic game.
 As an example, feel free to reference [Ghost Hunter](https://github.com/gjf2a/ghost_hunter),
 my own interpretation of a well-known classic.
-
-Unlike our other projects, for this project you are welcome to work in a team of up to three students.
 
 ## Interrupts
 
@@ -62,11 +60,10 @@ Here is its [`main.rs`](https://github.com/gjf2a/pluggable_interrupt_template/bl
 #![no_std]
 #![no_main]
 
-use pc_keyboard::DecodedKey;
-use pluggable_interrupt_os::HandlerTable;
-use pluggable_interrupt_os::vga_buffer::clear_screen;
-use pluggable_interrupt_template::LetterMover;
 use crossbeam::atomic::AtomicCell;
+use pc_keyboard::DecodedKey;
+use pluggable_interrupt_os::{vga_buffer::clear_screen, HandlerTable};
+use pluggable_interrupt_template::LetterMover;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
@@ -79,30 +76,28 @@ pub extern "C" fn _start() -> ! {
 }
 
 static LAST_KEY: AtomicCell<Option<DecodedKey>> = AtomicCell::new(None);
-static TICKS: AtomicCell<usize> = AtomicCell::new(0);
+static TICKED: AtomicCell<bool> = AtomicCell::new(false);
 
 fn cpu_loop() -> ! {
     let mut kernel = LetterMover::new();
-    let mut last_tick = 0;
     loop {
         if let Some(key) = LAST_KEY.load() {
             LAST_KEY.store(None);
             kernel.key(key);
         }
-        let current_tick = TICKS.load();
-        if current_tick > last_tick {
-            last_tick = current_tick;
+        if TICKED.load() {
+            TICKED.store(false);
             kernel.tick();
         }
     }
 }
 
-fn tick() {
-    TICKS.fetch_add(1);
-}
-
 fn key(key: DecodedKey) {
     LAST_KEY.store(Some(key));
+}
+
+fn tick() {
+    TICKED.store(true);
 }
 
 fn startup() {
@@ -119,11 +114,11 @@ I created the [`LetterMover`](https://github.com/gjf2a/pluggable_interrupt_templ
 `cpu_loop()`. It gets updated in response to messages from the interrupt
 handlers. Those messages are sent by updating shared `AtomicCell` objects.
 
-Whenever a timer interrupt occurs, `tick()` increases `TICKS` by one. Whenever a
+Whenever a timer interrupt occurs, `tick()` changes `TICKED` to `true`. Whenever a
 keyboard interrupt occurs, `key()` updates `LAST_KEY` to contain the most
 recent keypress.
 
-The `cpu_loop()` checks `TICKS` constantly. Whenever a new tick occurs,
+The `cpu_loop()` checks `TICKED` constantly. Whenever a new tick occurs,
 it instructs the `LetterMover` to update its state accordingly. Similarly, 
 whenever a new keypress appears, `cpu_loop()` relays that keystroke
 to `LetterMover`. 
@@ -237,6 +232,11 @@ impl LetterMover {
 The keyboard handler receives each character as it is typed. Keys representable as a `char`
 are added to the moving string. The arrow keys change how the string is moving.
 
+In order to implement wrapping around the sides of the screen, this implementation uses 
+[modular numbers](https://docs.rs/bare_metal_modulo/1.2.5/bare_metal_modulo/). I have an
+[alternative implementation](https://github.com/gjf2a/pluggable_interrupt_template_simplified) 
+that uses modulo directly on integers rather than modular numbers. The effect is the same,
+but you may find the alternative implementation a bit more transparent.
   
 ## Requirements
 
@@ -250,21 +250,31 @@ This project is very flexible in its requirements. A successful submission will:
 6. Run indefinitely without any panics.
 7. Allow the user to restart the game when it ends.
 8. Display the user's current score.
-9. If multiple students collaborate, the features of the game should be proportionate
-to the number of contributors.
 
 ## Submissions
 * Create a **public** GitHub repository for your bare metal game.
-* Post the repository URL to the General channel in the CSCI 320 Teams page by 5pm on Thursday, March 16.
-* Pick four games. Download and play them. Then post reviews of each game in your private Teams channel by 
-  Friday, March 17 at 5 pm.
+* Submit your GitHub URL via Teams.
+* Be ready to present your game in class on Friday, March 14.
+  * Presentation should consist of the following four slides:
+    * Title slide
+    * Overview of game
+    * Overview of code structure
+    * Key challenges overcome
+  * Then give a brief (2 minute) live demo of the game.
+  * Some presentations may take place on Monday, March 17.
 
 ## Assessment
-* **Partial**: Meets requirements 1, 2, and 3, and either requirement 4 or requirement 5.
-* **Complete**: Meets all requirements given above, including the submitted reviews of other games.
-* **Bonus Token**: If the program meets all requirements, and additionally 
-demonstrates creativity or innovation in a striking way, each contributor will earn
-a bonus token. 
+* **Level 1**: 
+  * Meets requirements 1, 2, and 3, and either requirement 4 or requirement 5.
+* **Level 2**: 
+  * Meets all requirements given above. 
+  * Presentation given in class on March 14 or 17 when requested.
+* **Level 3**:
+  * Meets all Level 2 criteria.
+  * In addition, the game demonstrates creativity or innovation in a striking way. 
+    * Something comparable to [Ghost Hunter](https://github.com/gjf2a/ghost_hunter) 
+      in complexity or engagement would probably suffice.
+    * Consult with instructor prior to submission to determine if game scope is at this level.
 
 ## Acknowledgement
 
