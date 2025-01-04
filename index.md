@@ -100,14 +100,12 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 4/28 | Mon | In-Class Essay 3: [The Kernel]({{site.baseurl}}/essays/essay3.html) 
 | 4/30 | Wed | Free Software vs. Open Source<br>Return of the Mac<br>Microkernels |  |  |  |
-| 5/2  | Fri | Wrap-up |  |  |  |
+| 5/2  | Fri | Three Easy Pieces |  |  |  |
 |      |
 | 5/9  | Fri 8:30-11:30am | **No final exam** | | | All revised work |
 
 <hr>
 # <a name="assessment">Assessment</a>
-
-# TODO: CONTINUE REVISION HERE
 
 ## <a name="projects">Projects</a>
 
@@ -120,27 +118,50 @@ project per week. Each project will have three levels to which it can be complet
 Each project will be evaluated via **specifications** (a set of criteria) for each level. Projects meeting all the criteria for a 
 given level will receive credit for that level; projects that do not meet all the criteria will not receive credit for that level.
 
+Each project submitted by the **assigned deadline** receives **one additional credit** as an on-time bonus.
+
 Once a project is graded, if a student wishes to revise it to achieve a higher level, the student should first meet with the
 professor to discuss the planned revisions. The student may thereafter resubmit the revised project when ready.
 
-Each student should have a [GitHub](https://github.com/) account. Each student should create one **private** GitHub repository that contains all of their code for Parts 1 and 2 of the course, and an additional **private** GitHub repository for Part 3 of the course.  The student should add [Dr. Ferrer](https://github.com/gjf2a) as 
-a contributor to each repository. When each project is due, he will download the 
-repository onto his own machine for grading.
+Each student should have a [GitHub](https://github.com/) account. Each student should create one **private** GitHub repository 
+that contains all of their code for Part 1 of the course and additional GitHub repositories as 
+specified for the Part 2 projects.  The student should add [Dr. Ferrer](https://github.com/gjf2a) as 
+a contributor to each repository. For each project, there will be a Teams assignment in which 
+you will copy and paste the URL for the project's GitHub repository. When each project is due, 
+the instructor will download the repository onto his own machine for grading.
   
+## <a name="essays">In-Class Essays</a>
+
+A total of three in-class essays will be assigned over the course of the semester. Each essay
+topic is posted on the course web page. In preparing for the in-class essay, each student may
+make use of whatever resources they would like - readings, assignments, classmates, anything on
+the Internet, or any other resource. 
+
+The in-class essay itself is closed-book, closed-note, and closed-device. Paper will be provided
+for writing the essay, which must be submitted at the end of the class period. 
+
+The essays will be commented upon by the instructor and returned. Each student should then
+revise their essay, taking into account the instructor comments. The revised essay should be 
+typed and submitted electronically. The original handwritten essay should also be resubmitted. 
+The revised essay will be due one week after the original essays are returned.
+
+Students are welcome to make use of additional resources when revising their essays; proper
+citation should be included for each resource. Each revised essay will then be assessed as
+**Level 1**, **Level 2**, or **Level 3**, depending on the quality of the provided argument. 
+One additional credit will be awarded for on-time submissions of the revised essays.
 
 ## <a name="grading">Specifications Grading</a>
 Each project earns one credit for each level achieved. Submitting a project by the specified deadline earns one additional credit.
-There are **55 total credits** available for the semester: **4 credits** for each of **10 projects** and **15 credits** for the 
-**final project**.
+There are **52 total credits** available for the semester: **4 credits** for each of **10 projects** and **12 credits** for the 
+**three essays**.
 
-| Grade | Credit range |
-| ----: | -----------: |
-| A     | 48-55        |
-| B     | 40-47        |
-| C     | 32-39        |
-| D     | 24-31        |
-| F     | 0-23         |
+| Grade | Minimum Project Credits | Minimum Essay Credits | Minimum Total Credits |
+| ----: | ----------------------: | --------------------: | --------------------: |
+| A     | Level 2 on 10 projects  | Level 2 on 3 essays   | 47                    |
+| B     | 30                      | Level 2 on 1 essay<br>Level 1 on 2 essays   | 39                    |
+| C     | 20                      | Level 1 on 3 essays   | 30                    |
+| D     | None                    | Level 1 on 2 essays    | 18                    |
 
 
-* **Note**: All late submissions/revisions must be received before 5 pm on Tuesday, 
-  May 13, the last day of the semester.
+* **Note**: All late submissions/revisions must be received before 11:30 am on Friday, 
+  May 9, the end of the final exam period for the course.
