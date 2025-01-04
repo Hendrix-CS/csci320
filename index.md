@@ -12,10 +12,9 @@ layout: course-single
 ## <a name="goals">Learning Goals</a>
 
 Upon completing this course, our goal is for you to be able to:
-
 * Describe how an operating system mediates interaction with:
-  * CPU and RAM through the **process** abstraction
-  * Hard disk and Flash memory through the **file system** abstraction.
+  * CPU and RAM by virtualizing those resources by means of the **process** abstraction.
+  * Persistent memory (hard disk, Flash memory) through the **file system** abstraction.
   * The Internet through the **TCP socket** abstraction.
 * Write useful programs that:
   * Interact directly with the CPU, RAM, keyboard, and monitor on behalf of a user.
@@ -54,13 +53,13 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 2/17 | Mon | **Winter Break: No class** |
 | 2/19 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)
-| 2/21 | Fri | In-Class Essay 1: The Unix Shell
+| 2/21 | Fri | In-Class Essay 1: [The Unix Shell]({{site.baseurl}}/essays/essay1.html)
 |      |
 | 2/24 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | Unix Shell |
 | 2/26 | Wed | Threads in Rust<br>Locks | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
 | 2/28 | Fri | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
 |      |
-| 3/3  | Mon | Performance analysis |
+| 3/3  | Mon | Iterators in Rust |
 
 
 
@@ -76,7 +75,7 @@ Upon completing this course, our goal is for you to be able to:
 | 3/14 | Fri | Bare Metal Demos | | [SWIM Part 1: Interface]({{site.baseurl}}/projects/bare_metal_editor.html) | Bare Metal Game |
 |      |
 | 3/17 | Mon | User-space vs. Kernel-space programming: Retrospective | | |
-| 3/19 | Wed | In-Class Essay 2: Processes and Threads |  |  |  |
+| 3/19 | Wed | In-Class Essay 2: [Processes and Threads]({{site.baseurl}}/essays/essay2.html) |  |  |  |
 | 3/21 | Fri | The Story So Far |  |  | SWIM Part 1: Interface |
 |      |
 | 3/24 | Mon | Spring Break: no class |  |  |  |
@@ -99,11 +98,11 @@ Upon completing this course, our goal is for you to be able to:
 | 4/23 | Wed | Unix history, GNU Project, Linux kernel
 | 4/25 | Fri | History of MS-DOS and Windows, evolution of GNU/Linux |  | [Free Project]() | SWIM Part 4  |
 |      |
-| 4/28 | Mon | In-Class Essay 3: The Kernel 
+| 4/28 | Mon | In-Class Essay 3: [The Kernel]({{site.baseurl}}/essays/essay3.html) 
 | 4/30 | Wed | Free Software vs. Open Source<br>Return of the Mac<br>Microkernels |  |  |  |
 | 5/2  | Fri | Wrap-up |  |  |  |
 |      |
-| 5/9  | Fri 8:30-11:30am | Final Essay: Three Easy Pieces | | | Free Project |
+| 5/9  | Fri 8:30-11:30am | **No final exam** | | | All revised work |
 
 <hr>
 # <a name="assessment">Assessment</a>
