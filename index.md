@@ -109,16 +109,17 @@ Upon completing this course, our goal is for you to be able to:
 
 ## <a name="projects">Projects</a>
 
-A total of 10 projects will be assigned throughout the semester; approximately one 
+A total of 10 formal projects will be assigned throughout the semester; approximately one 
 project per week. Each project will have three levels to which it can be completed, with each level building upon the previous level. In general:
 * A **Level 1 project** contains a basic implementation of the core ideas explored in the project.
-* A **Level 2 project** is a more complete implementation of those ideas, including results and analysis of experiments.
+* A **Level 2 project** is a more complete implementation of those ideas.
 * A **Level 3 project** goes beyond this to undertake a deeper exploration of the assignment ideas.
 
 Each project will be evaluated via **specifications** (a set of criteria) for each level. Projects meeting all the criteria for a 
 given level will receive credit for that level; projects that do not meet all the criteria will not receive credit for that level.
 
-Each project submitted by the **assigned deadline** receives **one additional credit** as an on-time bonus.
+Each project submitted by the **assigned deadline** of at least **Level 1 quality** receives 
+**one additional credit** as an on-time bonus.
 
 Once a project is graded, if a student wishes to revise it to achieve a higher level, the student should first meet with the
 professor to discuss the planned revisions. The student may thereafter resubmit the revised project when ready.
@@ -133,12 +134,14 @@ the instructor will download the repository onto his own machine for grading.
 ### <a name="free">Free Project</a>
 
 Students may also complete a **free project**. This is **completely optional**, but it is
-an opportunity for a student to earn project credits pursuing a topic of personal interest. 
+an opportunity to earn project credits pursuing a topic of personal interest. 
 The free project consists of a program written in the Rust programming language on any topic 
 of interest to the student. Any student wishing to pursue a free project should submit a project
 proposal by Monday, April 21. The instructor will advise the student as to what would constitute 
-Level 1, Level 2, and Level 3 performance on the proposed project. All free projects are due
-by the end of the final exam period for the course.
+Level 1, Level 2, and Level 3 performance on the proposed project. 
+
+All free projects are due by the end of the final exam period for the course. There is no 
+on-time bonus for a free project; it must be submitted by the deadline to receive any credit.
   
 ## <a name="essays">In-Class Essays</a>
 
@@ -168,8 +171,9 @@ One additional credit will be awarded for on-time submissions of the revised ess
 ## <a name="grading">Specifications Grading</a>
 Each project and essay earns one credit for each level achieved. Submitting an assignment by the 
 specified deadline earns one additional credit.
-There are **53 total credits** available for the semester: **4 credits** for each of 
-**11 projects** and **3 credits** for each of the **three essays**.
+There are **52 total credits** available for the semester: **4 credits** for each of 
+**10 formal projects**, **3 credits** for the **free project**, and **3 credits** for 
+each of the **three essays**.
 
 | Grade | Minimum Project Credits | Minimum Essay Credits | Minimum Total Credits |
 | ----: | ----------------------: | --------------------: | --------------------: |
