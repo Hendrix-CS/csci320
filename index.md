@@ -96,13 +96,13 @@ Upon completing this course, our goal is for you to be able to:
 |      |
 | 4/21 | Mon | Randomized Scheduling | [Lottery Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) |  |  |
 | 4/23 | Wed | Unix history, GNU Project, Linux kernel
-| 4/25 | Fri | History of MS-DOS and Windows, evolution of GNU/Linux |  | [Free Project]() | SWIM Part 4  |
+| 4/25 | Fri | History of MS-DOS and Windows, evolution of GNU/Linux |  | [Free Project](#free) | SWIM Part 4  |
 |      |
 | 4/28 | Mon | In-Class Essay 3: [The Kernel]({{site.baseurl}}/essays/essay3.html) 
 | 4/30 | Wed | Free Software vs. Open Source<br>Return of the Mac<br>Microkernels |  |  |  |
 | 5/2  | Fri | Three Easy Pieces |  |  |  |
 |      |
-| 5/9  | Fri 8:30-11:30am | **No final exam** | | | All revised work |
+| 5/9  | Fri 8:30-11:30am | **No final exam** | | | Free project<br>All revised work |
 
 <hr>
 # <a name="assessment">Assessment</a>
@@ -129,6 +129,16 @@ specified for the Part 2 projects.  The student should add [Dr. Ferrer](https://
 a contributor to each repository. For each project, there will be a Teams assignment in which 
 you will copy and paste the URL for the project's GitHub repository. When each project is due, 
 the instructor will download the repository onto his own machine for grading.
+
+### <a name="free">Free Project</a>
+
+Students may also complete a **free project**. This is **completely optional**, but it is
+an opportunity for a student to earn project credits pursuing a topic of personal interest. 
+The free project consists of a program written in the Rust programming language on any topic 
+of interest to the student. Any student wishing to pursue a free project should submit a project
+proposal by Monday, April 21. The instructor will advise the student as to what would constitute 
+Level 1, Level 2, and Level 3 performance on the proposed project. All free projects are due
+by the end of the final exam period for the course.
   
 ## <a name="essays">In-Class Essays</a>
 
@@ -147,20 +157,26 @@ The revised essay will be due one week after the original essays are returned.
 
 Students are welcome to make use of additional resources when revising their essays; proper
 citation should be included for each resource. Each revised essay will then be assessed as
-**Level 1**, **Level 2**, or **Level 3**, depending on the quality of the provided argument. 
+**Level 1** or **Level 2**, depending on the quality of the essay. Quality will be assessed
+according to the following criteria:
+* Writing quality, including proper spelling, usage, and grammar.
+* Demonstrated depth of understanding the essay topic.
+* Appropriate use of examples from course projects.
+ 
 One additional credit will be awarded for on-time submissions of the revised essays.
 
 ## <a name="grading">Specifications Grading</a>
-Each project earns one credit for each level achieved. Submitting a project by the specified deadline earns one additional credit.
-There are **52 total credits** available for the semester: **4 credits** for each of **10 projects** and **12 credits** for the 
-**three essays**.
+Each project and essay earns one credit for each level achieved. Submitting an assignment by the 
+specified deadline earns one additional credit.
+There are **49 total credits** available for the semester: **4 credits** for each of **10 projects** 
+and **3 credits** for each of the **three essays**.
 
 | Grade | Minimum Project Credits | Minimum Essay Credits | Minimum Total Credits |
 | ----: | ----------------------: | --------------------: | --------------------: |
 | A     | Level 2 on 10 projects  | Level 2 on 3 essays   | 47                    |
-| B     | 30                      | Level 2 on 1 essay<br>Level 1 on 2 essays   | 39                    |
-| C     | 20                      | Level 1 on 3 essays   | 30                    |
-| D     | None                    | Level 1 on 2 essays    | 18                    |
+| B     | 30                      | Level 2 on 2 essays<br>Level 1 on 1 essay   | 38                    |
+| C     | 20                      | Level 1 on 3 essays   | 29                    |
+| D     | 12                      | Level 1 on 2 essays   | 18                    |
 
 
 * **Note**: All late submissions/revisions must be received before 11:30 am on Friday, 
