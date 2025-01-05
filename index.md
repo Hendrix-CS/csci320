@@ -168,8 +168,8 @@ One additional credit will be awarded for on-time submissions of the revised ess
 ## <a name="grading">Specifications Grading</a>
 Each project and essay earns one credit for each level achieved. Submitting an assignment by the 
 specified deadline earns one additional credit.
-There are **49 total credits** available for the semester: **4 credits** for each of **10 projects** 
-and **3 credits** for each of the **three essays**.
+There are **53 total credits** available for the semester: **4 credits** for each of 
+**11 projects** and **3 credits** for each of the **three essays**.
 
 | Grade | Minimum Project Credits | Minimum Essay Credits | Minimum Total Credits |
 | ----: | ----------------------: | --------------------: | --------------------: |
