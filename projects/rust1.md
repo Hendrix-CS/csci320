@@ -80,11 +80,10 @@ writing many of these programs:
 * Share the `part1` project as a **private** GitHub repository.
 * Submit your GitHub URL via Teams.
 
-<!-- FOR NEXT TIME: Level 3 should require error handling -->
 ## Assessment
 * **Level 1**: Any three programs correctly completed.
 * **Level 2**: Any five programs correctly completed.
-* **Level 3**: All six programs correctly completed.
-* **Note**: No error handling is required for this assignment. A panic is fine.
+* **Level 3**: All six programs correctly completed. They also 
+  cleanly handle any errors that arise without a panic.
 
 ------------------------------------------------------------------------
