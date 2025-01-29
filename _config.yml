@@ -73,7 +73,8 @@ resources:
     url: https://code.visualstudio.com
   - name: The Rust Book
     image: assets/images/Rust2018_front.webp
-    url: https://doc.rust-lang.org/book/
+    #url: https://doc.rust-lang.org/book/
+    url: https://rust-book.cs.brown.edu
   - name: Writing an OS in Rust
     image: assets/images/img_241211.png
     url: https://os.phil-opp.com/

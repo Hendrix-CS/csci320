@@ -28,20 +28,18 @@ Upon completing this course, our goal is for you to be able to:
 
 <hr>
 
-# NEW: [Interactive Rust Book](https://rust-book.cs.brown.edu/)
-
 # <a name="calendar">Calendar</a>
 
 ## Part 1: User Space
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 1/22 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | [Introduction to Operating Systems](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf) | [Survey](https://forms.gle/xwQESACLYUpc1i9R9)<br>[Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html) |  |
+| 1/22 | Wed | Three Easy Pieces<br>Command Line<br>Files and Directories | [Introduction to Operating Systems](http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf) | [Survey](https://forms.gle/brYNvuWqYEEcXq3A7)<br>[Shell Commands, introduction]({{site.baseurl}}/projects/shell_commands.html) |  |
 | 1/24 | Fri | Processes<br>Pipes<br>I/O Redirection | [Processes](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | [Shell Commands, complete]({{site.baseurl}}/projects/shell_commands.html) | Shell Commands, introduction |
 |      |
-| 1/27 | Mon | Rust<br>File I/O | [Getting Started](https://doc.rust-lang.org/book/ch01-00-getting-started.html)<br>[Programming a Guessing Game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)<br>[Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)<br>[std::fs](https://doc.rust-lang.org/std/fs/index.html) | [Rust Programming 1]({{site.baseurl}}/projects/rust1.html) | Shell Commands, complete |
-| 1/29 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | [Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)<br>[Read trait](https://doc.rust-lang.org/std/io/trait.Read.html)<br>[String in Rust](https://gjf2a.blogspot.com/2017/02/strings-in-rust.html)<br>[BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)<br>[BufRead trait](https://doc.rust-lang.org/std/io/trait.BufRead.html) |  |  |
-| 1/31 | Fri | Rust Collection Types | [Common Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html) |  |  |
+| 1/27 | Mon | Rust<br>File I/O | [Getting Started](https://rust-book.cs.brown.edu/ch01-00-getting-started.html)<br>[Programming a Guessing Game](https://rust-book.cs.brown.edu/ch02-00-guessing-game-tutorial.html)<br>[Common Programming Concepts](https://rust-book.cs.brown.edu/ch03-00-common-programming-concepts.html)<br>[std::fs](https://doc.rust-lang.org/std/fs/index.html) | [Rust Programming 1]({{site.baseurl}}/projects/rust1.html) | Shell Commands, complete |
+| 1/29 | Wed | Ownership and Borrowing<br>Strings<br>Buffers | [Understanding Ownership](https://rust-book.cs.brown.edu/ch04-00-understanding-ownership.html)<br>[Read trait](https://doc.rust-lang.org/std/io/trait.Read.html)<br>[String in Rust](https://gjf2a.blogspot.com/2017/02/strings-in-rust.html)<br>[BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html)<br>[BufRead trait](https://doc.rust-lang.org/std/io/trait.BufRead.html) |  |  |
+| 1/31 | Fri | Rust Collection Types | [Common Collections](https://rust-book.cs.brown.edu/ch08-00-common-collections.html) |  |  |
 |      |     
 | 2/3  | Mon | The Internet<br>Downloading a web page | [Overview of TCP/IP](https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html)<br>[TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)<br>[Write trait](https://doc.rust-lang.org/std/io/trait.Write.html)<br>[`write!` macro](https://doc.rust-lang.org/std/macro.write.html) | [Rust Programming 2]({{site.baseurl}}/projects/rust2.html) | Rust Programming 1 |
 | 2/5  | Wed | Using Transport Layer Security | [Cryptography](http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf)
@@ -52,11 +50,11 @@ Upon completing this course, our goal is for you to be able to:
 | 2/14 | Fri | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) |
 |      |
 | 2/17 | Mon | **Winter Break: No class** |
-| 2/19 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://doc.rust-lang.org/book/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)
+| 2/19 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://rust-book.cs.brown.edu/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://rust-book.cs.brown.edu/ch06-00-enums.html)
 | 2/21 | Fri | In-Class Essay 1: [The Unix Shell]({{site.baseurl}}/essays/essay1.html)
 |      |
 | 2/24 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | Unix Shell |
-| 2/26 | Wed | Threads in Rust<br>Locks | [Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
+| 2/26 | Wed | Threads in Rust<br>Locks | [Fearless Concurrency](https://rust-book.cs.brown.edu/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
 | 2/28 | Fri | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
 |      |
 | 3/3  | Mon | Iterators in Rust |
