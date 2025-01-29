@@ -140,8 +140,9 @@ the problem:
 * Submit your GitHub URL via Teams.
 
 ## Assessment
-* **Level 1**: Correctly complete any one of the three programs.
-* **Level 2**: Correctly complete any two of the three programs.
-* **Level 3**: All three programs correctly completed.
+* **Level 1**: Correctly complete any two of the three programs.
+* **Level 2**: All three programs correctly completed.
+* **Level 3**: All three programs are not only correctly completed; they also 
+  cleanly handle any errors that arise without a panic.
 
 ------------------------------------------------------------------------
