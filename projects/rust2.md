@@ -40,12 +40,12 @@ webget https://hendrix-cs.github.io/csci320/projects/rust2.html
 ```
 
 Note that the protocol is `https`, the host is `hendrix-cs.github.io`, and the requested
-file is `csci320/projects/webget.html`.
+file is `csci320/projects/rust2.html`.
 
 Given that command, `webget` would send the following `GET` message:
 
 ```
-GET /csci320/projects/webget.html HTTP/1.1                                                                               
+GET /csci320/projects/rust2.html HTTP/1.1                                                                               
 Host: hendrix-cs.github.io                                                                                              
 Connection: Close
 
