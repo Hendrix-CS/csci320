@@ -92,26 +92,27 @@ anyhow = "1"
 ```
 
 Using sockets secured by TLS requires the following steps:
-* Load a standard set of trusted TLS certificates.
+* Load a [standard set of trusted TLS certificates](https://docs.rs/rustls/latest/rustls/struct.RootCertStore.html)
+  into the [rustls::ClientConfig](https://docs.rs/rustls/latest/rustls/client/struct.ClientConfig.html).
   * This enables us to ensure that the server is who they claim to be.
 * Convert the host name to a [`ServerName`](https://docs.rs/rustls-pki-types/latest/rustls_pki_types/enum.ServerName.html) object.  
   * This is important for the authentication process if a DNS name is used.
-* Create a TCP connection.
-* Create a secure TLS connection.
-* Create an I/O stream that puts together the TCP connection and the TLS connection.
+* Create a [TCP connection](https://doc.rust-lang.org/std/net/struct.TcpStream.html).
+* Create a [secure TLS connection](https://docs.rs/rustls/latest/rustls/client/struct.ClientConnection.html).
+* Create an [I/O stream](https://docs.rs/rustls/latest/rustls/struct.Stream.html) that puts together the TCP connection and the TLS connection.
 
 ```
 use std::{io::{BufReader, Read, Write}, net::TcpStream, sync::Arc};
 
 fn send_message(host: &str, port: usize, message: &str) -> anyhow::Result<()> {
     // Obtain standard set of trusted TLS certificates
-    let root_store = rustls::[RootCertStore](https://docs.rs/rustls/latest/rustls/struct.RootCertStore.html) {
+    let root_store = rustls::RootCertStore {
         roots: webpki_roots::TLS_SERVER_ROOTS.into(),
     };
     
     // Use the trusted set above; do not offer a certificate on the
     // client side, as the client is not claiming to be trusted.
-    let config = rustls::[ClientConfig](https://docs.rs/rustls/latest/rustls/client/struct.ClientConfig.html)::builder()
+    let config = rustls::ClientConfig::builder()
         .with_root_certificates(root_store)
         .with_no_client_auth();
     
@@ -119,13 +120,13 @@ fn send_message(host: &str, port: usize, message: &str) -> anyhow::Result<()> {
     let server_name = host.to_string().try_into().unwrap();
     
     // Create TCP connection 
-    let mut tcp = [TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)::connect(format!("{}:{}", host, port))?;
+    let mut tcp = TcpStream::connect(format!("{}:{}", host, port))?;
     
     // Create TLS connection
-    let mut connector = rustls::[ClientConnection](https://docs.rs/rustls/latest/rustls/client/struct.ClientConnection.html)::new(Arc::new(config), server_name)?;
+    let mut connector = rustls::ClientConnection::new(Arc::new(config), server_name)?;
     
     // Create I/O stream
-    let mut stream = rustls::[Stream](https://docs.rs/rustls/latest/rustls/struct.Stream.html)::new(&mut connector, &mut tcp);
+    let mut stream = rustls::Stream::new(&mut connector, &mut tcp);
     write!(stream, "{message}")?;
     
     // TODO: ****Write code here to read and process the response from the socket.****
