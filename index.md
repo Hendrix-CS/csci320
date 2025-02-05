@@ -43,7 +43,7 @@ Upon completing this course, our goal is for you to be able to:
 |      |     
 | 2/3  | Mon | The Internet<br>Downloading a web page | [Overview of TCP/IP](https://www.oreilly.com/library/view/tcpip-network-administration/0596002971/ch01.html)<br>[TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)<br>[Write trait](https://doc.rust-lang.org/std/io/trait.Write.html)<br>[`write!` macro](https://doc.rust-lang.org/std/macro.write.html) | [Rust Programming 2]({{site.baseurl}}/projects/rust2.html) | Rust Programming 1 |
 | 2/5  | Wed | Using Transport Layer Security | [Cryptography](http://pages.cs.wisc.edu/~remzi/OSTEP/security-crypto.pdf)
-| 2/7  | Fri | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/0.26.2/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | 
+| 2/7  | Fri | Unix Process API | [Process API](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf)<br>[nix crate](https://docs.rs/nix/latest/nix/)<br>[C strings](https://doc.rust-lang.org/std/ffi/struct.CString.html) | 
 |      |
 | 2/10 | Mon | Unix System Calls | [Direct Execution](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | |
 | 2/12 | Wed | Files and Directories | [Files and Directories](http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf) | [Unix Shell]({{site.baseurl}}/projects/vssh.html) | Rust Programming 2 |
