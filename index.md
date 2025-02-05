@@ -129,6 +129,15 @@ a contributor to each repository. For each project, there will be a Teams assign
 you will copy and paste the URL for the project's GitHub repository. When each project is due, 
 the instructor will download the repository onto his own machine for grading.
 
+Students are welcome to undertake projects **individually** or with **one other student** 
+in the course. If two students work together, they should create a **single submission** in 
+a **single GitHub repository**.
+
+Discussion of the projects is encouraged. However, 
+**all code and solutions must be written up individually or in a collaborating pair**. 
+Copying a submission from another student or team, in whole or in part, will be considered an 
+**academic integrity violation**.
+
 ### <a name="free">Free Project</a>
 
 Students may also complete a **free project**. This is **completely optional**, but it is
@@ -154,12 +163,13 @@ for writing the essay, which must be submitted at the end of the class period.
 The essays will be commented upon by the instructor and returned. Each student should then
 revise their essay, taking into account the instructor comments. The revised essay should be 
 typed and submitted electronically. The original handwritten essay should also be resubmitted. 
-The revised essay will be due one week after the original essays are returned.
+The revised essay will be due one week after the original essays are returned. 
 
 Students are welcome to make use of additional resources when revising their essays; proper
-citation should be included for each resource. Each revised essay will then be assessed as
-**Level 1** or **Level 2**, depending on the quality of the essay. Quality will be assessed
-according to the following criteria:
+citation should be included for each resource. Plagiarism, including submitting an essay 
+rewritten by a generative AI, is strictly prohibited. Each revised essay will then be 
+assessed as **Level 1** or **Level 2**, depending on the quality of the essay. Quality will 
+be assessed according to the following criteria:
 * Writing quality, including proper spelling, usage, and grammar.
 * Demonstrated depth of understanding the essay topic.
 * Appropriate use of examples from course projects.

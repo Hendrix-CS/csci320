@@ -142,6 +142,7 @@ the problem:
 ## Assessment
 * **Level 1**: Correctly complete any one of the three programs.
 * **Level 2**: Correctly complete any two of the three programs.
-* **Level 3**: All three programs correctly completed.
+* **Level 3**: All three programs correctly completed. They also 
+  cleanly handle any errors that arise without a panic.
 
 ------------------------------------------------------------------------

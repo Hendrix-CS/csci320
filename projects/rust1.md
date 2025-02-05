@@ -83,6 +83,7 @@ writing many of these programs:
 ## Assessment
 * **Level 1**: Any three programs correctly completed.
 * **Level 2**: Any five programs correctly completed.
-* **Level 3**: All six programs correctly completed.
+* **Level 3**: All six programs correctly completed. They also 
+  cleanly handle any errors that arise without a panic.
 
 ------------------------------------------------------------------------
