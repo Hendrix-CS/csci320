@@ -36,7 +36,7 @@ Connection: Close
 For example, if we wish to retrieve this web page, we might issue the following command:
 
 ```
-webget https://hendrix-cs.github.io/csci320/projects/webget.html
+webget https://hendrix-cs.github.io/csci320/projects/rust2.html
 ```
 
 Note that the protocol is `https`, the host is `hendrix-cs.github.io`, and the requested
