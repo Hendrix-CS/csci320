@@ -122,7 +122,7 @@ give enough clues as to where certificates are stored.
 If this occurs, use the [openssl-probe](https://crates.io/crates/openssl-probe) crate to fix
 the problem:
 * Add this line to `Cargo.toml`:
-  * `openssl-probe = "0.1.5"`
+  * `openssl-probe = "0.1.6"`
 * Add this line to your `main()` at the very start:
   * `openssl_probe::init_ssl_cert_env_vars();`
 
