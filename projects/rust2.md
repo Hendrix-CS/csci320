@@ -135,7 +135,7 @@ fn send_message(host: &str, port: usize, message: &str) -> anyhow::Result<()> {
 }
 ```
 
-To read from a socket, I recommend using [BufReader](https://doc.rust-lang.org/std/io/struct.BufReader.html).
+To read from a socket, I recommend using [`BufReader`](https://doc.rust-lang.org/std/io/struct.BufReader.html).
 
 
 ## Design Hints
