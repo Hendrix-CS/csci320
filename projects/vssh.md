@@ -16,9 +16,9 @@ Implement `vssh`, the Very Simple SHell:
 * Execute any other command the user types by spawning a new process:
 * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml` using the following line under `[dependencies]`:
   * `nix = {version = "0.29.0", features = ["process"]}`
-* Use [fork](https://docs.rs/nix/0.29.0/nix/unistd/fn.fork.html) to create the child process.
-* Within the child process, use [execvp](https://docs.rs/nix/0.29.0/nix/unistd/fn.execvp.html) to execute the command.
-* Within the parent process, use [waitpid](https://docs.rs/nix/0.29.0/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
+* Use [fork](https://docs.rs/nix/latest/nix/unistd/fn.fork.html) to create the child process.
+* Within the child process, use [execvp](https://docs.rs/nix/latest/nix/unistd/fn.execvp.html) to execute the command.
+* Within the parent process, use [waitpid](https://docs.rs/nix/latest/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
 * If the line ends with the `&` symbol, the child process should run in the background. That is, your shell should not wait for it 
 to terminate; the command line should immediately return. Your shell should print the PID of the process, so that 
 the user may later manage it as needed. This is typically used for long-running programs that perform a lot of 
