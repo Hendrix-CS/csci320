@@ -28,12 +28,12 @@ computation.
 Here is an example execution of `vssh`:
 
 ```
-gjf2a@20003LPUX:~/solutions320$ cargo run --bin vssh1
+gjf2a@20003LPUX:~/solutions320$ cargo run --bin vssh
    Compiling solutions320 v0.1.0 (/home/gjf2a/solutions320)
     Finished dev [unoptimized + debuginfo] target(s) in 1.75s
-     Running `target/debug/vssh1`
+     Running `target/debug/vssh`
 /home/gjf2a/solutions320$ cd src/bin
-/home/gjf2a/solutions320/src/bin$ grep fn vssh1.rs
+/home/gjf2a/solutions320/src/bin$ grep fn vssh.rs
 fn main() {
 fn process_next_line() -> anyhow::Result<Status> {
 fn run_command(command: &str) -> anyhow::Result<()> {
@@ -46,14 +46,12 @@ Cargo.lock  Cargo.toml  grep_test.out  src  target  toml.out
 ```
 
 The `execvp` system call requires the command to be formatted as a fixed-size array of 
-[c-style strings](https://doc.rust-lang.org/std/ffi/struct.CString.html). The function
-below will perform this conversion for you:
-
+[c-style strings](https://doc.rust-lang.org/std/ffi/struct.CString.html). Here is our
+example from class that demonstrates how to create `CString` objects for this purpose:
 ```
-fn externalize(command: &str) -> Vec<CString> {
-    command.split_whitespace()
-        .map(|s| CString::new(s).unwrap())
-        .collect()
+let mut argv = Vec::new();
+for arg in ["wc", "src/bin/fork3.rs"] {
+    argv.push(CString::new(arg).unwrap());
 }
 ```
 
