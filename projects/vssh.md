@@ -69,7 +69,21 @@ it should be created. This is known as **output redirection**.
 3. Both options may be combined in a single command. In that case, the input redirection
 should be first.
 
-## TODO: Need examples!!!
+### Example Execution
+
+```
+ferrer@Gabriels-MacBook-Pro solutions320 % ls > listing.txt
+ferrer@Gabriels-MacBook-Pro solutions320 % sort < listing.txt
+Cargo.lock
+Cargo.toml
+bare_metal_modulo
+baroque_hoedown.txt
+grep_test.out
+listing.txt
+src
+target
+test
+```
 
 ## Level 3: Pipelines
 1. The line may contain two or more commands connected with the pipe symbol (`|`). If this happens, start a process 
