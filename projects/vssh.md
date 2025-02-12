@@ -72,17 +72,22 @@ should be first.
 ### Example Execution
 
 ```
-ferrer@Gabriels-MacBook-Pro solutions320 % ls > listing.txt
-ferrer@Gabriels-MacBook-Pro solutions320 % sort < listing.txt
-Cargo.lock
-Cargo.toml
-bare_metal_modulo
-baroque_hoedown.txt
-grep_test.out
-listing.txt
-src
-target
-test
+ferrer@20003LPUX:~/solutions320$ cargo run --bin vssh
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running `target/debug/vssh`
+/home/ferrer/solutions320$ ls -lth > listing.out
+/home/ferrer/solutions320$ cat < listing.out
+total 44K
+-rw------- 1 ferrer ferrer    0 Feb 12 08:35 listing.out
+-rw-r--r-- 1 ferrer ferrer  293 Feb 12 08:31 Cargo.toml
+drwxr-xr-x 3 ferrer ferrer 4.0K Feb 12 08:22 target
+-rw-r--r-- 1 ferrer ferrer  15K Feb 12 08:22 Cargo.lock
+-rw-r--r-- 1 ferrer ferrer  667 Feb 12 08:22 bare_metal_modulo
+-rw-r--r-- 1 ferrer ferrer   49 Feb 12 08:22 baroque_hoedown.txt
+-rw-r--r-- 1 ferrer ferrer  108 Feb 12 08:22 grep_test.out
+drwxr-xr-x 3 ferrer ferrer 4.0K Feb 12 08:22 src
+-rw-r--r-- 1 ferrer ferrer  106 Feb 12 08:22 test
+/home/ferrer/solutions320$ 
 ```
 
 ## Level 3: Pipelines
