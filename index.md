@@ -50,26 +50,25 @@ Upon completing this course, our goal is for you to be able to:
 | 2/14 | Fri | File Descriptors<br>Pipelines | [Pipelines in Rust](https://gjf2a.blogspot.com/2017/02/pipelines-in-rust.html) |
 |      |
 | 2/17 | Mon | **Winter Break: No class** |
-| 2/19 | Wed | Data structures in Rust | [Using Structs to Structure Related Data](https://rust-book.cs.brown.edu/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://rust-book.cs.brown.edu/ch06-00-enums.html)
-| 2/21 | Fri | In-Class Essay 1: [The Unix Shell]({{site.baseurl}}/essays/essay1.html)
+| 2/19 | Wed | **Snow and Ice: No class** |
+| 2/21 | Fri | Data structures in Rust | [Using Structs to Structure Related Data](https://rust-book.cs.brown.edu/ch05-00-structs.html)<br>[Enums and Pattern Matching](https://rust-book.cs.brown.edu/ch06-00-enums.html)
 |      |
-| 2/24 | Mon | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | Unix Shell |
-| 2/26 | Wed | Threads in Rust<br>Locks | [Fearless Concurrency](https://rust-book.cs.brown.edu/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
-| 2/28 | Fri | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
+| 2/24 | Mon | In-Class Essay 1: [The Unix Shell]({{site.baseurl}}/essays/essay1.html)
+| 2/26 | Wed | Threads vs Processes | [Concurrency and Threads](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf) | [Web Server]({{site.baseurl}}/projects/webserver.html) | Unix Shell |
+| 2/28 | Fri | Threads in Rust<br>Locks | [Fearless Concurrency](https://rust-book.cs.brown.edu/ch16-00-concurrency.html)<br>[Locks](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf)<br>[Locked Data Structures](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf)
 |      |
-| 3/3  | Mon | Iterators in Rust |
-
+| 3/3  | Mon | Concurrency Problems | [Common Concurrency Problems](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf) |  |  |
+| 3/5  | Wed | Iterators in Rust |
 
 
 ## Part 2: Kernel Space
 
 |Date|Day|Topic/Activity|Reading|Assigned|Due|
 | --- | --- | --- | --- | --- | --- |
-| 3/5  | Wed | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/)<br>[VGA Buffer](https://os.phil-opp.com/vga-text-mode/)<br>[Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os) |  [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server |
-| 3/7  | Fri | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
+| 3/7  | Fri | Bare metal programming | [A Freestanding Rust Binary](https://os.phil-opp.com/freestanding-rust-binary/)<br>[A Minimal Rust Kernel](https://os.phil-opp.com/minimal-rust-kernel/)<br>[VGA Buffer](https://os.phil-opp.com/vga-text-mode/)<br>[Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os) |  [Bare metal game]({{site.baseurl}}/projects/baremetalgame) | Web server |
 |      |
-| 3/10 | Mon | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |
-| 3/12 | Wed | Interrupts | |  |  |
+| 3/10 | Mon | Ghost Hunter | [Ghost Hunter](https://github.com/gjf2a/ghost_hunter)<br>[Ghost Hunter Core](https://github.com/gjf2a/ghost_hunter_core) |  |  |
+| 3/12 | Wed | Interrupts | [CPU Exceptions](https://os.phil-opp.com/cpu-exceptions/)<br>[Double Faults](https://os.phil-opp.com/double-fault-exceptions/)<br>[Hardware interrupts](https://os.phil-opp.com/hardware-interrupts/) |
 | 3/14 | Fri | Bare Metal Demos | | [SWIM Part 1: Interface]({{site.baseurl}}/projects/bare_metal_editor.html) | Bare Metal Game |
 |      |
 | 3/17 | Mon | User-space vs. Kernel-space programming: Retrospective | | |
