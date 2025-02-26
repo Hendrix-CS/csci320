@@ -16,13 +16,14 @@ on port 8888. To achieve this, you will set up a
 ## Step 1: Listen
 
 When your server receives a connection, it should print the IP address of the peer that 
-contacted it. Test it using your [webget]({{site.baseurl}}/projects/webget) program as follows:
+contacted it. Open a second shell, then test it using 
+[wget](https://www.gnu.org/software/wget/manual/wget.html) as follows:
 
 ```
-webget http://localhost:8888/test
+wget http://localhost:8888/test
 ```
 
-Since `webget` is running on the same machine, you can send the message to `localhost` and it
+Since `wget` is running on the same machine, you can send the message to `localhost` and it
 will look for a server on the local machine. Since the server is not actually going to send
 any data, the filename doesn't matter. Using `http` avoids a panic when it does not receive 
 a TLS secured connection.
@@ -223,9 +224,6 @@ Devise at least three different performance workloads using [locust.io](https://
 to use these [files of varying sizes]({{site.baseurl}}/projects/workloads.zip) in creating your 
 performance workloads.
 
-Note that, in general, it is best to run your tests on a different machine than that which is running your 
-server. Each of your workloads should represent a different type of stress on the server.
-
 ### Baseline
 
 Measure the performance of `webserver` as it stands, without modifications.
@@ -242,6 +240,12 @@ Modify your server so that it reads a fixed number of bytes from the disk at a t
 those same bytes to the client. Add a command-line flag (`-s`) to switch streaming on. In the absence
 of the flag, it should read the entire file into RAM and then send it.
 
+### Streaming perofrmance
+
+Measure the performance of `webserver` with streaming activated. In an evaluation document,
+record the performance of the baseline and the streaming server. Then analyze the extent
+to which streaming was (or was not) helpful.
+
 ## Step 9: Caching
 
 As reading from disk is time consuming, potential speedup gains may be had by caching frequently
@@ -256,6 +260,13 @@ the cache to store up to three files. If the `-c` flag is not employed, caching 
 
 Track the number of requests for each file. The `n` most popular files will be kept in the cache.
 
+### Caching perofrmance
+
+Measure the performance of `webserver` with caching activated. In an evaluation document,
+record the performance of the baseline and the caching server. Then analyze the extent
+to which caching was (or was not) helpful. Be sure to try at least three different values 
+of `n`.
+
 
 ## Submissions
 * Share the `part1` project as a **private** GitHub repository.
@@ -263,8 +274,10 @@ Track the number of requests for each file. The `n` most popular files will be k
 
 ## Assessment
 * **Level 1**: Steps 1-6 complete.
-* **Level 2**: Step 7 and either Step 8 or Step 9 complete.
-* **Level 3**: All 9 steps complete
+* **Level 2**: Step 7 and either Step 8 or Step 9 complete, along with an evalution document
+containing a good analysis of the results.
+* **Level 3**: All 9 steps complete, along with an evalution document
+containing a good analysis of the results.
 
 ## Acknowledgement
 
