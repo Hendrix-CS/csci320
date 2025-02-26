@@ -15,7 +15,9 @@ Implement `vssh`, the Very Simple SHell:
 * If the user types a blank line, ignore it and display the prompt once again.
 * Execute any other command the user types by spawning a new process:
 * Be sure to include the [nix crate](https://crates.io/crates/nix) in `Cargo.toml` using the following line under `[dependencies]`:
-  * `nix = {version = "0.29.0", features = ["process", "fs"]}`
+  * `nix = "0.26"`
+  * Do not use a later version of `nix`; some backwards-incompatible changes make completing
+    this assignment difficult.
 * Use [fork](https://docs.rs/nix/latest/nix/unistd/fn.fork.html) to create the child process.
 * Within the child process, use [execvp](https://docs.rs/nix/latest/nix/unistd/fn.execvp.html) to execute the command.
 * Within the parent process, use [waitpid](https://docs.rs/nix/latest/nix/sys/wait/fn.waitpid.html) to wait for the child process to complete.
