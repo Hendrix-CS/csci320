@@ -240,7 +240,7 @@ Modify your server so that it reads a fixed number of bytes from the disk at a t
 those same bytes to the client. Add a command-line flag (`-s`) to switch streaming on. In the absence
 of the flag, it should read the entire file into RAM and then send it.
 
-### Streaming perofrmance
+### Streaming performance
 
 Measure the performance of `webserver` with streaming activated. In an evaluation document,
 record the performance of the baseline and the streaming server. Then analyze the extent
@@ -260,7 +260,7 @@ the cache to store up to three files. If the `-c` flag is not employed, caching 
 
 Track the number of requests for each file. The `n` most popular files will be kept in the cache.
 
-### Caching perofrmance
+### Caching performance
 
 Measure the performance of `webserver` with caching activated. In an evaluation document,
 record the performance of the baseline and the caching server. Then analyze the extent
