@@ -53,16 +53,21 @@ Refine your program as follows:
   specification allows servers to end with that sequence too. 
 * It should then print the message it received.
 
-In the above example, it would print somemthing akin to the following:
+In response to the `wget` command above, it would print somemthing akin to the following:
 
 ```
-client IP address: 127.0.0.1:60632                                                                                      
-Read 54 bytes from 127.0.0.1:60632                       
-GET /test HTTP/1.1                                     
-Host: localhost                                                                                                         
-Connection: Close
-
+Client IP address: 127.0.0.1:44822
+Read 133 bytes from 127.0.0.1:44822
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: Wget/1.21.2
+Accept: */*
+Accept-Encoding: identity
+Connection: Keep-Alive
 ```
+
+If you use a different client, such as a web browser, the message may look very different. But it should 
+unambiguously be an HTTP request.
 
 ## Step 3: Respond
   
