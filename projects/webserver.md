@@ -179,17 +179,16 @@ Once you have generated these files, you can set up TLS when accepting connectio
 ## Step 7: Creating Benchmarks
 Use [locust.io](https://locust.io/) to test the performance of your server. This program 
 allows you to [write Python scripts to describe workload tests](https://docs.locust.io/en/stable/quickstart.html). 
-It will then spawn as many test users as you would like. Install it on the command line on a machine with 
-Python3 installed:
+It will then spawn as many test users as you would like. 
 
+To install `locust` on **Windows Subsystem for Linux**, at the command prompt, type:
+```
+sudo apt install python3-locust
+```
+
+On a Mac:
 ```
 python3 -m pip install locust
-```
-
-**Windows Subsystem for Linux only**: If that command yields an error message, try the following first (in `bash`):
-```
-sudo apt update
-sudo apt install python3-pip
 ```
 
 (You can also install it [directly from PyCharm](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html),
