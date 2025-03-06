@@ -186,6 +186,29 @@ To install `locust` on **Windows Subsystem for Linux**, at the command prompt, t
 sudo apt install python3-locust
 ```
 
+If, when you run `locust`, you get the following error:
+```
+[2025-03-06 13:39:05,531] 20003LPUX/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+Traceback (most recent call last):
+  File "/usr/bin/locust", line 33, in <module>
+    sys.exit(load_entry_point('locust==1.4.3', 'console_scripts', 'locust')())
+  File "/usr/lib/python3/dist-packages/locust/main.py", line 286, in main
+    web_ui = environment.create_web_ui(
+  File "/usr/lib/python3/dist-packages/locust/env.py", line 165, in create_web_ui
+    self.web_ui = WebUI(
+  File "/usr/lib/python3/dist-packages/locust/web.py", line 102, in __init__
+    app.jinja_options["extensions"].append("jinja2.ext.do")
+KeyError: 'extensions'
+```
+
+Then update your installation as follows:
+```
+sudo apt remove locust
+python3 -m pip install --upgrade locust
+```
+
+After the above, I would expect it to work.
+
 On a Mac:
 ```
 python3 -m pip install locust
