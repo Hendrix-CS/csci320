@@ -143,6 +143,10 @@ The server should print the counts to the command line every time it receives a 
 If the request is valid, and the request is for a file, the server should send back the 
 contents of the file. You may assume that all requested files are text files.
 
+Constructing the header requires specifying the number of bytes in the file. The 
+[`metadata()`](https://doc.rust-lang.org/std/path/struct.PathBuf.html#method.metadata)
+method of `PathBuf` enables you to obtain this number.
+
 <!---
 ## Step 7: Transport Layer Security
 
