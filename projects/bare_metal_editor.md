@@ -21,6 +21,7 @@ For **Level 2** credit:
 * Each window has an outline of period (`.`) characters.
 * Each window has a header with one of `F1`, `F2`, `F3`, or `F4` in the center.
 * Initially, the `F1` window is active.
+* Pressing a function key makes the corresponding window active.
 * The currently active window should have a color-highlighted outline.
 * The currently active window is where keystrokes appear.
 
@@ -42,7 +43,7 @@ Here is an image of what the windowing editor should look like:
 * This can be built atop the `pluggable_interrupt_template` project, just like the bare metal game.
 * As with the game, it should have a central `struct` to represent the user interface as a whole.
 * Make heavy use of constants for values like the window height and width, document height, starting locations
-of windows, and so forth.
+of windows, and so forth. A later assignment might require adjusting the window boundaries.
 * Create an additional `struct` to represent an individual document. For **Level 1** and **Level 2**, this 
 `struct` really only needs to represent the cursor position and window boundaries, as the text itself can be 
 represented exclusively within the VGA buffer. For **Level 3**, this `struct` will need to maintain a 
