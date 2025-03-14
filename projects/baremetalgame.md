@@ -11,7 +11,8 @@ Classic console video games such as [Space Invaders](https://en.wikipedia.org/wi
 The games mediated all hardware interaction by themselves.
 
 In this project, you will use the [Pluggable Interrupt OS](https://crates.io/crates/pluggable_interrupt_os)
-to develop a bare-metal video game. The graphical aspect of the game will be rendered in the VGA buffer.
+to develop a bare-metal video game. The graphical aspect of the game will be rendered in the 
+[VGA buffer](https://docs.rs/pluggable_interrupt_os/0.5.3/pluggable_interrupt_os/vga_buffer/index.html).
 You are encouraged to be creative in using VGA characters to represent your game graphics.
 
 You are welcome to develop an original game or to create your own interpretation of a classic game.
@@ -259,12 +260,6 @@ impl LetterMover {
 
 The keyboard handler receives each character as it is typed. Keys representable as a `char`
 are added to the moving string. The arrow keys change how the string is moving.
-
-In order to implement wrapping around the sides of the screen, this implementation uses 
-[modular numbers](https://docs.rs/bare_metal_modulo/1.2.5/bare_metal_modulo/). I have an
-[alternative implementation](https://github.com/gjf2a/pluggable_interrupt_template_simplified) 
-that uses modulo directly on integers rather than modular numbers. The effect is the same,
-but you may find the alternative implementation a bit more transparent.
   
 ## Requirements
 
