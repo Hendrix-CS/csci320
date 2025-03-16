@@ -40,8 +40,8 @@ Here is an image of what the windowing editor should look like:
 <img src="https://hendrix-cs.github.io/csci320/assets/images/swim_part_1_4_windows.png" width=500>
 
 ### Design suggestions
-* This can be built atop the `pluggable_interrupt_template` project, just like the bare metal game.
-* As with the game, it should have a central `struct` to represent the user interface as a whole.
+* This can be built atop the [simple_swim_template](https://github.com/gjf2a/simple_swim_template) project, which is based on the `pluggable_interrupt_template` we used as the basis for bare metal games.
+* As with the bare metal game, it should have a central `struct` to represent the user interface as a whole.
 * Make heavy use of constants for values like the window height and width, document height, starting locations
 of windows, and so forth. A later assignment might require adjusting the window boundaries.
 * Create an additional `struct` to represent an individual document. For **Level 1** and **Level 2**, this 
