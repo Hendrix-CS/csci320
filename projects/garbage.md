@@ -18,6 +18,8 @@ heap that runs as part of the kernel.
 
 * Privately fork [this template](https://github.com/gjf2a/gc_heap_template) for 
   building your solution. 
+* Each `RamHeap` object represents a region of RAM. RAM itself is accessed via the 
+  array that each `RamHeap` object manages.
 * Also examine the [gc_headers](https://github.com/gjf2a/gc_headers)
   to familiarize yourself with the data structures you will be using.
   * `Pointer` objects are the means by which entities using the heap
@@ -53,13 +55,26 @@ heap that runs as part of the kernel.
 
 ## Assessment
 * **Level 1**
-  * `malloc()` passes the unit tests that assess successful allocation.
+  * The following unit tests pass:
+    * `block_table_test()`
+    * `basic_allocation_test()`
+    * `out_of_blocks_test()`
+    * `test_bad_address_error()`
 * **Level 2**
-  * `malloc()` passes all of its unit tests, including those requiring collections.
+  * The Level 1 unit tests still pass. In addition, the following unit tests pass:
+    * `deallocation_test()`
+    * `collection_test()`
+    * `full_test()`
+    * `test_no_blocks_error()`
+    * `test_zero_size_error()`
+    * `test_illegal_block_error()`
+    * `test_unallocated_block_error()`
+    * `test_offset_error()`
+    * `test_misaligned_pointer_error()`
 * **Level 3**
   * Implement a **generational** collector.
-    * Any object that survives two collections is copied into a second-generation heap segment.
+    * Any object that survives `MAX_COPIES` collections is copied into a second-generation 
+      heap segment.
     * The second-generation heap will be collected much less often, as most objects won't live
       long enough to be copied there.
-  * Run the given experiments to document the frequencies of first and second generation collections,
-    as well as statistics about the number of times each block is copied.
+  * The Level 1 and Level 2 unit tests must still pass. In addition, `generational_test()` passes.
