@@ -49,6 +49,23 @@ heap that runs as part of the kernel.
   * The collector will then copy each `true` block to the new heap, 
     updating their addresses as they are moved.
 
+## Debugging
+Since the file system code is set up to run as `no-std`, you can't normally
+use `println!()` to help debug it. However, as a temporary measure, you
+can re-enable the standard library for debugging purposes.
+
+The key line for compiling as `no-std` is at the top of the program:
+```
+#![cfg_attr(not(test), no_std)]
+```
+
+If you want to use `println!()` to help debug, comment that line out:
+```
+//#![cfg_attr(not(test), no_std)]
+```
+
+Once you have gotten the information you need, be sure to restore the line!
+
 ## Submissions
 * Add the instructor as a collaborator on your fork of `gc_heap_template`.
 * Submit your GitHub URL via Teams.
