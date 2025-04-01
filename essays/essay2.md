@@ -15,7 +15,6 @@ the web server in support of your answer.
 2. Describe two situations beyond those covered in our projects in which one would need 
 concurrency. In one situation, argue as to why processes are preferable to threads as a 
 concurrency mechanism. In the other situation, argue as to why threads are preferable to 
-processes as a concurrency mechanism. Again, use specific examples from your implementations
-of the shell and the web server to support your answer.
+processes as a concurrency mechanism. Again, use specific examples to support your answer.
 3. Write a concluding paragraph in which you summarize what you have learned about 
 concurrency by this point in the course.
