@@ -96,19 +96,18 @@ To create a file:
     * Select its first data block.
     * Create an inode for the directory, and save it in the inode table.
 * Search the directory file for the filename
-  * 
-* If the file already has an inode:
-  * Use the current inode.
-  * Reset its stored-bytes and current-block to a state as if it were
-    newly created.
-  * Clear the in-use bits for its existing data blocks, except for the
-    first data block. We will continue to use that block as we start
-    the write.
-* Otherwise:
-  * Select an inode number.
-  * Select a data block number for the first block.
-  * Create an inode for the new file, and save it in the inode table.
-  * Update the directory file with an entry for the new file.
+  * If the file already has an inode:
+    * Use the current inode.
+    * Reset its stored-bytes and current-block to a state as if it were
+      newly created.
+    * Clear the in-use bits for its existing data blocks, except for the
+      first data block. We will continue to use that block as we start
+      the write.
+  * Otherwise:
+    * Select an inode number.
+    * Select a data block number for the first block.
+    * Create an inode for the new file, and save it in the inode table.
+    * Update the directory file with an entry for the new file.
 * Create a file table entry for the newly created file, and return the file 
   descriptor.
 
