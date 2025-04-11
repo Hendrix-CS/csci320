@@ -235,6 +235,8 @@ Add the instructor as a collaborator on your **private** fork of the repository.
 * Level 2:
   * Passes all of the unit tests above.
   * Also passes the following unit tests:
+    * `test_create_dictionary_entry()`
+    * `test_create_dictionary_many_entries()`
     * `test_empty()`
     * `test_short_write()`
     * `test_long_write()`
