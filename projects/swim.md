@@ -145,6 +145,14 @@ use simple_interp::{Interpreter, InterpreterOutput};
 
 ## Level 3: File Editor
 
+* When `F5` is selected, the user can enter a filename of up to 10 characters
+  in the top window.
+  * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
+    character.
+  * When the user types the Enter key:
+    * An empty file with the given name is opened, created, and closed on the disk
+    * The filename is cleared from the top window
+    * The file listings in the four quadrant windows are updated to include the new file
 * If you type the `e` key, the highlighted file should be loaded into the editor. At this
 point, we switch from file navigation to editing.
   * The selected filename appears as part of the window header, after the function 
@@ -158,14 +166,6 @@ point, we switch from file navigation to editing.
     the file selection screen.
   * When the file is re-opened, from any of the windows, the changes saved earlier
     should be reflected.
-* When `F5` is selected, the user can enter a filename of up to 10 characters
-  in the top window.
-  * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
-    character.
-  * When the user types the Enter key:
-    * An empty file with the given name is opened, created, and closed on the disk
-    * The filename is cleared from the top window
-    * The file listings in the four quadrant windows are updated to include the new file
     
 When creating a file named `test`, SWIM should look like this:
 
