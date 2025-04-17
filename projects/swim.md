@@ -157,6 +157,9 @@ use simple_interp::{Interpreter, InterpreterOutput};
 
 ## Level 3: File Editor
 
+* The kernel should not panic under any circumstances.
+  * If an error occurs, the user should receive sufficient information
+    to understand the error and continue activity.
 * When `F5` is selected, the user can enter a filename of up to 10 characters
   in the top window.
   * When the user types the backspace (Unicode ``\u{8}``), it erases the previous 
