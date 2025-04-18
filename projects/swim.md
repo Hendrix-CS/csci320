@@ -129,7 +129,7 @@ const MAX_HEAP_BLOCKS: usize = HEAP_SIZE;
 ```
 * Add the following import to the top of `lib.rs`:
 ```
-use simple_interp::{Interpreter, InterpreterOutput};
+use simple_interp::{Interpreter, InterpreterOutput, ArrayString};
 ```
 * When the user hits `r` when a file is highlighted, the file should **run**.
   * To run a program, create an `Interpreter` object for it using `Interpreter::new()`.
@@ -141,7 +141,13 @@ use simple_interp::{Interpreter, InterpreterOutput};
     `Interpreter<MAX_TOKENS, MAX_LITERAL_CHARS, STACK_DEPTH, MAX_LOCAL_VARS, WIN_WIDTH, GenerationalHeap<HEAP_SIZE, MAX_HEAP_BLOCKS, 2>>`
   * You will need to create a data type that implements the `InterpreterOutput`
     trait in order to receive output from the interpreter.
+    * **Suggestion**: The data type representing each of your four windows would be a 
+      good choice to implement this trait.
+  * The only method you will need to call on an `Interpreter` object is `.tick()`, which 
+    expects as a parameter an object of that type that implements the `InterpreterOutput` 
+    trait.
   * Use the `tick()` method to execute **one instruction** in **one program**.
+    * If **any** programs are running, exactly one of them should execute an instruction.
     * If `tick()` returns `TickResult::AwaitInput`, block the process
       until input is available.
     * Once input is available, use the `provide_input()` method to send
