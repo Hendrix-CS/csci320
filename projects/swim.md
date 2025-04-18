@@ -64,9 +64,9 @@ given in three columns, each of which may contain up to 10 rows.
 * If you use the left-arrow and right-arrow keys, it should cycle through the 
   files, highlighting the current file.
 
-After completing Step 2, SWIM should look like this:
+After completing Level 1, SWIM should look like this:
 
-<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_2.png" width=500> 
+<img src="https://hendrix-cs.github.io/csci320/assets/images/SWIM_Level_1.png" width=500> 
 
 ## File Text
 
@@ -197,6 +197,10 @@ While editing the file in the `F1` buffer, it should look like this:
 After saving the file using `F6` and reopening it in the `F2` buffer, it should look
 like this:
 <img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3d.png" width=500>    
+
+After closing the `F2` buffer and running the program in the `F3` buffer, it should look
+like this:
+<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_3e.png" width=500>
 
 
 ## Acknowledgement
