@@ -153,7 +153,7 @@ use simple_interp::{Interpreter, InterpreterOutput};
 * The number of instructions executed by each process should be shown in the 
   right window, as seen below:
 
-<img src="https://hendrix-cs.github.io/csci320/assets/images/swim_step_5.png" width=500>
+<img src="https://hendrix-cs.github.io/csci320/assets/images/SWIM_Level_2.png" width=500>
 
 ## Level 3: File Editor
 
