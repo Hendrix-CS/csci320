@@ -144,6 +144,7 @@ use simple_interp::{Interpreter, InterpreterOutput, ArrayString};
     * **Suggestion**: The data type representing each of your four windows would be a 
       good choice to implement this trait. Implementing a trait looks something like 
       this in Rust source code:
+
 ```
 struct DataType {
    /* Your data declarations go here */
@@ -155,6 +156,7 @@ impl InterpreterOutput for DataType {
    }
 }
 ```
+
   * The only method you will need to call on an `Interpreter` object is `.tick()`, which 
     expects as a parameter an object of that type that implements the `InterpreterOutput` 
     trait.
