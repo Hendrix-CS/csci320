@@ -142,7 +142,19 @@ use simple_interp::{Interpreter, InterpreterOutput, ArrayString};
   * You will need to create a data type that implements the `InterpreterOutput`
     trait in order to receive output from the interpreter.
     * **Suggestion**: The data type representing each of your four windows would be a 
-      good choice to implement this trait.
+      good choice to implement this trait. Implementing a trait looks something like 
+      this in Rust source code:
+```
+struct DataType {
+   /* Your data declarations go here */
+}
+
+impl InterpreterOutput for DataType {
+   fn print(&mut self, chars: &[u8]) {
+      /* Your code here */
+   }
+}
+```
   * The only method you will need to call on an `Interpreter` object is `.tick()`, which 
     expects as a parameter an object of that type that implements the `InterpreterOutput` 
     trait.
@@ -160,6 +172,12 @@ use simple_interp::{Interpreter, InterpreterOutput, ArrayString};
   right window, as seen below:
 
 <img src="https://hendrix-cs.github.io/csci320/assets/images/SWIM_Level_2.png" width=500>
+
+Additional suggestions:
+* Get the programs that do not use input (`hello`, `nums`) working before those that do use input (`average`, `pi`).
+* To store the input buffer, use the `ArrayString` struct from `simple_interp`. It won't display anything, but it is a very convenient input buffer. Features include:
+  * Easy conversion to `&str`.
+  * You can create formatted strings using `write!()`. 
 
 ## Level 3: File Editor
 
