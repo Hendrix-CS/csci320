@@ -120,11 +120,11 @@ print((4 * sum))
 ## Level 2: Program Execution
 * Add another set of constants to `lib.rs`:
 ```
-const MAX_TOKENS: usize = 500;
-const MAX_LITERAL_CHARS: usize = 30;
-const STACK_DEPTH: usize = 50;
-const MAX_LOCAL_VARS: usize = 20;
-const HEAP_SIZE: usize = 1024;
+const MAX_TOKENS: usize = 100; 
+const MAX_LITERAL_CHARS: usize = 15;
+const STACK_DEPTH: usize = 20; 
+const MAX_LOCAL_VARS: usize = 10; 
+const HEAP_SIZE: usize = 256; 
 const MAX_HEAP_BLOCKS: usize = HEAP_SIZE;
 ```
 * Add the following import to the top of `lib.rs`:
